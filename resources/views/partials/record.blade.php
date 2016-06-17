@@ -28,7 +28,7 @@
 			<p>weight</p>
 			<p>{{ $data["weight"] }} kg</p>
 			<p>age</p>
-			<p>{{ $age }} let</p>
+			<p>{{ $age }} years</p>
 
 		</div>
 

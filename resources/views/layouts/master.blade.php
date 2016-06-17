@@ -14,12 +14,12 @@
             </nav>
         @endif
 
-        <div class="row almost-white-bg">
+        <div class="row theme-bg">
         	<div class="col-12 area-2 center">
-        		<h1 class="theme-text">Shape Log</h1>
+        		<h1 class="light-grey-text">Shape Log</h1>
         	</div>
             <div class="col-12 area-2 center">
-                <h3 class="dark-grey-text">Perfect app for logging your gym progress</h3>
+                <h3 class="light-grey-text">The perfect tool for monitoring your gym progress</h3>
             </div>
         </div>
         

@@ -19,3 +19,8 @@ Version 0.3 beta
 * Added side-menu
 * Added footer
 * Added changelog Kappa
+
+Version 0.4 beta
+----------------
+* Graphics
+* Profile bar
