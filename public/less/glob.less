@@ -403,6 +403,33 @@ hr {
 
 }
 
+/* 4.3 - Top bar */
+.top-bar {
+	height: 80px;
+
+	a {
+		float: left;
+		padding: 30px;
+		line-height: 20px;
+		.animate();
+		
+		&.img {
+			padding: 0;
+		}
+
+		&:hover {
+			color: @theme;
+		}
+	}
+
+	img {
+		height: 60px;
+		width: 60px;
+		padding: 10px;
+		border-radius: 50%;
+	}
+}
+
 /*
  * 5 - Inputs 
  */ 
