@@ -37,9 +37,9 @@
 		<div class="pseudo-table">
 			<p><abbr title="Basal Metabolic Rate">BMR</abbr></p>
 			<p>{{ $bmr }} kcal</p>
-			<p>caloric expenditure</p>
+			<p>expenditure</p>
 			<p>{{ $burn = round($bmr * $record->cal_level) }} kcal</p>
-			<p>caloric intake</p>
+			<p>intake</p>
 			<p>{{ $data["kcal"] }} kcal ({{ abs($data["kcal"] - $burn) }} in {{ $data["kcal"] > $burn ? "surplus" : "deficit" }})</p>
 		</div>
 

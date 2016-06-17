@@ -28,7 +28,7 @@
 					<div class="pseudo-table">
 						<p>caloric intake</p>
 						<p><input type="text" name="kcal" /></p>
-						<p>exercise frequency</p>
+						<p>exercise</p>
 						<p>
 							<select name="cal_level">
 								<option value="1.2">None</option>
@@ -67,7 +67,10 @@
 
 					<button>ADD</button>
 				</form>
+
+				<div class="add light-grey-bg"><div></div></div>
 			</div>
 		</div>
 	</div>
+	
 @stop

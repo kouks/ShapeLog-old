@@ -5,10 +5,6 @@
     @if(!isset($_SESSION["facebook_access_token"]))
         <div class="row">
             <div class="col-12 center area-4">
-                <h3>Our app requires you to login with Facebook</h3>
-            </div>
-
-            <div class="col-12 center area-4">
                 <a class="fb-button center" href="{{ $loginUrl }}">
                     <i class="fa fa-2 fa-facebook"></i> &nbsp;&nbsp;
                     Login with Facebook
@@ -37,7 +33,7 @@
         </div>
         <div class="col-3 area-4 left">
             <p class="left">
-                <img src="http://placehold.it/150x150">
+                <img src="img/graph.png">
             </p>
         </div>
         <div class="col-3">&nbsp;</div>

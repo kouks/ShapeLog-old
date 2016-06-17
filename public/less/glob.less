@@ -403,7 +403,7 @@ hr {
 
 }
 
-/* 4.3 - Top bar */
+/* 4.3 - Homepage */
 .top-bar {
 	height: 80px;
 
@@ -430,14 +430,19 @@ hr {
 	}
 }
 
+.header {
+	background: url('../img/header.png') center center no-repeat;
+	background-size: cover;
+}
+
 /*
  * 5 - Inputs 
  */ 
 /* 5.1 - New record */
 
 .record-form {
-	opacity: 0.3;
 	background: white;
+	position: relative;
 	.animate();
 
 	&:hover {
@@ -457,5 +462,29 @@ hr {
 		color: #eee;
 		font-weight: bold;
 		cursor: pointer;
+	}
+
+	.add {
+		position: absolute;
+		top: -1%; left: -1%;
+		width: 102%;
+		height: 102%;
+
+		div {
+			width: 94%;
+			height: 94%;
+			margin: 3%;
+			border: 5px dashed #ddd;
+			box-sizing: border-box;
+			border-radius: 20px;
+			cursor: pointer;
+			background: url("../img/icons/add.png") center center no-repeat;
+			.animate();
+
+			&:hover {
+				border: 5px dashed #d0d0d0;
+				background-image: url("../img/icons/add-hover.png");
+			}
+		}
 	}
 }

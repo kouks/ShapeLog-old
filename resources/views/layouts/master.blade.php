@@ -7,14 +7,14 @@
 
         @if(isset($_SESSION["facebook_access_token"]))
             <nav class="row top-bar">
-                    <a href="/profile" class="img"><img src="//graph.facebook.com/{{ $user->fbid }}/picture?type=large"></a>
-                    <a href="/profile" class="bold">Logged in as {{ $user->first_name }}</a>
-                    <a href="/profile">Go to profile</a>
-                    <a href="/profile/logout">Logout</a>
+                <a href="/profile" class="img"><img src="//graph.facebook.com/{{ $user->fbid }}/picture?width=80&height=80"></a>
+                <a href="/profile" class="bold">Logged in as {{ $user->first_name }}</a>
+                <a href="/profile">Go to profile</a>
+                <a href="/profile/logout">Logout</a>
             </nav>
         @endif
 
-        <div class="row theme-bg">
+        <div class="row header theme-bg">
         	<div class="col-12 area-2 center">
         		<h1 class="light-grey-text">Shape Log</h1>
         	</div>

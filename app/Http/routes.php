@@ -18,5 +18,8 @@ Route::group(['prefix' => 'profile'], function() {
 	Route::get('', 'ProfileController@index')->middleware('logout_check');
 	Route::post('add', 'ProfileController@add')->middleware('logout_check');
 	Route::get('delete/{id}', 'ProfileController@delete')->middleware('logout_check');
+
+	Route::get('graphs', 'GraphsController@index')->middleware('logout_check');
+
 	Route::get('logout', 'ProfileController@logout');
 });

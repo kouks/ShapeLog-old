@@ -19,7 +19,7 @@
     <div class="col-4 area-2">
     	<p class="light-grey-text big">Links</p>
         <ul>
-            <li class="grey-text">GitHub</li>
+            <a href="https://github.com/KouKs/ShapeLog"><li class="grey-text">GitHub</li></a>
             <li class="grey-text">Facebook</li>
         </ul>
     </div>

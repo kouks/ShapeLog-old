@@ -21,5 +21,9 @@ $(document).ready(function() {
             itemSelector: '.grid-item'
         }).masonry('reloadItems');
     });
+
+    $('.add div').click(function() {
+    	$(this).parent().hide();
+    });
 	
 });
