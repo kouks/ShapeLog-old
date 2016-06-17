@@ -1,0 +1,767 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bos",
+				"box-sizing"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"border-",
+				"border-radius"
+			],
+			[
+				"spa",
+				"border-spacing"
+			],
+			[
+				"bac",
+				"background-size"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"backgrou",
+				"background"
+			],
+			[
+				"de",
+				"dependencies"
+			],
+			[
+				"mat",
+				"matrix"
+			],
+			[
+				"matrix",
+				"matrixSum"
+			],
+			[
+				"D",
+				"D"
+			],
+			[
+				"while",
+				"while	while …"
+			],
+			[
+				"htmlspecia",
+				"htmlspecialchars_decode"
+			],
+			[
+				"backg",
+				"background"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"json_",
+				"json_encode"
+			],
+			[
+				"Requ",
+				"Request"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"box",
+				"box-sizing"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"Nova",
+				"ProximaNova-Regular"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 120.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/wamp/www/Ebchod/resources/views/partials/head.blade.php",
+		"/C/wamp/www/forma/js/jquery.min.js",
+		"/C/wamp/www/Ebchod/resources/views/layouts/page.blade.php",
+		"/C/wamp/www/Ebchod/public/index.php",
+		"/C/Users/kochova/AppData/Roaming/Sublime Text 3/Packages/User/less2css.sublime-settings",
+		"/C/wamp/www/forma/less/glob.less",
+		"/C/Users/kochova/AppData/Roaming/Sublime Text 3/Packages/Less2Css/README.md",
+		"/C/Users/kochova/AppData/Roaming/Sublime Text 3/Packages/Less2Css/less2css.sublime-settings",
+		"/C/Users/kochova/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/kochova/AppData/Roaming/Sublime Text 3/Packages/User/LESS.sublime-settings",
+		"/C/wamp/www/index.php",
+		"/C/wamp/www/forma.php",
+		"/C/Users/kochova/Desktop/forma.php",
+		"/C/wamp/www/tom/stravovani.php",
+		"/C/wamp/www/tom/squat.php",
+		"/C/wamp/www/tom/benchpress.php",
+		"/C/wamp/www/tom/deadlift.php",
+		"/C/wamp/www/tom/index.php",
+		"/C/wamp/www/tom/css/style.css",
+		"/C/wamp/www/tom/js/main.js",
+		"/C/wamp/www/tom/js/jquery.min.js",
+		"/C/wamp/www/KK/Prvni/index.php",
+		"/C/wamp/www/KK/Treti/index.php",
+		"/C/wamp/www/KK/Ctvrty/index.html",
+		"/C/wamp/www/tom/less/glob.less",
+		"/C/wamp/www/Ebchod/public/less/glob.less",
+		"/C/wamp/www/Ebchod/public/css/glob.css",
+		"/C/Users/kochova/Desktop/hodnota_vyrazu.py",
+		"/C/Users/kochova/Desktop/asd.pgn",
+		"/C/wamp/www/Ebchod/porovnani_dvou_cisel.py",
+		"/C/wamp/www/Ebchod/sude_liche.py",
+		"/C/Users/kochova/Desktop/kladne_zaporne.py",
+		"/C/Users/kochova/Desktop/absolutni_hodnota.py",
+		"/C/Users/kochova/Desktop/odmocnina.py",
+		"/C/Users/kochova/Desktop/podil.py",
+		"/C/Users/kochova/Desktop/prohozeni_hodnot.py",
+		"/C/Users/kochova/Desktop/kruh.py",
+		"/C/Users/kochova/Desktop/valec.py",
+		"/C/Users/kochova/Desktop/junk/asd.pgn",
+		"/C/Users/kochova/AppData/Local/Temp/Rar$DIa0.036/valec.py",
+		"/C/wamp/www/insults.txt",
+		"/C/Users/kochova/Downloads/06 (2).in",
+		"/C/wamp/www/result02.in.txt",
+		"/C/Users/kochova/Downloads/06 (1).in",
+		"/C/Users/kochova/Downloads/05 (2).in",
+		"/C/Users/kochova/Downloads/05 (1).in",
+		"/C/wamp/www/02 (1).in",
+		"/C/wamp/www/03.in",
+		"/C/Users/kochova/Downloads/04 (2).in",
+		"/C/wamp/www/ksp04.php",
+		"/C/Users/kochova/Downloads/02.in",
+		"/C/wamp/www/result01.in.txt",
+		"/C/Users/kochova/Downloads/01.in",
+		"/C/wamp/www/ksp02.php",
+		"/C/wamp/www/result06.in.txt",
+		"/C/wamp/www/04.in",
+		"/C/wamp/www/result05.in.txt",
+		"/C/wamp/www/result04.in.txt",
+		"/C/Users/kochova/Downloads/04 (3).in",
+		"/C/Users/kochova/Downloads/06 (3).in",
+		"/C/wamp/www/ksp06.php",
+		"/C/wamp/www/ksp05.php",
+		"/C/wamp/www/result03.in.txt",
+		"/C/Users/kochova/Downloads/05.in",
+		"/C/wamp/www/06.in",
+		"/C/wamp/www/01.in",
+		"/C/Users/kochova/Downloads/04.in",
+		"/C/wamp/www/01 (1).in",
+		"/C/wamp/www/ksp01.php",
+		"/C/Users/kochova/Downloads/06.in",
+		"/C/wamp/www/ksp03.php",
+		"/C/wamp/www/01 (3).in",
+		"/C/Users/kochova/AppData/Local/Temp/scp54379/sleanded.com/sub/dev/Scripts/insulter.php",
+		"/C/Users/kochova/Downloads/zasobnik.php",
+		"/C/wamp/www/insults.php",
+		"/C/Users/kochova/Downloads/fronta (1).php",
+		"/C/Users/kochova/Downloads/fronta.php",
+		"/C/Users/kochova/Desktop/komplecni.cs",
+		"/C/Users/kochova/Downloads/Kontroln%25C3%25AD%2520ot%25C3%25A1zky%2520na%2520t%25C3%25A9ma%25201.%2520f%25C3%25A1ze%25202.%2520sv%25C4%259Btov%25C3%25A9%2520v%25C3%25A1lky.docx",
+		"/C/wamp/www/KK/Ctvrty/js/main.js",
+		"/C/wamp/www/KK/Druhy/index.php",
+		"/C/wamp/www/KK/Ctvrty/css/style.css",
+		"/C/wamp/www/KK/Prvni/css/style.css",
+		"/C/wamp/www/KK/Prvni/config.php",
+		"/C/Users/kochova/Desktop/browser/numbers.html",
+		"/C/wamp/www/KK/Ctvrty/ocrad.js",
+		"/C/wamp/www/KK/Ctvrty/file.html",
+		"/C/Users/kochova/Desktop/browser/file.html",
+		"/C/wamp/www/KK/Ctvrty/js/ocrad.js",
+		"/C/Users/kochova/AppData/Local/Temp/Rar$EXa0.392/ocrad.js-master/demo.html",
+		"/C/wamp/www/Ebchod/public/js/filter.js",
+		"/C/wamp/www/Ebchod/public/js/main.js",
+		"/C/Users/kochova/Documents/Visual Studio 2015/Projects/Test/Test/bin/Debug/Test.exe.config",
+		"/C/Users/kochova/Documents/Visual Studio 2015/Projects/Test/Test/libs/Tao.FreeGlut.dll.config",
+		"/C/Users/kochova/Documents/Visual Studio 2015/Projects/Test/Test/libs/Tao.FreeGlut.xml",
+		"/C/wamp/www/Ebchod/app/Http/Controllers/XMLfeedController.php",
+		"/C/wamp/www/Ebchod/app/Libraries/HeurekaImporter.php",
+		"/C/wamp/www/Ebchod/resources/views/products.blade.php",
+		"/C/Users/kochova/AppData/Local/Temp/scp24010/e-bchod.cz/web/public/js/main.js",
+		"/C/Users/kochova/AppData/Local/Temp/scp07080/e-bchod.cz/web/resources/views/partials/article.blade.php",
+		"/C/wamp/www/Ebchod/resources/views/partials/article.blade.php",
+		"/C/Users/kochova/AppData/Local/Temp/scp05050/e-bchod.cz/web/public/.htaccess",
+		"/C/wamp/www/Ebchod/resources/views/layouts/master.blade.php",
+		"/C/wamp/www/Ebchod/resources/views/partials/footer.blade.php",
+		"/C/wamp/www/Ebchod/app/Providers/AppServiceProvider.php",
+		"/C/wamp/www/Ebchod/resources/views/admin/shops/browse.blade.php",
+		"/C/wamp/www/Ebchod/resources/views/faq.blade.php",
+		"/C/wamp/www/Ebchod/resources/views/about.blade.php",
+		"/C/wamp/www/Ebchod/resources/views/partials/product.blade.php",
+		"/C/Users/kochova/AppData/Local/Temp/scp34390/e-bchod.cz/web/public/less/glob.less",
+		"/C/Users/kochova/AppData/Local/Temp/scp24622/e-bchod.cz/web/.env",
+		"/C/Users/kochova/AppData/Local/Temp/scp21133/e-bchod.cz/web/public/.htaccess",
+		"/C/Users/kochova/AppData/Local/Temp/scp20125/e-bchod.cz/web/.htaccess",
+		"/C/wamp/www/Ebchod/readme.md",
+		"/C/wamp/www/Ebchod/.env.example",
+		"/C/wamp/www/Ebchod/resources/views/partials/side-bar.blade.php",
+		"/C/wamp/www/Ebchod/hhhoblxj.f1w.txt",
+		"/C/wamp/www/Ebchod/resources/views/layouts/admin.blade.php",
+		"/C/wamp/www/Ebchod/resources/views/admin/statistics.blade.php",
+		"/C/wamp/www/Ebchod/app/Http/routes.php",
+		"/C/wamp/www/Ebchod/app/Http/Controllers/Admin/AdminController.php",
+		"/C/wamp/www/Ebchod/app/Http/Controllers/Admin/ShopsController.php",
+		"/C/wamp/www/Ebchod/resources/views/home.blade.php",
+		"/C/wamp/www/Ebchod/resources/views/admin/blog/add.blade.php",
+		"/C/wamp/www/Ebchod/resources/views/partials/filter.blade.php",
+		"/C/wamp/www/Ebchod/app/Helpers/Helper.php",
+		"/C/wamp/www/Ebchod/app/Http/Controllers/Sites/HomeController.php",
+		"/C/wamp/www/Ebchod/resources/views/partials/menu.blade.php"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			" class=\"half\"",
+			"img",
+			"th",
+			"td",
+			"<td",
+			"tr",
+			"lato",
+			" 36 ",
+			" 8 ",
+			" 16 ",
+			" 343 ",
+			" 34 ",
+			" 49 ",
+			" 64 ",
+			"'a'",
+			"#",
+			"letter",
+			".section",
+			"z-in",
+			".row",
+			".section",
+			"select",
+			".sections",
+			"input",
+			"message",
+			"{",
+			"a ",
+			"a",
+			"button",
+			".animate",
+			"sections",
+			".sections",
+			"remaini",
+			"remainin",
+			"remain",
+			"xdebug",
+			"Fiter",
+			".img",
+			".img-header",
+			"autocomplete",
+			"this",
+			".settings",
+			"small",
+			"});",
+			";",
+			".hea	",
+			".hea		",
+			".hea	",
+			".hea		",
+			"col-4",
+			"h2",
+			"h1",
+			"href",
+			"img",
+			"0px",
+			"&-",
+			"col",
+			"width",
+			"rgba",
+			"=\"#\"></",
+			"get",
+			"ProductModel",
+			"title"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"p class=\"title\"",
+			"p",
+			"<p class=\"half\"",
+			"<p class=\"half",
+			"p",
+			"Bebas",
+			"char",
+			".filter",
+			"col-3",
+			"App\\Product"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"filter",
+				"public\\js\\filter.js"
+			],
+			[
+				"main",
+				"public\\js\\main.js"
+			],
+			[
+				"produ",
+				"resources\\views\\products.blade.php"
+			],
+			[
+				"heure",
+				"app\\Libraries\\HeurekaImporter.php"
+			],
+			[
+				"xm",
+				"app\\Http\\Controllers\\XMLfeedController.php"
+			],
+			[
+				"glob",
+				"public\\less\\glob.less"
+			],
+			[
+				"arti",
+				"resources\\views\\partials\\article.blade.php"
+			],
+			[
+				"fil",
+				"public\\js\\filter.js"
+			],
+			[
+				"app",
+				"app\\Providers\\AppServiceProvider.php"
+			],
+			[
+				"footer",
+				"resources\\views\\partials\\footer.blade.php"
+			],
+			[
+				"brow",
+				"resources\\views\\admin\\shops\\browse.blade.php"
+			],
+			[
+				"master",
+				"resources\\views\\layouts\\master.blade.php"
+			],
+			[
+				"faq",
+				"resources\\views\\faq.blade.php"
+			],
+			[
+				"about",
+				"resources\\views\\about.blade.php"
+			],
+			[
+				"product.",
+				"resources\\views\\partials\\product.blade.php"
+			],
+			[
+				"head",
+				"resources\\views\\partials\\head.blade.php"
+			],
+			[
+				"home",
+				"resources\\views\\home.blade.php"
+			],
+			[
+				"admin",
+				"resources\\views\\layouts\\admin.blade.php"
+			],
+			[
+				"add",
+				"resources\\views\\admin\\blog\\add.blade.php"
+			],
+			[
+				"routes",
+				"app\\Http\\routes.php"
+			],
+			[
+				"stat",
+				"resources\\views\\admin\\statistics.blade.php"
+			],
+			[
+				"helper",
+				"app\\Helpers\\Helper.php"
+			],
+			[
+				"page",
+				"resources\\views\\layouts\\page.blade.php"
+			],
+			[
+				"products",
+				"resources\\views\\products.blade.php"
+			],
+			[
+				"pro",
+				"resources\\views\\products.blade.php"
+			],
+			[
+				"home.",
+				"resources\\views\\home.blade.php"
+			],
+			[
+				"hom",
+				"app\\Http\\Controllers\\Sites\\HomeController.php"
+			],
+			[
+				"menu",
+				"resources\\views\\partials\\menu.blade.php"
+			],
+			[
+				"glo",
+				"public\\less\\glob.less"
+			],
+			[
+				"blog",
+				"app\\Http\\Controllers\\Sites\\BlogController.php"
+			],
+			[
+				"side-",
+				"resources\\views\\partials\\side-bar.blade.php"
+			],
+			[
+				"product",
+				"app\\Http\\Controllers\\Sites\\ProductsController.php"
+			],
+			[
+				"abou",
+				"app\\Http\\Controllers\\Sites\\AboutController.php"
+			],
+			[
+				"part",
+				"resources\\views\\partners.blade.php"
+			],
+			[
+				"load",
+				"public\\js\\load_products.js"
+			],
+			[
+				"prod",
+				"resources\\views\\products.blade.php"
+			],
+			[
+				"post",
+				"resources\\views\\post.blade.php"
+			],
+			[
+				"blog_",
+				"database\\migrations\\2015_11_28_233347_create_blogs_table.php"
+			],
+			[
+				"gll",
+				"public\\less\\glob.less"
+			],
+			[
+				"ajax",
+				"app\\Http\\Controllers\\AjaxController.php"
+			],
+			[
+				"produc",
+				"resources\\views\\products.blade.php"
+			],
+			[
+				"appser",
+				"app\\Providers\\AppServiceProvider.php"
+			],
+			[
+				"boot",
+				"vendor\\hamcrest\\hamcrest-php\\tests\\bootstrap.php"
+			],
+			[
+				"contr",
+				"app\\Http\\Controllers\\Controller.php"
+			],
+			[
+				"side",
+				"resources\\views\\partials\\side-bar.blade.php"
+			],
+			[
+				"",
+				"resources\\views\\layouts\\admin.blade.php"
+			],
+			[
+				"article",
+				"resources\\views\\partials\\article.blade.php"
+			],
+			[
+				"parter",
+				"resources\\views\\partners.blade.php"
+			],
+			[
+				"blogc",
+				"app\\Http\\Controllers\\Admin\\BlogController.php"
+			],
+			[
+				"rout",
+				"app\\Http\\routes.php"
+			],
+			[
+				"blog.bl",
+				"resources\\views\\admin\\blog\\add.blade.php"
+			],
+			[
+				"main.js",
+				"public\\js\\main.js"
+			],
+			[
+				"productsc",
+				"app\\Http\\Controllers\\Sites\\ProductsController.php"
+			],
+			[
+				"detai",
+				"resources\\views\\detail.blade.php"
+			],
+			[
+				"heu",
+				"app\\Libraries\\HeurekaImporter.php"
+			],
+			[
+				"autocom",
+				"public\\js\\autocomplete.js"
+			],
+			[
+				"aja",
+				"app\\Http\\Controllers\\AjaxController.php"
+			],
+			[
+				"main.",
+				"public\\js\\main.js"
+			],
+			[
+				"filter.js",
+				"public\\js\\filter.js"
+			],
+			[
+				"glob.le",
+				"public\\less\\glob.less"
+			],
+			[
+				"detail",
+				"resources\\views\\detail.blade.php"
+			],
+			[
+				"productc",
+				"app\\Http\\Controllers\\Sites\\ProductsController.php"
+			],
+			[
+				"admin.b",
+				"resources\\views\\layouts\\admin.blade.php"
+			],
+			[
+				"auto",
+				"public\\js\\autocomplete.js"
+			],
+			[
+				"compo",
+				"composer.json"
+			],
+			[
+				"secti",
+				"app\\Section.php"
+			],
+			[
+				"autom",
+				"public\\js\\autocomplete.js"
+			],
+			[
+				"autocomplete.js",
+				"public\\js\\autocomplete.js"
+			],
+			[
+				"autocomp",
+				"vendor\\psy\\psysh\\test\\Psy\\Test\\TabCompletion\\AutoCompleterTest.php"
+			],
+			[
+				"autocomplete",
+				"vendor\\psy\\psysh\\src\\Psy\\TabCompletion\\AutoCompleter.php"
+			],
+			[
+				"route",
+				"app\\Http\\routes.php"
+			],
+			[
+				"text",
+				"public\\less\\text.less"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 239.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
