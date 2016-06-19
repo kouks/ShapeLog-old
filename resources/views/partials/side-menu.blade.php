@@ -8,6 +8,7 @@
 	    <ul>
 	        <a href="/profile/"><li><i class="fa fa-home" aria-hidden="true"></i> Home</li></a>
 	        <a href="/profile/graphs"><li><i class="fa fa-area-chart" aria-hidden="true"></i> Graphs</li></a>
+	        <a href="/profile/tags"><li><i class="fa fa-tags" aria-hidden="true"></i> Custom Tags</li></a>
 	        <a href="/profile/settings"><li><i class="fa fa-cog" aria-hidden="true"></i> Settings</li></a>
 	        <a href="/profile/logout"><li><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</li></a>
 	    </ul>

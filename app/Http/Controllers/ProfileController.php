@@ -8,6 +8,7 @@ use App\Http\Requests;
 
 class ProfileController extends Controller
 {
+    
     /**
      * Display a listing of the resource.
      *
@@ -38,18 +39,24 @@ class ProfileController extends Controller
             \Input::file('img')->move('uploads', $fileName);
         }
 
-        
+        /// REWORK ///////////////////////////
         $input = \Input::all();
-        $calLevel = $input["cal_level"];
+        $calLevel = $input["cal_level"]; unset($input["cal_level"]);
+        $height = $input["height"]; unset($input["height"]);
+        $weight = $input["weight"]; unset($input["weight"]);
+        $kcal = $input["kcal"]; unset($input["kcal"]);
+
         unset($input["_token"]);
-        unset($input["img"]);
-        unset($input["cal_level"]);
+        unset($input["img"]); 
+        
         $data = serialize($input);
 
         $user = \App\User::where(['fbid' => $_SESSION['fbid']])->first();
 
         \App\Record::create([
             'user_id' => $user->id,
+            'height' => $height,
+            'weight' => $weight,
             'data' => $data,
             'cal_level' => $calLevel,
             'img'  => $fileName,

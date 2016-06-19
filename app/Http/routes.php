@@ -21,5 +21,11 @@ Route::group(['prefix' => 'profile'], function() {
 
 	Route::get('graphs', 'GraphsController@index')->middleware('logout_check');
 
+	Route::group(['prefix' => 'tags'], function() {
+		Route::get('', 'TagsController@index')->middleware('logout_check');
+		Route::post('add', 'TagsController@add')->middleware('logout_check');
+		Route::get('delete/{id}', 'TagsController@delete')->middleware('logout_check');
+	});
+
 	Route::get('logout', 'ProfileController@logout');
 });

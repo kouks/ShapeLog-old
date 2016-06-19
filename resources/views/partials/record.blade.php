@@ -8,8 +8,8 @@
 	$age = floor( ($time - $bday) / 86400 / 365.25 );
 
 	$bmr = $user->gender == "male" ? 
-			round(66.5 + 13.75*$data["weight"] + 5.003*$data["height"] - 6.755*$age) :
-			round(655.1 + 9.563*$data["weight"] + 1.850*$data["height"] - 4.676*$age);
+			round(66.5 + 13.75*$record->weight + 5.003*$record->height - 6.755*$age) :
+			round(655.1 + 9.563*$record->weight + 1.850*$record->height - 4.676*$age);
 
 ?>
 <div class="col-6 area-4 grid-item">
@@ -24,9 +24,9 @@
 
 		<div class="pseudo-table">
 			<p>height</p>
-			<p>{{ $data["height"] }} cm</p>
+			<p>{{ $record->height }} cm</p>
 			<p>weight</p>
-			<p>{{ $data["weight"] }} kg</p>
+			<p>{{ $record->weight }} kg</p>
 			<p>age</p>
 			<p>{{ $age }} years</p>
 
@@ -40,24 +40,16 @@
 			<p>expenditure</p>
 			<p>{{ $burn = round($bmr * $record->cal_level) }} kcal</p>
 			<p>intake</p>
-			<p>{{ $data["kcal"] }} kcal ({{ abs($data["kcal"] - $burn) }} in {{ $data["kcal"] > $burn ? "surplus" : "deficit" }})</p>
+			<p>{{ $record->kcal }} kcal ({{ abs($record->kcal - $burn) }} in {{ $record->kcal > $burn ? "surplus" : "deficit" }})</p>
 		</div>
 
-		<p class="title">measures</p>
+		<p class="title">Custom Tags</p>
 
 		<div class="pseudo-table">
-			<p>biceps</p>
-			<p>{{ $data["arm"] }} cm</p>
-			<p>thighs</p>
-			<p>{{ $data["leg"] }} cm</p>
-			<p>chest</p>
-			<p>{{ $data["chest"] }} cm</p>
-			<p>waist</p>
-			<p>{{ $data["waist"] }} cm</p>
-			<p>hips</p>
-			<p>{{ $data["hips"] }} cm</p>
-			<p>calves</p>
-			<p>{{ $data["calf"] }} cm</p>
+			@foreach($user->tags as $tag)
+				<p>{{ $tag->name }}</p>
+				<p>{{ $data[$tag->name] }} {{ $tag->unit }}</p>
+			@endforeach
 		</div>
 
 		@if(!empty($record->img))

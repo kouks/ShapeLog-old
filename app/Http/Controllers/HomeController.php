@@ -81,6 +81,20 @@ class HomeController extends Controller
             $u->birthday = $user->birthday;
             $u->gender = $user->gender;
             $u->save();
+
+            $uid = \App\User::where(['fbid' => $user->id])->first()->id;
+
+            \App\Tag::create([
+                'user_id' => $uid,
+                'name' => 'BICEPS',
+                'unit' => 'cm'
+            ]);
+
+            \App\Tag::create([
+                'user_id' => $uid,
+                'name' => 'CHEST',
+                'unit' => 'cm'
+            ]);
         }
 
         if (isset($accessToken))

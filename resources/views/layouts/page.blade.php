@@ -5,7 +5,7 @@
 
     <body id="master">
 
-        <div class="row light-grey-bg full-height">
+        <div class="row almost-white-bg full-height">
         <div class="col-2">&nbsp;</div>
 
             <div class="col-10 light-grey-bg">

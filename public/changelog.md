@@ -30,3 +30,8 @@ Version 0.5
 ----------------
 * Simple graphs
 * Improved Graphics
+
+Version 0.6
+----------------
+* Added custom tags system
+* Improved Graphics

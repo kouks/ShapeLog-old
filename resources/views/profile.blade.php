@@ -2,7 +2,7 @@
 
 @section('main')
 
-	<div class="row light-grey-bg">
+	<div class="row almost-white-bg">
 	
 		@foreach($user->records as $record)
 			@include('partials.record')
@@ -41,21 +41,13 @@
 						</p>
 					</div>
 
-					<p class="title">measures</p>
+					<a href="/profile/tags"><p class="title">Custom Tags</p></a>
 
 					<div class="pseudo-table">
-						<p>biceps</p>
-						<p><input type="text" name="arm" /></p>
-						<p>thighs</p>
-						<p><input type="text" name="leg" /></p>
-						<p>chest</p>
-						<p><input type="text" name="chest" /></p>
-						<p>waist</p>
-						<p><input type="text" name="waist" /></p>
-						<p>hips</p>
-						<p><input type="text" name="hips" /></p>
-						<p>calves</p>
-						<p><input type="text" name="calf" /></p>
+						@foreach($user->tags as $tag)
+							<p>{{ $tag->name }}</p>
+							<p><input type="text" name="{{ $tag->name }}" /></p>
+						@endforeach
 					</div>
 
 					<p data-img="" class="title toggle-photo">photo (optional)</p>
@@ -68,7 +60,7 @@
 					<button>ADD</button>
 				</form>
 
-				<div class="add light-grey-bg"><div></div></div>
+				<div class="add almost-white-bg"><div></div></div>
 			</div>
 		</div>
 	</div>

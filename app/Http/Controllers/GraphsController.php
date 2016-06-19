@@ -21,7 +21,10 @@ class GraphsController extends Controller
         foreach($user->records as $record)
         {
             $time = date('j. n. Y', strtotime($record->created_at));
-            $data[] = [ 'date' => $time, 'data' => unserialize($record->data) ];
+            $data[] = [ 
+                'date' => $time,
+                'data' => array_merge( [ 'weight' => $record->weight, 'kcal' => $record->kcal ], unserialize($record->data))
+            ];
         }
 
         return \View::make('graphs', [

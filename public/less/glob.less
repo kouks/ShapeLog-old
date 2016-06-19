@@ -439,7 +439,6 @@ hr {
  * 5 - Inputs 
  */ 
 /* 5.1 - New record */
-
 .record-form {
 	background: white;
 	position: relative;
@@ -485,6 +484,56 @@ hr {
 				border: 5px dashed #d0d0d0;
 				background-image: url("../img/icons/add-hover.png");
 			}
+		}
+	}
+}
+
+/* 5.1 - New tag */
+.tags {
+	input, select {
+		background: transparent;
+		width: 100%;
+	}
+	button {
+		background: none;
+		cursor: pointer;
+		
+		&:hover {
+			color: @theme;
+		}
+	}
+}
+
+/*
+ * 6 - Tables 
+ */ 
+/* 6.1 - Simple */
+.table-simple {
+	padding: 0;
+	margin: 0;
+	border-spacing: 0;
+	border-collapse: collapse;
+	width: 100%;
+
+	td, th {
+		padding: 7px;
+	}
+
+	th {
+		background: #eee;
+		border: 1px solid #fff;
+	}
+
+	tr:nth-child(odd) {
+		background: #fafafa;
+	}
+
+	td.delete {
+		width: 30px;
+		cursor: pointer;
+
+		&:hover {
+			color: @theme;
 		}
 	}
 }
