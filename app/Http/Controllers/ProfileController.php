@@ -57,6 +57,7 @@ class ProfileController extends Controller
             'user_id' => $user->id,
             'height' => $height,
             'weight' => $weight,
+            'kcal' => $kcal,
             'data' => $data,
             'cal_level' => $calLevel,
             'img'  => $fileName,
