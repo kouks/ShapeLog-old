@@ -11,7 +11,6 @@
             </p>
         </div>
         <div class="col-4 area-4 left">
-            <p class="left big">něco</p>
         </div>
         <div class="col-2">&nbsp;</div>
     </div>
