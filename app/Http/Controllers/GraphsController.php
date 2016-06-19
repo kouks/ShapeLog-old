@@ -15,9 +15,19 @@ class GraphsController extends Controller
      */
     public function index()
     { 
-      return \View::make('graphs', [
+        $user = \App\User::where(['fbid' => $_SESSION["fbid"]])->first();
+
+        $data = [];
+        foreach($user->records as $record)
+        {
+            $time = date('j. n. Y', strtotime($record->created_at));
+            $data[] = [ 'date' => $time, 'data' => unserialize($record->data) ];
+        }
+
+        return \View::make('graphs', [
             'title'         => 'Graphs',
-            'user'          => \App\User::where(['fbid' => $_SESSION["fbid"]])->first(),
+            'user'          => $user,
+            'data'          => $data,
         ]);  
     }
 }

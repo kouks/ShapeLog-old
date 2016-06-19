@@ -2,16 +2,6 @@
 
 @section('main') 
 
-    @if(!isset($_SESSION["facebook_access_token"]))
-        <div class="row">
-            <div class="col-12 center area-4">
-                <a class="fb-button center" href="{{ $loginUrl }}">
-                    <i class="fa fa-2 fa-facebook"></i> &nbsp;&nbsp;
-                    Login with Facebook
-                </a>
-            </div>
-        </div>
-    @endif
 
     <div class="row almost-white-bg">
         <div class="col-3">&nbsp;</div>

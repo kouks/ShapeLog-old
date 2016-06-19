@@ -7,10 +7,12 @@
     <link href="/css/glob.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="/favicon.ico">
 
+    <script type="text/javascript" src="/js/Chart.bundle.min.js"></script>
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/js/jquery.ui.min.js"></script>
     <script type="text/javascript" src="/js/jquery.cookie.js"></script>
     <script type="text/javascript" src="/js/jquery.masonry.min.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="/js/graphs.js"></script>
     
 </head>
