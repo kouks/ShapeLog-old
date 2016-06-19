@@ -7,10 +7,11 @@
         <div class="col-3">&nbsp;</div>
         <div class="col-3 area-4 right">
             <p class="right">
-                <img src="http://placehold.it/150x150">
+                <img src="img/pic01.png">
             </p>
         </div>
         <div class="col-4 area-4 left">
+            <p class="left big">Welcome to Shape Log. Our main goal is to help you with tracking important information of your gym progress, to achieve the  best results!</p>
         </div>
         <div class="col-2">&nbsp;</div>
     </div>
