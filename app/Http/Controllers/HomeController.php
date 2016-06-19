@@ -22,8 +22,7 @@ class HomeController extends Controller
             'persistent_data_handler'=>'session'
         ]);
 
-        $loginUrl = $fb->getRedirectLoginHelper()->getLoginUrl('http://' . $_SERVER["SERVER_NAME"] . '/login',
-            [ 'email', 'user_birthday' ]);
+        $loginUrl = $fb->getRedirectLoginHelper()->getLoginUrl('http://' . $_SERVER["SERVER_NAME"] . '/login');
 
         return \View::make('home', [
             'title' => 'Home',
@@ -51,6 +50,9 @@ class HomeController extends Controller
 
         $_SESSION['FBRLH_state'] = $_GET['state'];
 
+        /*
+         * Getting data from FB
+         */
         try
         {
             $accessToken = $helper->getAccessToken();
@@ -74,29 +76,34 @@ class HomeController extends Controller
         /*
          * Saving on DB
          */
-        if($u = \App\User::firstOrCreate(['fbid' => $user->id]))
+        if(!\App\User::where(['fbid' => $user->id])->count())
         {
-            $u->first_name = $user->first_name;
-            $u->last_name = $user->last_name;
-            $u->birthday = $user->birthday;
-            $u->gender = $user->gender;
-            $u->save();
+            \App\User::create([
+                'fbid'          => $user->id,
+                'first_name'    => $user->first_name,
+                'last_name'     => $user->last_name,
+                'birthday'      => $user->birthday,
+                'gender'        => $user->gender,
+            ]);
 
             $uid = \App\User::where(['fbid' => $user->id])->first()->id;
 
             \App\Tag::create([
-                'user_id' => $uid,
-                'name' => 'BICEPS',
-                'unit' => 'cm'
+                'user_id'   => $uid,
+                'name'      => 'BICEPS',
+                'unit'      => 'cm'
             ]);
 
             \App\Tag::create([
-                'user_id' => $uid,
-                'name' => 'CHEST',
-                'unit' => 'cm'
+                'user_id'   => $uid,
+                'name'      => 'CHEST',
+                'unit'      => 'cm'
             ]);
         }
 
+        /*
+         * Storing the token
+         */
         if (isset($accessToken))
         {
             $_SESSION['fbid'] = $user->id;

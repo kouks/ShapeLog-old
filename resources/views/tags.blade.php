@@ -2,7 +2,7 @@
 
 @section('main')
 
-	<div class="row light-grey-bg">
+	<div class="row almost-white-bg">
 		<div class="col-12 area-2">
 			<h1 class="center">Edit custom tags</h1>			
 		</div>

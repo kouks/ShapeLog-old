@@ -24,9 +24,9 @@
 
 		<div class="pseudo-table">
 			<p>height</p>
-			<p>{{ $record->height }} cm</p>
+			<p>{{ round($record->height, 1) }} cm</p>
 			<p>weight</p>
-			<p>{{ $record->weight }} kg</p>
+			<p>{{ round($record->weight, 1) }} kg</p>
 			<p>age</p>
 			<p>{{ $age }} years</p>
 
@@ -40,7 +40,7 @@
 			<p>expenditure</p>
 			<p>{{ $burn = round($bmr * $record->cal_level) }} kcal</p>
 			<p>intake</p>
-			<p>{{ $record->kcal }} kcal ({{ abs($record->kcal - $burn) }} in {{ $record->kcal > $burn ? "surplus" : "deficit" }})</p>
+			<p>{{ round($record->kcal) }} kcal ({{ abs($record->kcal - $burn) }} in {{ $record->kcal > $burn ? "surplus" : "deficit" }})</p>
 		</div>
 
 		<p class="title">Custom Tags</p>
@@ -48,7 +48,7 @@
 		<div class="pseudo-table">
 			@foreach($user->tags as $tag)
 				<p>{{ $tag->name }}</p>
-				<p>{{ $data[$tag->name] }} {{ $tag->unit }}</p>
+				<p>{{ round($data[$tag->name], 1) }} {{ $tag->unit }}</p>
 			@endforeach
 		</div>
 
