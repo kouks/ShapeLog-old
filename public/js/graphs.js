@@ -24,7 +24,7 @@ function draw(data, cat) {
                 label: cat.toUpperCase(),
                 data: dataset.reverse(),
                 fill: false,
-                borderDash: [5, 5],
+                borderDash: [20, 5],
             }]
         },
         options: {
@@ -53,7 +53,7 @@ function draw(data, cat) {
             },
             title: {
                 display: true,
-                text: 'ShapeLog data Graphs'
+                text: 'Shape Log data graphs'
             }
         }
     };

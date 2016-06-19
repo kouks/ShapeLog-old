@@ -25,3 +25,8 @@ Version 0.4 beta
 * Graphics
 * Profile bar
 * Graphs (only page)
+
+Version 0.5
+----------------
+* Simple graphs
+* Improved Graphics
