@@ -1,6 +1,6 @@
 <div class="col-6 area-4 grid-item">
 	<div class="record-form record">
-		<form method="post" action="profile/add" enctype="multipart/form-data">
+		<form method="post" action="/profile/add" enctype="multipart/form-data">
 			<input type="hidden" name="user" value="{{ $user->id }}" />
 			{!! csrf_field() !!}
 
