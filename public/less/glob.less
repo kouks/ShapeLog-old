@@ -300,7 +300,8 @@ hr {
 /* 3.2 - Record */
 .record {
 	position: relative;
-	.shadow();
+	border: 1px solid;
+    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
 
 	.toggle-photo {
 		cursor: pointer;
@@ -389,19 +390,21 @@ hr {
 		border-radius: 50%;
 	}
 
-	ul {
+	nav {
 		margin-top: 20px;
 		background: @dark-grey;
 		cursor: pointer;
 
-		li {
+		a {
 			width: 90%;
 			padding: 10px 5%;
 			color: @light-grey;
+			display: block;
+			.animate();
 
 			&:hover {
 				color: white;
-				font-weight: bold;
+				text-shadow: 0 0 4px white;
 			}
 		}
 	}
