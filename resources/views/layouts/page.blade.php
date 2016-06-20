@@ -10,11 +10,11 @@
 
             <div class="col-10">
                 @if(null !== Session::get('message'))
-                <div class="col-12 area-2 message">
-                    <div class="area-2 theme-bg light-grey-text big bold">
-                        {{ Session::get('message') }}
+                    <div class="col-12 area-2 message">
+                        <div class="area-2 theme-bg light-grey-text big bold">
+                            <p class="light-grey-text big bold">{{ Session::get('message') }}</p>
+                        </div>
                     </div>
-                </div>
                 @endif
 
                 @yield('main')                
