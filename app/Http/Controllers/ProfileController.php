@@ -43,14 +43,6 @@ class ProfileController extends Controller
         }
 
         /*
-         * Making a data array from user custom tags
-         */
-        foreach(\App\User::where(['id' => $request->user])->first()->tags as $tag) 
-        {
-            $data[$tag->name] = \Input::get($tag->name);
-        }
-
-        /*
          * Saving data on DB
          */
         \App\Record::create([
@@ -58,7 +50,7 @@ class ProfileController extends Controller
             'height' => $request->height,
             'weight' => $request->weight,
             'kcal' => $request->kcal,
-            'data' => serialize($data),
+            'data' => serialize($request->data),
             'cal_level' => $request->cal_level,
             'img'  => $fileName,
         ]);

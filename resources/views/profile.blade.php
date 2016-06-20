@@ -48,7 +48,7 @@
 					<div class="pseudo-table">
 						@foreach($user->tags as $tag)
 							<p>{{ $tag->name }}</p>
-							<p><input type="text" name="{{ $tag->name }}" /></p>
+							<p><input type="text" name="data[{{ $tag->name }}]" /></p>
 						@endforeach
 					</div>
 
