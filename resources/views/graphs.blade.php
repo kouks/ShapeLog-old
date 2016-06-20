@@ -9,7 +9,11 @@
 	</div>
 	<div class="row white-bg">
 		<div class="col-12 area-2">
-			<h3>Choose your data to graph</h3>
+			<p class="center big grey-text">It is always motivating to see your body fat go down. Simply select what data you want to graph.</p>
+		</div>
+	</div>
+	<div class="row almost-white-bg">
+		<div class="col-12 area-2">
 			@foreach($data as $record)
 				@foreach($record["data"] as $cat=>$_)
 					<input {{ $cat == "weight" ? "checked='checked'" : "" }} class="change"  name="cat" type="radio" data-cat="{{ $cat }}" />
@@ -20,7 +24,7 @@
 			@endforeach
 		</div>
 	</div>
-	<div class="row almost-white-bg">
+	<div class="row white-bg">
 		<div class="col-12 area-2">
         	<canvas id="canvas"></canvas>
         </div>

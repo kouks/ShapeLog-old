@@ -7,8 +7,13 @@
 			<h1 class="center">Edit custom tags</h1>			
 		</div>
 	</div>
-
 	<div class="row white-bg">
+		<div class="col-12 area-2">
+			<p class="center big grey-text">On this page, you can edit your own custom tags. Simply enter the name and unit of whatever you want to keep track of. It is automatically added to both your record form and graphs page.</p>
+		</div>
+	</div>
+
+	<div class="row almost-white-bg">
 		<div class="col-12 area-2">
 			<table class="table-simple tags">
 				@foreach($user->tags as $tag)

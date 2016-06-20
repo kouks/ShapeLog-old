@@ -47,6 +47,7 @@
 
 		<div class="pseudo-table">
 			@foreach($user->tags as $tag)
+				<? if(!@$data[$tag->name]) continue; ?>
 				<p>{{ $tag->name }}</p>
 				<p>{{ round($data[$tag->name], 1) }} {{ $tag->unit }}</p>
 			@endforeach
