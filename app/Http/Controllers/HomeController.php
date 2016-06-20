@@ -22,6 +22,9 @@ class HomeController extends Controller
             'persistent_data_handler'=>'session'
         ]);
 
+        /*
+         * Generating login url
+         */
         $loginUrl = $fb->getRedirectLoginHelper()->getLoginUrl('http://' . $_SERVER["SERVER_NAME"] . '/login');
 
         return \View::make('home', [
@@ -48,6 +51,9 @@ class HomeController extends Controller
 
         $helper = $fb->getRedirectLoginHelper();
 
+        /*
+         * Passing security token
+         */
         $_SESSION['FBRLH_state'] = $_GET['state'];
 
         /*
@@ -56,23 +62,19 @@ class HomeController extends Controller
         try
         {
             $accessToken = $helper->getAccessToken();
-
             $fb->setDefaultAccessToken($accessToken);
-
-            $response = $fb->get('/me?fields=birthday,first_name,last_name,gender');
+            $response = $fb->get('/me?fields=birthday,first_name,last_name,gender,permissions');
             $user = json_decode($response->getGraphUser());
         } 
         catch(\Facebook\Exceptions\FacebookResponseException $e)
         {
-            echo 'Graph returned an error: ' . $e->getMessage(); //better handling?
             return \Redirect::to('')->with('message', 'Login failed');
         }
         catch(\Facebook\Exceptions\FacebookSDKException $e)
         {
-            echo 'Facebook SDK returned an error: ' . $e->getMessage();
             return \Redirect::to('')->with('message', 'Login failed');
         }
-
+        
         /*
          * Saving on DB
          */

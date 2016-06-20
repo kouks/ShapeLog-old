@@ -11,7 +11,9 @@
 		<div class="col-6 area-4 grid-item">
 			<div class="record-form record">
 				<form method="post" action="profile/add" enctype="multipart/form-data">
+					<input type="hidden" name="user" value="{{ $user->id }}" />
 					{!! csrf_field() !!}
+
 					<h4 class="theme-bg light-grey-text center area-2">New record</h4>
 
 					<p class="title">basic info</p>

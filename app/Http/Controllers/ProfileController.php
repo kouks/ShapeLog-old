@@ -29,41 +29,41 @@ class ProfileController extends Controller
      */
     public function add(Request $request)
     {
+        
+        /*
+         * Parsing image name, if present
+         */
         $fileName = '';
         
         if (\Input::hasFile('img') && \Input::file('img')->isValid())
         {
-            $fileName = time() . "_" .
-                        \Input::file('img')->getClientOriginalName();
+            $fileName = time() . "_" . \Input::file('img')->getClientOriginalName();
 
             \Input::file('img')->move('uploads', $fileName);
         }
 
-        /// REWORK ///////////////////////////
-        $input = \Input::all();
-        $calLevel = $input["cal_level"]; unset($input["cal_level"]);
-        $height = $input["height"]; unset($input["height"]);
-        $weight = $input["weight"]; unset($input["weight"]);
-        $kcal = $input["kcal"]; unset($input["kcal"]);
+        /*
+         * Making a data array from user custom tags
+         */
+        foreach(\App\User::where(['id' => $request->user])->first()->tags as $tag) 
+        {
+            $data[$tag->name] = \Input::get($tag->name);
+        }
 
-        unset($input["_token"]);
-        unset($input["img"]); 
-        
-        $data = serialize($input);
-
-        $user = \App\User::where(['fbid' => $_SESSION['fbid']])->first();
-
+        /*
+         * Saving data on DB
+         */
         \App\Record::create([
-            'user_id' => $user->id,
-            'height' => $height,
-            'weight' => $weight,
-            'kcal' => $kcal,
-            'data' => $data,
-            'cal_level' => $calLevel,
+            'user_id' => $request->user,
+            'height' => $request->height,
+            'weight' => $request->weight,
+            'kcal' => $request->kcal,
+            'data' => serialize($data),
+            'cal_level' => $request->cal_level,
             'img'  => $fileName,
         ]);
         
-        return \Redirect::to('profile')->with('message', 'Successfully added');
+        return \Redirect::to('profile')->with('message', 'Record successfully added');
     }
 
     /**

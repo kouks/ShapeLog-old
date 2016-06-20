@@ -1,6 +1,7 @@
 TODO List
 ==========
+* Remake grafiky grafů
 * Index
 * Nastavení
 * Udělat něco s footerem
-* Codecleaning přidávání nového záznamu včetně formuláře, je to kentus
+* Codecleaning formuláře přidávání nového záznamu
