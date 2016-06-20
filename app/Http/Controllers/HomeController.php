@@ -63,7 +63,7 @@ class HomeController extends Controller
         {
             $accessToken = $helper->getAccessToken();
             $fb->setDefaultAccessToken($accessToken);
-            $response = $fb->get('/me?fields=birthday,first_name,last_name,gender,permissions');
+            $response = $fb->get('/me?fields=birthday,first_name,last_name,gender');
             $user = json_decode($response->getGraphUser());
         } 
         catch(\Facebook\Exceptions\FacebookResponseException $e)

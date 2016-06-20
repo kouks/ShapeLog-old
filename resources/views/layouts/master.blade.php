@@ -15,12 +15,12 @@
         @endif
 
         <div class="row header theme-bg">
-        	<div class="col-12 area-2 center">
+        	<div class="col-12 area-4 center">
         		<h1 class="light-grey-text">Shape Log</h1>
         	</div>
             
-            <div class="col-12 area-2 center">
-                <h3 class="light-grey-text">The perfect tool for monitoring your gym progress</h3>
+            <div class="col-12 area-4 center">
+                <h2 class="light-grey-text">The perfect tool for monitoring your gym progress</h2>
             </div>
 
             @if(!isset($_SESSION["facebook_access_token"]))
