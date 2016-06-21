@@ -14,14 +14,14 @@
 	</div>
 	<div class="row almost-white-bg">
 		<div class="col-12 area-2">
-			@foreach($data as $record)
-				@foreach($record["data"] as $cat=>$_)
-					<input {{ $cat == "weight" ? "checked='checked'" : "" }} class="change"  name="cat" type="radio" data-cat="{{ $cat }}" />
-					{{ strtoupper($cat) }}
-					<br />
+			<ul class="tag-list">
+				@foreach($data as $record)
+					@foreach($record["data"] as $cat=>$value)
+						<li data-selected="0" data-cat="{{ strtoupper($cat) }}">{{ strtoupper($cat) }}</li>	
+					@endforeach
+					<? break; ?>
 				@endforeach
-				<? break; ?>
-			@endforeach
+			</ul>
 		</div>
 	</div>
 	<div class="row white-bg">
@@ -33,13 +33,7 @@
 	<script>
 		var data = <?php echo json_encode($data); ?>;
 
-		draw(data, 'weight');
-
-		$(document).ready(function() {
-			$('.change').change(function() {
-				draw(data, $(this).data('cat'));
-			});
-		});
+		draw(data, []);
 	</script>
 
 @stop

@@ -1,7 +1,6 @@
 TODO List
 ==========
 * Editace tagů
-* Remake grafiky grafů
 * Remake toho <p> shitu, co je ve výpisu a ve formuláři záznamů
 * Index
 * Nastavení

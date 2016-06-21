@@ -23,7 +23,7 @@ class GraphsController extends Controller
             $time = date('j. n. Y', strtotime($record->created_at));
             $data[] = [ 
                 'date' => $time,
-                'data' => array_merge( [ 'weight' => $record->weight, 'kcal' => $record->kcal ], unserialize($record->data))
+                'data' => array_merge( [ 'WEIGHT' => $record->weight, 'KCAL' => $record->kcal ], unserialize($record->data))
             ];
         }
 

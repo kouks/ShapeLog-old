@@ -6,26 +6,35 @@ var randomColor = function(opacity) {
     return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + (opacity || '.3') + ')';
 };
 
-function draw(data, cat) {
+var cats = [];
 
-	var dataset = new Array();
-	var dates = new Array();
+function draw(data) {
 
-	for(key in data) {
-		dates[key] = data[key]['date'];
-		dataset[key] = data[key]['data'][cat];
+	var datasets = [];
+	var dates = [];
+
+    for(cat in cats) {
+        dataset = [];
+        
+	    for(key in data) {
+            dataset[key] = data[key]['data'][cats[cat]];
+            dates[key] = data[key]['date'];
+        }
+
+
+        datasets[cat] = {
+            label: cats[cat].toUpperCase(),
+            data: dataset.reverse(),
+            fill: false,
+            borderDash: [20, 5]
+        }
 	}
 
     var config = {
         type: 'line',
         data: {
             labels: dates.reverse(),
-            datasets: [{
-                label: cat.toUpperCase(),
-                data: dataset.reverse(),
-                fill: false,
-                borderDash: [20, 5],
-            }]
+            datasets: datasets
         },
         options: {
             responsive: true,
@@ -70,3 +79,22 @@ function draw(data, cat) {
     var ctx = document.getElementById("canvas").getContext("2d");
     window.myLine = new Chart(ctx, config);
 }
+
+$(document).ready(function() {    
+    $(".tag-list li").click(function() {
+
+        var cat = $(this).data("cat");
+
+        if($(this).data("selected") == 1) {
+            $(this).css({color: '#333'});
+            $(this).data("selected", '0');
+            cats.splice(cats.indexOf(cat), 1);
+            draw(data, cats);
+        } else {
+            $(this).css({color: '#b23432'});
+            $(this).data("selected", '1');
+            cats.push(cat);
+            draw(data, cats);
+        }
+    });
+});
