@@ -12,7 +12,7 @@
 			round(655.1 + 9.563*$record->weight + 1.850*$record->height - 4.676*$age);
 
 ?>
-<div class="col-6 area-4 grid-item">
+<div class="col-6 area-4">
 	<div class="record">
 
 		<h4 class="theme-bg center light-grey-text area-2">

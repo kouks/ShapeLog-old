@@ -15,6 +15,7 @@ Route::get('', "HomeController@index");
 Route::get('login', "HomeController@login");
 
 Route::group(['prefix' => 'profile'], function() {
+	
 	Route::get('', 'ProfileController@index')->middleware('logout_check');
 	Route::post('add', 'ProfileController@add')->middleware('logout_check');
 	Route::get('delete/{id}', 'ProfileController@delete')->middleware('logout_check');
@@ -25,6 +26,10 @@ Route::group(['prefix' => 'profile'], function() {
 		Route::get('', 'TagsController@index')->middleware('logout_check');
 		Route::post('add', 'TagsController@add')->middleware('logout_check');
 		Route::get('delete/{id}', 'TagsController@delete')->middleware('logout_check');
+	});
+
+	Route::group(['prefix' => 'settings'], function() {
+		Route::get('', 'SettingsController@index')->middleware('logout_check');
 	});
 
 	Route::get('logout', 'ProfileController@logout');

@@ -41,7 +41,9 @@
             </div>
         @endif
 
-        @yield('main')
+        <div class="content">
+            @yield('main') 
+        </div>
         
         <div class="row almost-black-bg">
             @include('partials.footer')            

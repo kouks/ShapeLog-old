@@ -16,7 +16,7 @@ class ProfileController extends Controller
      */
     public function index()
     { 
-      return \View::make('profile', [
+        return \View::make('profile', [
             'title'         => 'Profile',
             'user'          => \App\User::where(['fbid' => $_SESSION["fbid"]])->first(),
         ]);  

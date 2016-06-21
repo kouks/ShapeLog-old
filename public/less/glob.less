@@ -572,16 +572,16 @@ hr {
 /* 7.1 - Print */
 
 @media print {
-	.menu {
-		display: none;
-	}
-	.footer {
+	.menu, .footer, .header, .top-bar, .record-form {
 		display: none;
 	}
 	.content {
-		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
+	}
+	.record {
+   		page-break-after: always;
+   		page-break-inside: avoid;
 	}
 }
