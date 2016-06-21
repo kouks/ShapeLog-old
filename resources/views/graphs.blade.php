@@ -26,7 +26,7 @@
 	</div>
 	<div class="row white-bg">
 		<div class="col-12 area-2">
-        	<canvas id="canvas"></canvas>
+        	<canvas id="graph"></canvas>
         </div>
     </div>
 

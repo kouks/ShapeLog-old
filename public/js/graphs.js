@@ -76,7 +76,7 @@ function draw(data) {
         dataset.pointBorderWidth = 1;
     });
 
-    var ctx = document.getElementById("canvas").getContext("2d");
+    var ctx = document.getElementById("graph").getContext("2d");
     window.myLine = new Chart(ctx, config);
 }
 
