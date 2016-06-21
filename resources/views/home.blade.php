@@ -12,7 +12,7 @@
         </div>
         <div class="col-4 area-4 left">
             <h5 class="margin">About</h5>
-            <p class="justify big">Welcome to Shape Log. Our main goal is to help you with tracking important information of your gym progress to achieve the best results!</p>
+            <p class="justify big">Welcome to Shape Log. Our main goal is to help you with tracking important information on your gym progress to achieve the best results! All you have to do is to login using your Facebook account. Don't worry, it's completely safe.</p>
         </div>
         <div class="col-2">&nbsp;</div>
     </div>
