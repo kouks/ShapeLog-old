@@ -1,16 +1,16 @@
-<div class="col-2 menu theme-bg">
+<div class="col-1 menu theme-bg">
 	<div class="row">
 	    <img src="//graph.facebook.com/{{ $user->fbid }}/picture?width=200&height=200">
-	    <h4 class="center light-grey-text">{{ $user->first_name }}</h4>
+	    <h5 class="center light-grey-text">{{ $user->first_name }}</h5>
 	</div>
 
 	<div class="row">
 	    <nav>
-	        <a href="/profile/"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-	        <a href="/profile/graphs"><i class="fa fa-area-chart" aria-hidden="true"></i> Graphs</a>
-	        <a href="/profile/tags"><i class="fa fa-tags" aria-hidden="true"></i> Custom Tags</a>
-	        <a href="/profile/settings"><i class="fa fa-cog" aria-hidden="true"></i> Settings</a>
-	        <a href="/profile/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+	        <a title="Home" href="/profile/"><i class="fa fa-home" aria-hidden="true"></i></a>
+	        <a title="Graphs" href="/profile/graphs"><i class="fa fa-area-chart" aria-hidden="true"></i></a>
+	        <a title="Custom tags" href="/profile/tags"><i class="fa fa-tags" aria-hidden="true"></i></a>
+	        <a title="Settings" href="/profile/settings"><i class="fa fa-cog" aria-hidden="true"></i></a>
+	        <a title="Logout" href="/profile/logout"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
 	    </nav>
 	</div>
 </div>

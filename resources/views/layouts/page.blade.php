@@ -6,9 +6,9 @@
     <body id="master">
 
         <div class="row almost-white-bg full-height">
-            <div class="col-2">&nbsp;</div>
+            <div class="col-1">&nbsp;</div>
 
-            <div class="col-10 content">
+            <div class="col-11 content">
                 @if(null !== Session::get('message'))
                     <div class="col-12 area-2 message">
                         <div class="area-2 theme-bg light-grey-text big bold">
