@@ -309,34 +309,44 @@ p {
 	border: 1px solid;
 	border-color: #e5e6e9 #dfe0e4 #d0d1d5;
 
-	.toggle-photo {
-		cursor: pointer;
+	.title {
+		padding: 10px;
+		background: #eee;
+		font-weight: bold;
+		text-align: center;
+		text-transform: uppercase;
+		font-family: 'Proxima Nova';
 	}
 
-	.pseudo-table {
-		display: block;
-		overflow: hidden;
-
-		p {
-			padding: 10px;
-			width: 50%;
-			box-sizing: border-box;
-			float: left;
+	.row {
+		width: 100%; 
+		
+		&:nth-child(odd) {
 			background: #fff;
-			font-family: 'Proxima Nova';
 		}
-
-		p:nth-child(even) {
-			text-align: right;
-		}
-
-		p:nth-child(4n-1), p:nth-child(4n) {
+		&:nth-child(even) {
 			background: #fafafa;
 		}
 
-		p:nth-child(odd) {
-			text-transform: uppercase;
+		span {
+			padding: 10px;
+			font-family: 'Proxima Nova';
+			width: 50%;
+			display: block;
+			float: left;
+			box-sizing: border-box;
+
+			&:nth-child(odd) {
+				text-transform: uppercase;
+			}
+			&:nth-child(even) {
+				text-align: right;
+			}
 		}
+	}
+
+	.toggle-photo {
+		cursor: pointer;
 	}
 
 	.delete {
@@ -349,16 +359,19 @@ p {
 			color: #333;
 		}
 	}
+
+	input.edit {
+		background: transparent;
+		width: 50%;
+		text-align: right;
+		padding: 10px;
+		box-sizing: border-box;
+		display: none;
+
+	}
+
 }
 
-.title {
-	padding: 10px;
-	background: #eee;
-	font-weight: bold;
-	text-align: center;
-	text-transform: uppercase;
-	font-family: 'Proxima Nova';
-}
 
 /* 3.3 - Flash message */
 .message {
@@ -554,6 +567,15 @@ p {
 
 	td, th {
 		padding: 7px;
+
+		&.delete {
+			width: 30px;
+			cursor: pointer;
+
+			&:hover {
+				color: @theme;
+			}
+		}
 	}
 
 	th {
@@ -563,15 +585,6 @@ p {
 
 	tr:nth-child(odd) {
 		background: white;
-	}
-
-	td.delete {
-		width: 30px;
-		cursor: pointer;
-
-		&:hover {
-			color: @theme;
-		}
 	}
 }
 

@@ -8,20 +8,24 @@
 
 			<p class="title">basic info</p>
 
-			<div class="pseudo-table">
-				<p>height</p>
-				<p><input type="text" name="height" /></p>
-				<p>weight</p>
-				<p><input type="text" name="weight" /></p>
-			</div>
+			<p class="row">
+				<span>height</span>
+				<span><input type="text" name="height" /></span>
+			</p>
+			<p class="row">
+				<span>weight</span>
+				<span><input type="text" name="weight" /></span>
+			</p>
 
 			<p class="title">energy</p>
 
-			<div class="pseudo-table">
-				<p>caloric intake</p>
-				<p><input type="text" name="kcal" /></p>
-				<p>exercise</p>
-				<p>
+			<p class="row">
+				<span>calorie intake</span>
+				<span><input type="text" name="kcal" /></span>
+			</p>
+			<p class="row">
+				<span>exercise</span>
+				<span>
 					<select name="cal_level">
 						<option value="1.2">None</option>
 						<option value="1.375">1-3 times/week</option>
@@ -29,25 +33,26 @@
 						<option value="1.725">6-7 times/week</option>
 						<option value="1.9">Full time athlete</option>
 					</select>
-
-				</p>
-			</div>
+				</span>
+			</p>
 
 			<a href="/profile/tags"><p class="title">Custom Tags</p></a>
 
 			<div class="pseudo-table">
 				@foreach($user->tags as $tag)
-					<p>{{ $tag->name }}</p>
-					<p><input type="text" name="data[{{ $tag->name }}]" /></p>
+					<p class="row">
+						<span>{{ $tag->name }}</span>
+						<span><input type="text" name="data[{{ $tag->name }}]" /></span>
+					</p>
 				@endforeach
 			</div>
 
 			<p data-img="" class="title toggle-photo">photo (optional)</p>
 
-			<div class="pseudo-table">
-				<p>choose</p>
-				<p><input type="file" name="img" /></p>
-			</div>
+			<p class="row">
+				<span>choose</span>
+				<span><input type="file" name="img" /></span>
+			</p>
 
 			<button>ADD</button>
 		</form>

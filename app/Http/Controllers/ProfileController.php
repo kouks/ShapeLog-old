@@ -71,6 +71,27 @@ class ProfileController extends Controller
     }
 
     /**
+     * Handles editing of a record
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Request $request)
+    {
+        if(in_array($request->cat, [ 'kcal', 'height', 'weight']))
+        {
+            \App\Record::where("id", $request->id)->update([$request->cat => $request->value]);
+        }
+        else
+        {
+            $data = unserialize(\App\Record::where("id", $request->id)->first()->data);
+            $data[$request->cat] = $request->value;
+            \App\Record::where("id", $request->id)->update(['data' => serialize($data)]);
+        }
+
+        return null;
+    }
+
+    /**
      * Handles the logout action
      *
      * @return \Illuminate\Http\Response

@@ -1,0 +1,49 @@
+
+$(document).ready(function() {
+
+    $(".toggle-photo").click(function() {
+        $("#" + $(this).data("id")).toggle();
+        $('.grid').masonry('reloadItems');
+    })
+
+    $(".row span").click(function() {
+    	var cat = $(this).data("cat");
+    	
+    	if(cat !== undefined) {
+    		$(this).hide().next().show().focus().attr('placeholder', 'Enter a new value');
+    	}
+    });
+
+
+    $('.edit').blur(function() {
+    	$(this).hide().prev().show();
+    });
+
+    $(window).keyup(function(e) {
+    	if(e.keyCode == 13 && $(e.target).is(".edit")) {
+    		console.log($(e.target).val());
+		    $.ajax({
+		    	url: '/profile/edit',
+		    	method: 'post',
+		    	data: { 
+		    		id: $(e.target).prev().data("id"), 
+		    		cat: $(e.target).prev().data("cat"), 
+		    		value: $(e.target).val(),
+		    		_token: $("input[name='_token']").val()
+		    	}
+		    }).done(function(data) {
+
+		    	if(data === '403')
+		    		return false;
+
+		    	var el = $(e.target).hide().prev();
+		    	var arr = $(el).text().split(" ");
+		    	arr.shift();
+		    	arr.unshift($(e.target).val());
+		    	$(el).show().text(arr.join(" "));
+		    	
+	    	});
+    	}
+    });
+
+});
