@@ -1,7 +1,7 @@
 <div class="row-90 footer">
     <div class="col-4 area-2">
     	<span class="grey-text">
-    		Version 0.6 beta | <a href="/changelog.md">Changelog</a>
+    		Version 0.7 beta | <a href="/changelog.md">Changelog</a>
     	</span>
     	<span class="grey-text">
     		Created by <a href="http://sleanded.com">Sleanded Codes</a> &copy; | 2016

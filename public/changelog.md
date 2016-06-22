@@ -35,3 +35,11 @@ Version 0.6
 ----------------
 * Added custom tags system
 * Improved Graphics
+
+Version 0.7
+----------------
+* Added editing of records
+* Print optimalization
+* Codecleaning
+* Various bugfixes
+* Typography changes
