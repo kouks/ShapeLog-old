@@ -27,6 +27,12 @@ class HomeController extends Controller
          */
         $loginUrl = $fb->getRedirectLoginHelper()->getLoginUrl('http://' . $_SERVER["SERVER_NAME"] . '/login');
 
+        /*
+         * Temporary bugfix
+         */
+        if(isset($_SESSION["fbid"]) && !\App\User::where([ 'fbid' => $_SESSION['fbid'] ])->count())
+            unset($_COOKIE["laravel_session"]);
+        
         return \View::make('home', [
             'title' => 'Home',
             'loginUrl' => $loginUrl,
