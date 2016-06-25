@@ -7,6 +7,7 @@
         <div class="col-3">&nbsp;</div>
         <div class="col-3 area-4 right">
             <p class="right">
+                <img src="img/pic300.png">
             </p>
         </div>
         <div class="col-4 area-4 left">
@@ -24,6 +25,7 @@
         </div>
         <div class="col-3 area-4 left">
             <p class="left">
+                <img src="img/graf300.png">
             </p>
         </div>
         <div class="col-3">&nbsp;</div>
