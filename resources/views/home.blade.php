@@ -21,7 +21,7 @@
         <div class="col-2">&nbsp;</div>
         <div class="col-4 area-4 right">
             <h5 class="margin">Features</h5>
-            <p class="justify big">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi assumenda quibusdam sapiente, iste dolore necessitatibus saepe quae odit nam esse libero eum autem impedit temporibus! Hic nihil nesciunt ullam maxime fugit dignissimos adipisci aut ut ipsam vitae dolorem, unde labore eaque quia, dolores aliquid consequatur modi odit exercitationem delectus ratione.</p>
+            <p class="justify big">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi assumenda quibusdam sapiente, iste dolore necessitatibus saepe quae odit nam esse libero eum autem impedit temporibus! Hic nihil nesciunt ullam maxime fugit dignissimos adipisci aut ut ipsam vitae dolorem.</p>
         </div>
         <div class="col-3 area-4 left">
             <p class="left">
@@ -39,7 +39,7 @@
             </p>
         </div>
         <div class="col-4 area-4 left">
-            <p class="justify big">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi assumenda quibusdam sapiente, iste dolore necessitatibus saepe quae odit nam esse libero eum autem impedit temporibus! Hic nihil nesciunt ullam maxime fugit dignissimos adipisci aut ut ipsam vitae dolorem, unde labore eaque quia, dolores aliquid consequatur modi odit exercitationem delectus ratione.</p>
+            <p class="justify big">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi assumenda quibusdam sapiente, iste dolore necessitatibus saepe quae odit nam esse libero eum autem impedit temporibus! Hic nihil nesciunt ullam maxime fugit dignissimos adipisci aut ut ipsam vitae dolorem.</p>
         </div>
         <div class="col-2">&nbsp;</div>
     </div>
