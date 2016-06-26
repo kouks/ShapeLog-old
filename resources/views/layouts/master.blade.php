@@ -21,7 +21,7 @@
         	</div>
             
             <div class="col-12 area-4 center">
-                <h2 class="light-grey-text">The perfect tool for monitoring your gym progress</h2>
+                <h2 class="light-grey-text">{{ trans('master.motto') }}</h2>
             </div>
 
             @if(!isset($_SESSION["fbid"]))

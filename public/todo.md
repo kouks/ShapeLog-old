@@ -6,7 +6,8 @@ TODO List
 	- setupcheck middleware
 	- username
 	- user bday
-	- system
+	- m/i system
+	- locale
 * Nastavení
 * Udělat něco s footerem
 * Community - nezávislé na profilu

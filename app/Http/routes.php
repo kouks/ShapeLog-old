@@ -10,7 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-//->middleware('logout_check')
+
 Route::get('', "HomeController@index");
 Route::get('login', "HomeController@login");
 
@@ -40,4 +40,8 @@ Route::group(['prefix' => 'profile'], function() {
 	});
 
 	Route::get('logout', 'ProfileController@logout');
+});
+
+Route::get('setlocale/{locale}', function($locale) {
+	App::setLocale($locale);
 });
