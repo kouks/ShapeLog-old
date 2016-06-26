@@ -21,7 +21,7 @@
 						<td class="bold">{{ $tag->name }}</td>
 						<td>{{ $tag->unit }}</td>
 						<td class="center verify delete">
-							<a href="/profile/tags/delete/{{ $tag->id }}"><i class="fa fa-times" aria-hidden="pue"></i></a>
+							<a href="/profile/tags/delete/{{ $tag->id }}"><i class="fa fa-times" aria-hidden="true"></i></a>
 						</td>
 					</tr>
 				@endforeach	
@@ -35,8 +35,8 @@
 						<td>
 							<input name="unit" placeholder="Enter unit" type="text">
 						</td>
-						<td>
-							<button>Add</button>
+						<td class="center">
+							<button><i class="fa fa-plus" aria-hidden="true"></i></button>
 						</td>
 					</form>
 				</tr>

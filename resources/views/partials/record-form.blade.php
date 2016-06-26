@@ -58,6 +58,6 @@
 			<button>ADD</button>
 		</form>
 
-		<i class="fa fa-times close" aria-hidden="pue"></i>
+		<i class="fa fa-times close" aria-hidden="true"></i>
 	</div>
 </div>

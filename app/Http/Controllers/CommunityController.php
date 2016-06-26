@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class SettingsController extends Controller
-{
+class CommunityController extends Controller
+{  
     /**
      * Display a listing of the resource.
      *
@@ -15,8 +15,8 @@ class SettingsController extends Controller
      */
     public function index()
     { 
-      	return \View::make('settings', [
-            'title'         => 'Settings',
+      	return \View::make('community', [
+            'title'         => 'Community',
             'user'          => \App\User::where(['fbid' => $_SESSION["fbid"]])->first(),
         ]);  
     }

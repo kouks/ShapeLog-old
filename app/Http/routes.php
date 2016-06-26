@@ -33,5 +33,9 @@ Route::group(['prefix' => 'profile'], function() {
 		Route::get('', 'SettingsController@index')->middleware('logout_check');
 	});
 
+	Route::group(['prefix' => 'community'], function() {
+		Route::get('', 'CommunityController@index')->middleware('logout_check');
+	});
+
 	Route::get('logout', 'ProfileController@logout');
 });

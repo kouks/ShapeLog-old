@@ -27,7 +27,7 @@
 		{!! csrf_field() !!}
 
 		<h4 class="theme-bg center light-grey-text area-2">
-			<i class="fa fa-calendar" aria-hidden="pue"></i>
+			<i class="fa fa-calendar" aria-hidden="true"></i>
 			{{ date('j. n. Y', strtotime($record->created_at)) }}
 		</h4>
 
@@ -89,6 +89,6 @@
 			<img style="display: none" id="{{ $record->id }}" src="/uploads/{{ $record->img }}" alt="Fotka Formy {{ $record->created_at }}">
 		@endif
 		
-		<i class="fa fa-times close" aria-hidden="pue"></i>
+		<i class="fa fa-times close" aria-hidden="true"></i>
 	</div>
 </div>

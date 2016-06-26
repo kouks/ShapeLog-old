@@ -9,8 +9,8 @@
 	        <a title="Home" href="/profile/"><i class="fa fa-home" aria-hidden="true"></i></a>
 	        <a title="Graphs" href="/profile/graphs"><i class="fa fa-area-chart" aria-hidden="true"></i></a>
 	        <a title="Custom tags" href="/profile/tags"><i class="fa fa-tags" aria-hidden="true"></i></a>
-	        <a title="Community" href="#"><i class="fa fa-users" aria-hidden="true"></i></a>
-	        <a title="Settings" href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>
+	        <a title="Community" href="/profile/community"><i class="fa fa-users" aria-hidden="true"></i></a>
+	        <a title="Settings" href="/profile/settings"><i class="fa fa-cog" aria-hidden="true"></i></a>
 	        <a title="Logout" href="/profile/logout"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
 	    </nav>
 	</div>
