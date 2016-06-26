@@ -46,8 +46,8 @@ $(document).ready(function() {
     	}
     });
 
-    $(".close, .page-shadow").click(function(e) {
-        if($(e.target).is("span") || $(e.target).is("p"))
+    $(window).click(function(e) {
+        if(!$(e.target).is(".page-shadow") && !$(e.target).is(".close"))
             return;
 
     	$(".page-shadow").fadeOut();
