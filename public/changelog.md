@@ -43,3 +43,9 @@ Version 0.7
 * Codecleaning
 * Various bugfixes
 * Typography changes
+
+Version 0.8
+----------------
+* Logo
+* Index page "remake"
+* Profile inded remake

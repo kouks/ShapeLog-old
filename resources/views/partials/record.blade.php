@@ -20,8 +20,9 @@
         round(655.1 + 9.563*$record->weight + 1.850*$record->height - 4.676*$age);
 
 ?>
-<div class="col-6 area-4 grid-item">
-	<div class="record">
+
+<div class="page-shadow">
+	<div class="record" id="record-{{ $record->id }}">
 		
 		{!! csrf_field() !!}
 
@@ -88,6 +89,6 @@
 			<img style="display: none" id="{{ $record->id }}" src="/uploads/{{ $record->img }}" alt="Fotka Formy {{ $record->created_at }}">
 		@endif
 		
-		<a href="/profile/delete/{{ $record->id }}" class="verify delete big light-grey-text"><i class="fa fa-times" aria-hidden="pue"></i></a>
+		<i class="fa fa-times close" aria-hidden="pue"></i>
 	</div>
 </div>

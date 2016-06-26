@@ -7,10 +7,11 @@
 
         @if(isset($_SESSION["fbid"]))
             <nav class="row top-bar">
-                <a href="/profile" class="img"><img src="//graph.facebook.com/{{ $user->fbid }}/picture?width=80&height=80"></a>
+                <a href="/profile" class="profile-pic"><img src="//graph.facebook.com/{{ $user->fbid }}/picture?width=80&height=80"></a>
                 <a href="/profile" class="bold">Logged in as {{ $user->first_name }}</a>
                 <a href="/profile">Go to profile</a>
                 <a href="/profile/logout">Logout</a>
+                <a href="/" class="logo"><img src="/img/graph.png" alt=""></a>
             </nav>
         @endif
 

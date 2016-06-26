@@ -303,11 +303,23 @@ p {
 	min-height: 100%;
 }
 
+.page-shadow {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+	z-index: 20;
+	display: none;
+	overflow: auto;
+}
+
 /* 3.2 - Record */
 .record {
-	position: relative;
-	border: 1px solid;
-	border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+	position: absolute;
+	width: 40%;
+	margin: 5% 30%;
 
 	.title {
 		padding: 10px;
@@ -349,11 +361,13 @@ p {
 		cursor: pointer;
 	}
 
-	.delete {
+	.close {
 		position: absolute;
 		top: 15px;
 		right: 10px;
 		cursor: pointer;
+		color: #eee;
+		.animate();
 
 		&:hover {
 			color: #333;
@@ -372,6 +386,41 @@ p {
 
 }
 
+.record-thumbnail {
+	.shadow();
+	.animate();
+	cursor: pointer;
+	position: relative;
+
+	&:hover {
+		.shadow(0.7);
+		color: white;
+	}
+
+	.delete {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		cursor: pointer;
+		.animate();
+
+		&:hover {
+			color: #aaa;
+		}
+	}
+
+}
+
+.new-record {
+	display: block;
+	cursor: pointer;
+	color: #ddd;
+	.animate();
+
+	&:hover {
+		color: #d0d0d0;
+	}
+}
 
 /* 3.3 - Flash message */
 .message {
@@ -406,10 +455,15 @@ p {
 	top: 0;
 	height: 100%;
 
-	img {
+	img.profile-pic {
 		width: 80%;
 		padding: 10%;
 		border-radius: 50%;
+	}
+
+	.logo {
+		position: absolute;
+		bottom: 0;
 	}
 
 	nav {
@@ -445,21 +499,28 @@ p {
 		line-height: 20px;
 		.animate();
 		
-		&.img {
+		&.profile-pic {
 			padding: 0;
+
+			img {
+				height: 60px;
+				width: 60px;
+				padding: 10px;
+				border-radius: 50%;
+			}
 		}
 
 		&:hover {
 			color: @theme;
 		}
-	}
 
-	img {
-		height: 60px;
-		width: 60px;
-		padding: 10px;
-		border-radius: 50%;
-	}
+		&.logo {
+			height: 60px;
+			width: 60px;
+			padding: 10px;
+			float: right;
+		}
+	}	
 }
 
 .header {
@@ -513,30 +574,6 @@ p {
 		color: #eee;
 		font-weight: bold;
 		cursor: pointer;
-	}
-
-	.add {
-		position: absolute;
-		top: -1%; left: -1%;
-		width: 102%;
-		height: 102%;
-
-		div {
-			width: 94%;
-			height: 94%;
-			margin: 3%;
-			border: 5px dashed #ddd;
-			box-sizing: border-box;
-			border-radius: 20px;
-			cursor: pointer;
-			background: url("../img/icons/add.png") center center no-repeat;
-			.animate();
-
-			&:hover {
-				border: 5px dashed #d0d0d0;
-				background-image: url("../img/icons/add-hover.png");
-			}
-		}
 	}
 }
 
@@ -596,7 +633,7 @@ p {
 /* 7.1 - Print */
 
 @media print {
-	.menu, .footer, .header, .top-bar, .record-form {
+	.menu, .footer, .header, .top-bar, .record-form, .new-record {
 		display: none;
 	}
 	.content {

@@ -1,4 +1,5 @@
-<div class="col-6 area-4 grid-item">
+
+<div class="page-shadow">
 	<div class="record-form record">
 		<form method="post" action="/profile/add" enctype="multipart/form-data">
 			<input type="hidden" name="user" value="{{ $user->id }}" />
@@ -57,6 +58,6 @@
 			<button>ADD</button>
 		</form>
 
-		<div class="add almost-white-bg"><div></div></div>
+		<i class="fa fa-times close" aria-hidden="pue"></i>
 	</div>
 </div>

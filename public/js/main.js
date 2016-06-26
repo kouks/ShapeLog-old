@@ -21,6 +21,5 @@ $(document).ready(function() {
     $('.add div').click(function() {
     	$(this).parent().hide();
     });
-
 	
 });

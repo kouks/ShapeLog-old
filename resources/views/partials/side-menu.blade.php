@@ -1,6 +1,6 @@
 <div class="col-1 menu theme-bg">
 	<div class="row">
-	    <img src="//graph.facebook.com/{{ $user->fbid }}/picture?width=200&height=200">
+	    <img class="profile-pic" src="//graph.facebook.com/{{ $user->fbid }}/picture?width=200&height=200">
 	    <h5 class="center light-grey-text">{{ $user->first_name }}</h5>
 	</div>
 
@@ -13,4 +13,9 @@
 	        <a title="Logout" href="/profile/logout"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
 	    </nav>
 	</div>
+
+	<div class="row logo">
+	    <a href="/"><img src="/img/graph.png"></a>
+	</div>
 </div>
+

@@ -46,4 +46,18 @@ $(document).ready(function() {
     	}
     });
 
+    $(".close, .page-shadow").click(function(e) {
+        if($(e.target).is("span") || $(e.target).is("p"))
+            return;
+
+    	$(".page-shadow").fadeOut();
+    });
+
+    $(".record-thumbnail").click(function() {
+    	$("#record-" + $(this).data("id")).parent().fadeIn();
+    });
+
+    $(".new-record").click(function() {
+    	$(".record-form").parent().fadeIn();
+    });
 });
