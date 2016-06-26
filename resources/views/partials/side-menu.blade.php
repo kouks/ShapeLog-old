@@ -16,7 +16,7 @@
 	</div>
 
 	<div class="row logo">
-	    <a href="/"><img src="/img/"></a>
+	    <a href="/"><img src="/img/logo-white-300.png"></a>
 	</div>
 </div>
 
