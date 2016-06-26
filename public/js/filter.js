@@ -4,8 +4,18 @@ $(document).ready(function() {
 	$(".community-filter").keyup(function() {
 		var pattern = $(this).val();
 
+		$(".results *").each(function() {
+			$(this).remove();
+		});
+
 		if(pattern.length < 3)
 			return;
+
+		$(".results").append(
+			'<h5 class="center grey-text area-2">' +
+				'<i class="fa fa-spinner fa-spin" aria-hidden="true"></i>' +
+			'</h5>'
+		);
 
 		$.ajax({
 			url: '/profile/community/filter',
