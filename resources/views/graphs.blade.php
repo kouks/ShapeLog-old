@@ -9,7 +9,7 @@
 	</div>
 	<div class="row white-bg">
 		<div class="col-12 area-2">
-			<p class="center big grey-text">It is always motivating to see your body fat go down. Simply select what data you want to graph.</p>
+			<p class="center big grey-text serif">It is always motivating to see your body fat go down. Simply select what data you want to graph.</p>
 		</div>
 	</div>
 	<div class="row almost-white-bg">

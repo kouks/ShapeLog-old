@@ -9,7 +9,7 @@
 	</div>
 	<div class="row white-bg">
 		<div class="col-12 area-2">
-			<p class="center big grey-text">Meet up with your friends and check their progress, too.</p>
+			<p class="center big grey-text serif">Meet up with your friends and check their progress, too.</p>
 		</div>
 	</div>
 

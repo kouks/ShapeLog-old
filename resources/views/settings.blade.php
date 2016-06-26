@@ -9,7 +9,7 @@
 	</div>
 	<div class="row white-bg">
 		<div class="col-12 area-2">
-			<p class="center big grey-text">Manage your account. Coming soon.</p>
+			<p class="center big grey-text serif">Manage your account. Coming soon.</p>
 		</div>
 	</div>
 	
