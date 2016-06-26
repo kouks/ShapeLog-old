@@ -25,7 +25,7 @@
         </div>
         <div class="col-3 area-4 left">
             <p class="left">
-                <img src="img/graf300.png">
+                <img src="img/graf03.png">
             </p>
         </div>
         <div class="col-3">&nbsp;</div>
@@ -35,7 +35,7 @@
         <div class="col-3">&nbsp;</div>
         <div class="col-3 area-4 right">
             <p class="right">
-                <img src="http://placehold.it/150x150">
+                <img src="img/medal.png">
             </p>
         </div>
         <div class="col-4 area-4 left">
