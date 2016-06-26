@@ -381,16 +381,16 @@ p {
 		padding: 10px;
 		box-sizing: border-box;
 		display: none;
-
 	}
-
 }
 
 .record-thumbnail {
-	.shadow();
-	.animate();
 	cursor: pointer;
 	position: relative;
+	overflow: hidden;
+	border-radius: 3px;
+	.shadow();
+	.animate();
 
 	&:hover {
 		.shadow(0.7);
@@ -550,6 +550,34 @@ p {
 #graph {
 	width: 100% !important;
 }
+
+/* 4.5 - Community */
+.member {
+	border-radius: 3px;
+	cursor: pointer;
+	background: #f7f7f7;
+	overflow: hidden;
+	.animate();
+
+	span {
+		line-height: 20px;
+		padding: 20px;
+		font-size: 20px;
+		display: block;
+		float: left;
+	}
+
+	img {
+		width: 60px;
+		height: 60px;
+		float: left;
+	}
+
+	&:hover {
+		background: #f2f2f2;
+	}
+}
+
 /*
  * 5 - Inputs 
  */ 
@@ -592,6 +620,24 @@ p {
 		&:hover {
 			color: @theme;
 		}
+	}
+}
+
+/* 5.3 - Community filter */
+.community-filter {
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	background: transparent;
+	.animate();
+
+	&:hover {
+		background: white;
+	}
+
+	&:focus {
+		background: white;
+		.shadow(.1);
 	}
 }
 

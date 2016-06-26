@@ -26,17 +26,17 @@ Version 0.4 beta
 * Profile bar
 * Graphs (only page)
 
-Version 0.5
+Version 0.5 beta
 ----------------
 * Simple graphs
 * Improved Graphics
 
-Version 0.6
+Version 0.6 beta
 ----------------
 * Added custom tags system
 * Improved Graphics
 
-Version 0.7
+Version 0.7 beta
 ----------------
 * Added editing of records
 * Print optimalization
@@ -44,8 +44,12 @@ Version 0.7
 * Various bugfixes
 * Typography changes
 
-Version 0.8
+Version 0.8 beta
 ----------------
 * Logo
 * Index page "remake"
-* Profile inded remake
+* Profile index remake
+
+Version 0.9 beta
+----------------
+* Community newest/filter

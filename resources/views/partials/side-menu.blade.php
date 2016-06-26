@@ -16,7 +16,7 @@
 	</div>
 
 	<div class="row logo">
-	    <a href="/"><img src="/img/graph.png"></a>
+	    <a href="/"><img src="/img/"></a>
 	</div>
 </div>
 

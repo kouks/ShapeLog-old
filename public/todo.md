@@ -2,4 +2,4 @@ TODO List
 ==========
 * Nastavení
 * Udělat něco s footerem
-* Community
+* Community - nezávislé na profilu

@@ -16,5 +16,6 @@
     <script type="text/javascript" src="/js/graphs.js"></script>
     <script type="text/javascript" src="/js/tags.js"></script>
     <script type="text/javascript" src="/js/records.js"></script>
+    <script type="text/javascript" src="/js/filter.js"></script>
     
 </head>

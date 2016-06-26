@@ -11,7 +11,7 @@
                 <a href="/profile" class="bold">Logged in as {{ $user->first_name }}</a>
                 <a href="/profile">Go to profile</a>
                 <a href="/profile/logout">Logout</a>
-                <a href="/" class="logo"><img src="/img/graph.png" alt=""></a>
+                <a href="/" class="logo"><img src="/img/" alt=""></a>
             </nav>
         @endif
 
