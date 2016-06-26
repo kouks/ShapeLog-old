@@ -4,7 +4,7 @@
 
 	<div class="row almost-white-bg">
 		<div class="col-12 area-2">
-			<h1 class="center">Edit custom tags</h1>			
+			<h1 class="center">Community page</h1>			
 		</div>
 	</div>
 	<div class="row white-bg">
