@@ -36,13 +36,14 @@
 		@endforeach
 		
 	</div>
+	
+	<div>
+		@include('partials.record-form')
 
-	@include('partials.record-form')
-
-	@foreach($user->records as $record)
-		@include('partials.record')
-	@endforeach
-
+		@foreach($user->records as $record)
+			@include('partials.record')
+		@endforeach
+	</div>
 @stop
 
 <!--

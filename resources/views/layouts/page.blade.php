@@ -3,7 +3,7 @@
     
     @include('partials.head')
 
-    <body id="master">
+    <body id="page">
 
         <div class="row almost-white-bg full-height">
             <div class="col-1">&nbsp;</div>
