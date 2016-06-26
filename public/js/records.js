@@ -54,10 +54,10 @@ $(document).ready(function() {
     });
 
     $(".record-thumbnail").click(function() {
-    	$("#record-" + $(this).data("id")).parent().fadeIn();
+    	$("#record-" + $(this).data("id")).show().parent().fadeIn();
     });
 
     $(".new-record").click(function() {
-    	$(".record-form").parent().fadeIn();
+    	$(".record-form").show().parent().fadeIn();
     });
 });
