@@ -6,7 +6,7 @@ $(document).ready(function() {
         $('.grid').masonry('reloadItems');
     })
 
-    $(".row span").click(function() {
+    $(".editable .row span").click(function() {
     	var cat = $(this).data("cat");
     	
     	if(cat !== undefined) {
@@ -15,12 +15,12 @@ $(document).ready(function() {
     });
 
 
-    $('.edit').blur(function() {
+    $('.editable .edit').blur(function() {
     	$(this).hide().prev().show();
     });
 
     $(window).keyup(function(e) {
-    	if(e.keyCode == 13 && $(e.target).is(".edit")) {
+    	if(e.keyCode == 13 && $(e.target).is(".editable .edit")) {
     		console.log($(e.target).val());
 		    $.ajax({
 		    	url: '/profile/edit',

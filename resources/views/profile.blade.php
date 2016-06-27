@@ -37,7 +37,7 @@
 		
 	</div>
 	
-	<div>
+	<div class="editable">
 		@include('partials.record-form')
 
 		@foreach($user->records as $record)

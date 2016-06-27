@@ -22,54 +22,59 @@
 		
 		<div class="col-3">&nbsp;</div>	
 	</div>
-
-	<div class="row white-bg">
-		<h2 class="center area-4">Records</h2>
-	</div>
-	<div class="row almost-white-bg">
-		@foreach($detail->records as $record)
-			<div class="col-3 area-2">
-				<div data-id="{{ $record->id }}" class="theme-bg area-4 record-thumbnail">
-					<h2 class="center light-grey-text"><i class="fa fa-calendar" aria-hidden="true"></i></h2>
-					<h4 class="area-4 center light-grey-text">
-						{{ date('j. n. Y', strtotime($record->created_at)) }}
-					</h4>
-				</div>
-			</div>
-		@endforeach	
-	</div>
-
-	<div class="row white-bg">
-		<h2 class="center area-4">Data graphs</h2>
-	</div>
-	<div class="row almost-white-bg">
-		<div class="col-12 area-2">
-			<ul class="tag-list">
-				@foreach($data as $record)
-					@foreach($record["data"] as $cat=>$value)
-						<li data-selected="0" data-cat="{{ strtoupper($cat) }}">{{ strtoupper($cat) }}</li>	
-					@endforeach
-					<? break; ?>
-				@endforeach
-			</ul>
+	@if(count($detail->records->toArray()))
+		<div class="row white-bg">
+			<h2 class="center area-4">Records</h2>
 		</div>
-	</div>
-	<div class="row white-bg">
-		<div class="col-12 area-2">
-        	<canvas id="graph"></canvas>
-        </div>
-    </div>
+		<div class="row almost-white-bg">
+			@foreach($detail->records as $record)
+				<div class="col-3 area-2">
+					<div data-id="{{ $record->id }}" class="theme-bg area-4 record-thumbnail">
+						<h2 class="center light-grey-text"><i class="fa fa-calendar" aria-hidden="true"></i></h2>
+						<h4 class="area-4 center light-grey-text">
+							{{ date('j. n. Y', strtotime($record->created_at)) }}
+						</h4>
+					</div>
+				</div>
+			@endforeach	
+		</div>
 
-	<script>
-		var data = <?php echo json_encode($data); ?>;
+		<div class="row white-bg">
+			<h2 class="center area-4">Data graphs</h2>
+		</div>
+		<div class="row almost-white-bg">
+			<div class="col-12 area-2">
+				<ul class="tag-list">
+					@foreach($data as $record)
+						@foreach($record["data"] as $cat=>$value)
+							<li data-selected="0" data-cat="{{ strtoupper($cat) }}">{{ strtoupper($cat) }}</li>	
+						@endforeach
+						<? break; ?>
+					@endforeach
+				</ul>
+			</div>
+		</div>
+		<div class="row white-bg">
+			<div class="col-12 area-2">
+	        	<canvas id="graph"></canvas>
+	        </div>
+	    </div>
 
-		draw(data, []);
-	</script>
+		<script>
+			var data = <?php echo json_encode($data); ?>;
 
-	<div>
-		@foreach($detail->records as $record)
-			@include('partials.record')
-		@endforeach
-	</div>
+			draw(data, []);
+		</script>
+
+		<div>
+			@foreach($detail->records as $record)
+				@include('partials.record')
+			@endforeach
+		</div>
+	@else
+		<div class="row white-bg">
+			<h2 class="center area-4">This user has not added any records yet</h2>
+		</div>
+	@endif
 	
 @stop
