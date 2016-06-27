@@ -40,7 +40,7 @@ class CommunityController extends Controller
      */
     public function detail(Request $request)
     { 
-        $user = \App\User::where('username', $request->username)->first();
+        $user = \App\User::where('id', $request->id)->first();
 
         $data = [];
         foreach($user->records as $record)

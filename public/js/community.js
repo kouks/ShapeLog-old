@@ -44,7 +44,7 @@ $(document).ready(function() {
 	    	for(key in data) {
 	    		$(".results").append(
 	    			'<div class="col-3 area-2">' + 
-	    				'<a href="/profile/community/detail/' + data[key].username + '">' +
+	    				'<a href="/profile/community/detail/' + data[key].id + '/' + data[key].username + '">' +
 		    				'<div class="member">' +
 		    					'<img class="profile-pic" src="//graph.facebook.com/' + data[key].fbid + '/picture?width=300&height=300">' +
         						'<p>' + data[key].first_name + ' ' + data[key].last_name + '</p>' +
