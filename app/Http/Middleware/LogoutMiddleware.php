@@ -18,7 +18,7 @@ class LogoutMiddleware
         if(!\Session::get('uid'))
             return \Redirect::to('')->with('message', 'You are not logged in');
 
-        if(!$request->is('setup/save') && empty(\App\User::where('id', \Session::get('uid'))->first()->username))
+        if(!$request->is('setup/check-name') && !$request->is('setup/save') && empty(\App\User::where('id', \Session::get('uid'))->first()->username))
             return \Redirect::to('setup')->with('message', 'We still need to set up a few things...');
 
         return $next($request);

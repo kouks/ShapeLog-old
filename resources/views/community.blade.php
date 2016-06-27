@@ -15,7 +15,7 @@
 
 	<div class="row almost-white-bg">
 		<div class="col-12 area-2">
-			<input class="community-filter" type="text" placeholder="Look up people">
+			<input class="community-filter" type="text" placeholder="Search Shape Log community">
 			{!! csrf_field() !!}
 
 			<div class="results"></div>
