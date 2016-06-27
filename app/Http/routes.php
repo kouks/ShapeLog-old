@@ -14,29 +14,38 @@
 Route::get('', "HomeController@index");
 Route::get('login', "HomeController@login");
 
+Route::group(['prefix' => 'setup'], function() {
+	Route::get('', "SetupController@index")->middleware('setup');
+	Route::post('save', "SetupController@save")->middleware('logout');
+	Route::post('check-name', "SetupController@checkName")->middleware('logout');
+});
+
 Route::group(['prefix' => 'profile'], function() {
 	
-	Route::get('', 'ProfileController@index')->middleware('logout_check');
-	Route::post('add', 'ProfileController@add')->middleware('logout_check');
-	Route::post('edit', 'ProfileController@edit')->middleware('logout_check');
-	Route::get('delete/{id}', 'ProfileController@delete')->middleware('logout_check');
+	Route::get('', 'ProfileController@index')->middleware('logout');
+	Route::post('add', 'ProfileController@add')->middleware('logout');
+	Route::post('edit', 'ProfileController@edit')->middleware('logout');
+	Route::get('delete/{id}', 'ProfileController@delete')->middleware('logout');
 
-	Route::get('graphs', 'GraphsController@index')->middleware('logout_check');
+	Route::get('graphs', 'GraphsController@index')->middleware('logout');
 
 	Route::group(['prefix' => 'tags'], function() {
-		Route::get('', 'TagsController@index')->middleware('logout_check');
-		Route::post('add', 'TagsController@add')->middleware('logout_check');
-		Route::get('delete/{id}', 'TagsController@delete')->middleware('logout_check');
+		Route::get('', 'TagsController@index')->middleware('logout');
+		Route::post('add', 'TagsController@add')->middleware('logout');
+		Route::get('delete/{id}', 'TagsController@delete')->middleware('logout');
 	});
 
 	Route::group(['prefix' => 'settings'], function() {
-		Route::get('', 'SettingsController@index')->middleware('logout_check');
+		Route::get('', 'SettingsController@index')->middleware('logout');
+		Route::post('save', 'SettingsController@save')->middleware('logout');
 	});
 
 	Route::group(['prefix' => 'community'], function() {
-		Route::get('', 'CommunityController@index')->middleware('logout_check');
-		Route::get('detail/{id}', 'CommunityController@detail')->middleware('logout_check');
-		Route::post('filter', 'CommunityController@filter')->middleware('logout_check');
+		Route::get('', 'CommunityController@index')->middleware('logout');
+		Route::get('detail/{username}', 'CommunityController@detail')->middleware('logout');
+		Route::post('add-friend', 'CommunityController@addFriend')->middleware('logout');
+		Route::post('remove-friend', 'CommunityController@removeFriend')->middleware('logout');
+		Route::post('filter', 'CommunityController@filter')->middleware('logout');
 	});
 
 	Route::get('logout', 'ProfileController@logout');

@@ -9,8 +9,7 @@
      * Calculating his age
      */
     $time = strtotime($record->created_at);
-    $bday = strtotime($user->birthday);
-    $age = floor( ($time - $bday) / 86400 / 365.25 );
+    $age = floor( ($time - $user->birthday) / 86400 / 365.25 );
 
     /*
      * Calculating BMR

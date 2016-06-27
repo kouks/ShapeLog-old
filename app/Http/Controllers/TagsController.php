@@ -17,7 +17,7 @@ class TagsController extends Controller
     { 
         return \View::make('tags', [
             'title'         => 'Custom Tags',
-            'user'          => \App\User::where(['fbid' => $_SESSION["fbid"]])->first(),
+            'user'          => \App\User::where('id', \Session::get('uid'))->first(),
         ]);  
     }
 
@@ -42,7 +42,7 @@ class TagsController extends Controller
      */
     public function delete(Request $request)
     { 
-        \App\Tag::where(['id' => $request->id])->delete();
+        \App\Tag::where('id', $request->id)->delete();
         return \Redirect::to('/profile/tags')->with('message', 'Tag successfully deleted');
     }
 }

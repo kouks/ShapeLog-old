@@ -18,7 +18,7 @@ class ProfileController extends Controller
     { 
         return \View::make('profile', [
             'title'         => 'Profile',
-            'user'          => \App\User::where(['fbid' => $_SESSION["fbid"]])->first(),
+            'user'          => \App\User::where('id', \Session::get('uid'))->first(),
         ]);  
     }
 
@@ -65,7 +65,7 @@ class ProfileController extends Controller
      */
     public function delete(Request $request)
     {
-        \App\Record::where(['id' => $request->id])->delete();
+        \App\Record::where('id', $request->id)->delete();
         
         return \Redirect::to('profile')->with('message', 'Successfully deleted');
     }
@@ -98,8 +98,7 @@ class ProfileController extends Controller
      */
     public function logout()
     {
-        unset($_SESSION["fbid"]);
-        unset($_SESSION["facebook_access_token"]);
+        \Session::flush();
         
         return \Redirect::to('')->with('message', 'Successfully logged out');
     }

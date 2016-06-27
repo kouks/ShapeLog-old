@@ -34,7 +34,6 @@ $(document).ready(function() {
 			if(data === '403')
 				return false;
 
-			console.log(data);
 	    	/* if no users, say it */
 	    	if (data[0] === undefined) {
 	    		$(".results").append(
@@ -45,10 +44,11 @@ $(document).ready(function() {
 	    	for(key in data) {
 	    		$(".results").append(
 	    			'<div class="col-3 area-2">' + 
-	    				'<a href="/profile/community/detail/' + data[key].id + '">' +
+	    				'<a href="/profile/community/detail/' + data[key].username + '">' +
 		    				'<div class="member">' +
 		    					'<img class="profile-pic" src="//graph.facebook.com/' + data[key].fbid + '/picture?width=300&height=300">' +
-        						'<span>' + data[key].first_name + ' ' + data[key].last_name + '</span>' +
+        						'<p>' + data[key].first_name + ' ' + data[key].last_name + '</p>' +
+        						'<p>@' + data[key].username + '</p>' +
 		    				'</div>' +
 	    				'</a>' +
 	    			'</div>'
@@ -57,32 +57,43 @@ $(document).ready(function() {
 		});
 	});
 
+	$(".add-friend").click(function() {
+		var id = $(this).data('id');
+
+		$.ajax({
+			url: '/profile/community/add-friend',
+			method: 'post',
+			data: { 
+				id: id,
+				_token: $("input[name='_token']").val()
+			}
+		}).done(function(data) {
+
+			if(data === '403')
+				return false;
+
+			$(".friend").text("Added as friend!");
+
+		});
+	});
+
+	$(".remove-friend").click(function() {
+		var id = $(this).data('id');
+
+		$.ajax({
+			url: '/profile/community/remove-friend',
+			method: 'post',
+			data: { 
+				id: id,
+				_token: $("input[name='_token']").val()
+			}
+		}).done(function(data) {
+
+			if(data === '403')
+				return false;
+
+			$(".friend").text("Friendship removed");
+
+		});
+	});
 });
-
-/* building ajax request 
-$.ajax({
-	url: '/profile/tags/add',
-	method: 'post',
-	data: { 
-		user: $("input[name='user']").val(), 
-		name: $("input[name='name']").val().toUpperCase(),
-		unit: $("input[name='unit']").val(),
-		_token: $("input[name='_token']").val()
-	}
-}).done(function(data) {
-
-	if(data === '403')
-		return false;
-
-	$("#new-tag").parent().before(
-		'<tr>' + 
-			'<td class="bold">' + $('input[name="name"]').val().toUpperCase() + '</td>' +
-			'<td>' + $('input[name="unit"]').val() + '</td>' +
-			'<td></td>' +
-		'</tr>'
-	);
-
-	$("input[name='name']").val('');
-	$("input[name='unit']").val('');
-});
-*/

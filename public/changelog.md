@@ -53,3 +53,11 @@ Version 0.8 beta
 Version 0.9 beta
 ----------------
 * Community newest/filter
+
+Version 1.0
+----------------
+* Prelogin
+* Settings
+* Localisation
+* Adding friends
+* Community detail page

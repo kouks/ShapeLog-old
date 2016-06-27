@@ -24,6 +24,11 @@
 	<div class="row white-bg">
 		<div class="col-6 area-2">
 			<h3 class="center area-2">Friends</h3>
+			@foreach($friends as $member)
+				<div class="col-6 area-2">
+					@include('partials.member')
+				</div>
+			@endforeach
 		</div>
 		<div class="col-6 area-2">
 			<h3 class="center area-2">Newest</h3>

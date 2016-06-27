@@ -15,7 +15,7 @@ class GraphsController extends Controller
      */
     public function index()
     { 
-        $user = \App\User::where(['fbid' => $_SESSION["fbid"]])->first();
+        $user = \App\User::where('id', \Session::get('uid'))->first();
 
         $data = [];
         foreach($user->records as $record)
@@ -23,7 +23,7 @@ class GraphsController extends Controller
             $time = date('j. n. Y', strtotime($record->created_at));
             $data[] = [ 
                 'date' => $time,
-                'data' => array_merge( [ 'WEIGHT' => $record->weight, 'KCAL' => $record->kcal ], unserialize($record->data))
+                'data' => array_merge([ 'WEIGHT' => $record->weight, 'KCAL' => $record->kcal ], unserialize($record->data))
             ];
         }
 

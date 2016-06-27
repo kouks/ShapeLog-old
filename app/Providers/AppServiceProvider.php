@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
+use Illuminate\Http\Request;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -14,9 +16,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         \Eloquent::unguard();
-        
+
         return \View::share([
-            'name' => 'ShapeLog',
+            'name' => 'Shape Log',
         ]);
     }
 

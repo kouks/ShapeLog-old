@@ -17,4 +17,19 @@ class User extends Model
         return $this->hasMany("App\Tag");
     }
 
+    public function friends()
+    {
+        return $this->hasMany("App\Relationship");
+    }
+
+    public function hasFriend($id)
+    {
+        $friends = \App\Relationship::where('user_id', \Session::get('uid'))->get();
+        foreach($friends as $friend)
+        {
+            if($friend->friend_id == $id)
+                return true;
+        }
+        return false;
+    }
 }

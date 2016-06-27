@@ -30,13 +30,13 @@ class HomeController extends Controller
         /*
          * Temporary bugfix
          */
-        if(isset($_SESSION["fbid"]) && !\App\User::where([ 'fbid' => $_SESSION['fbid'] ])->count())
+        if(isset($_SESSION["fbid"]) && !\App\User::where('id', \Session::get('uid'))->count())
             unset($_COOKIE["laravel_session"]);
-        
+
         return \View::make('home', [
             'title' => 'Home',
             'loginUrl' => $loginUrl,
-            'user' => isset($_SESSION['fbid']) ? \App\User::where([ 'fbid' => $_SESSION['fbid'] ])->first() : null,
+            'user' => \App\User::where('id', \Session::get('uid'))->first(),
         ]);  
     }
 
@@ -84,17 +84,17 @@ class HomeController extends Controller
         /*
          * Saving on DB
          */
-        if(!\App\User::where(['fbid' => $user->id])->count())
+        if(!\App\User::where('fbid', $user->id)->count())
         {
             \App\User::create([
                 'fbid'          => $user->id,
                 'first_name'    => $user->first_name,
                 'last_name'     => $user->last_name,
-                'birthday'      => $user->birthday,
+                'birthday'      => isset($user->birthday) ? strtotime($user->birthday) : 0,
                 'gender'        => $user->gender,
             ]);
 
-            $uid = \App\User::where(['fbid' => $user->id])->first()->id;
+            $uid = \App\User::where('fbid', $user->id)->first()->id;
 
             \App\Tag::create([
                 'user_id'   => $uid,
@@ -110,26 +110,10 @@ class HomeController extends Controller
         }
 
         /*
-         * Storing the token
-         */
-        if (isset($accessToken))
-        {
-            $_SESSION['fbid'] = $user->id;
-            $_SESSION['facebook_access_token'] = (string) $accessToken;
-        }
+         * Storing the user id
+         */ 
+        \Session::put('uid', \App\User::where('fbid', $user->id)->first()->id);
 
-        return \Redirect::to('profile')->with('message', 'Login successful');
+        return \Redirect::to('setup')->with('message', 'Setup your account');
     }
 }
-
-
-/*
-
-LONG LIVED
-
-$oAuth2Client = $fb->getOAuth2Client();
-
-// Exchanges a short-lived access token for a long-lived one
-$longLivedAccessToken = $oAuth2Client->getLongLivedAccessToken('{access-token}');
-
-*/

@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class LogoutCheck
+class LocaleMiddleware
 {
     /**
      * Handle an incoming request.
@@ -14,10 +14,10 @@ class LogoutCheck
      * @return mixed
      */
     public function handle($request, Closure $next)
-    {        
-        if(!isset($_SESSION['facebook_access_token']))
-            return \Redirect::to('')->with('message', 'You are not logged in');;
-
+    {
+        if($locale = \Cookie::get('locale'))
+            \App::setLocale($locale);
+        
         return $next($request);
     }
 }
