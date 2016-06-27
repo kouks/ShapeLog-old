@@ -42,7 +42,7 @@ Route::group(['prefix' => 'profile'], function() {
 
 	Route::group(['prefix' => 'community'], function() {
 		Route::get('', 'CommunityController@index')->middleware('logout');
-		Route::get('detail/{id}/{?username}', 'CommunityController@detail')->middleware('logout');
+		Route::get('detail/{id}/{username?}', 'CommunityController@detail')->middleware('logout');
 		Route::post('add-friend', 'CommunityController@addFriend')->middleware('logout');
 		Route::post('remove-friend', 'CommunityController@removeFriend')->middleware('logout');
 		Route::post('filter', 'CommunityController@filter')->middleware('logout');

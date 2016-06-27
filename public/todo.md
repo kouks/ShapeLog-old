@@ -2,7 +2,7 @@ TODO List
 ==========
 * m/i system
 * locale
-* Nastavení
+* mazání jen svých údajů
+
 * Udělat něco s footerem
 * Community - nezávislé na profilu
-* mazání jen svých údajů

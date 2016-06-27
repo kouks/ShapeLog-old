@@ -20,7 +20,7 @@ class CommunityController extends Controller
         $friends = [];
         foreach($user->friends as $friend)
         {
-            $friends[] = $friend->id;
+            $friends[] = $friend->friend_id;
         }
 
         $friends = \App\User::whereIn('id', $friends)->get();
