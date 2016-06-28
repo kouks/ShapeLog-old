@@ -5,7 +5,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
     <link href="/css/glob.css" rel="stylesheet" type="text/css">
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/img/favicon.ico">
 
     <script type="text/javascript" src="/js/Chart.bundle.min.js"></script>
     <script type="text/javascript" src="/js/jquery.min.js"></script>
