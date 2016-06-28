@@ -9,17 +9,17 @@
      * Calculating his age
      */
     $time = strtotime($record->created_at);
-    $age = floor( ($time - $user->birthday) / 86400 / 365.25 );
+    $age = floor( ($time - $record->user->birthday) / 86400 / 365.25 );
 
     /*
      * Calculating BMR
      */
-    if($user->metric)
-    	$bmr = $user->gender == "male" ? 
+    if($record->user->metric)
+    	$bmr = $record->user->gender == "male" ? 
 	        round(66.5 + 13.75*$record->weight + 5.003*$record->height - 6.755*$age) :
 	        round(655.1 + 9.563*$record->weight + 1.850*$record->height - 4.676*$age);
 	else
-    	$bmr = $user->gender == "male" ? 
+    	$bmr = $record->user->gender == "male" ? 
 	        round(66 + 6.2*$record->weight + 12.7*$record->height - 6.76*$age) :
 	        round(655.1 + 4.35*$record->weight + 4.7*$record->height - 4.7*$age);
 
@@ -42,7 +42,7 @@
 			<span>{{ trans('page.height') }}</span>
 			<span data-id="{{ $record->id }}" data-cat="height">
 				{{ round($record->height, 1) }} 
-				{{ trans_choice('page.records.system.length', $user->metric) }}
+				{{ trans_choice('page.records.system.length', $record->user->metric) }}
 			</span>
 			<input type="text" class="edit" />
 		</p>
@@ -50,7 +50,7 @@
 			<span>{{ trans('page.weight') }}</span>
 			<span data-id="{{ $record->id }}" data-cat="weight">
 				{{ round($record->weight, 1) }} 
-				{{ trans_choice('page.records.system.weight', $user->metric) }}
+				{{ trans_choice('page.records.system.weight', $record->user->metric) }}
 			</span>
 			<input type="text" class="edit" />
 		</p>
@@ -80,7 +80,7 @@
 
 		<p class="title">{{ trans('page.tags') }}</p>
 
-		@foreach($user->tags as $tag)
+		@foreach($record->user->tags as $tag)
 			@if(@$data[$tag->name])
 				<p class="row">
 					<span>{{ $tag->name }}</span>
