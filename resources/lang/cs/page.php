@@ -34,6 +34,8 @@ return [
 	'records.added'			=> 'Záznam byl úspěšně přidán',
 	'records.deleted'		=> 'Záznam byl úspěšně smazán',
 	'records.doesnt_exist'	=> 'Tento záznam neexistuje',
+	'records.system.length'	=> '{0}palců|{1}cm',
+	'records.system.weight'	=> '{0}lb|{1}kg',
 
 	/*
 	 * Graphs

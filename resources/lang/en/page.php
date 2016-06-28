@@ -33,6 +33,8 @@ return [
 	'records.added'			=> 'Record has been successfully added',
 	'records.deleted'		=> 'Record has beed deleted',
 	'records.doesnt_exist'	=> 'This record does not exist',
+	'records.system.length'	=> '{0}inches"|{1}cm',
+	'records.system.weight'	=> '{0}lb|{1}kg',
 
 	/*
 	 * Graphs

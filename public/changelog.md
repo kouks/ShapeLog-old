@@ -68,3 +68,4 @@ Version 1.1
 * Secured deleting od tags and records
 * Exception handling
 * Various bugfixes
+* Systems of measurement
