@@ -59,13 +59,13 @@ return [
 	'community.heading'		=> 'Komunita Shape Logu',
 	'community.desc'		=> 'Najděte své přátele a podívejte se také na jejich progres.',
 	'community.search'		=> 'Hledat mezi lidmi',
-	'community.friend'		=> '{1}Přítel|{2,3,4}Prátelé|[5,Inf]Přátel',
+	'community.i_follow'	=> 'Sleduji',
 	'community.newest'		=> 'Nejnovější',
 	'community.not_found'	=> 'Uživatel nebyl nalezen',
 	'community.detail.follow'		=> 'Sledovat',
 	'community.detail.followed'		=> 'Sleduji',
 	'community.detail.unfollow'		=> 'Zrušit sledování',
-	'community.detail.unfollowed'	=> 'Sledování zrišeno',
+	'community.detail.unfollowed'	=> 'Sledování zrušeno',
 	'community.detail.no_records'	=> '{0}:name zatím nepřidala žádné záznamy|{1}:name zatím nepřidal žádné záznamy',
 
 	/*

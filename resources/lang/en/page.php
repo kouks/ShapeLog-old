@@ -58,7 +58,7 @@ return [
 	'community.heading'		=> 'Community page',
 	'community.desc'		=> 'Meet up with your friends and check their progress, too.',
 	'community.search'		=> 'Search Shape Log community',
-	'community.friend'		=> '{1}Friend|[2,Inf]Friends',
+	'community.i_follow'	=> 'I follow',
 	'community.newest'		=> 'Newest',
 	'community.not_found'	=> 'This user was not found',
 	'community.detail.follow'		=> 'Follow',

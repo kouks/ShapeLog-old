@@ -69,3 +69,4 @@ Version 1.1
 * Exception handling
 * Various bugfixes
 * Systems of measurement
+* Friends changes to followers
