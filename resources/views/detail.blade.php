@@ -88,7 +88,7 @@
 	@else
 		<div class="row white-bg">
 			<h2 class="center area-4">
-				{{ trans_choice('page.community.detail.no_records', $user->gender == 'male' ? 1 : 0, ['name' => $detail->first_name]) }}
+				{{ trans_choice('page.community.detail.no_records', $detail->gender == 'male' ? 1 : 0, ['name' => $detail->first_name]) }}
 			</h2>
 		</div>
 	@endif
