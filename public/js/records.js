@@ -53,8 +53,9 @@ $(document).ready(function() {
     	$(".page-shadow").fadeOut();
     });
 
-    $(".record-thumbnail").click(function() {
-    	$("#record-" + $(this).data("id")).show().parent().fadeIn();
+    $(".record-thumbnail").click(function(e) {
+        if(!$(e.target).parent().is(".delete"))
+    	   $("#record-" + $(this).data("id")).show().parent().fadeIn();
     });
 
     $(".new-record").click(function() {
