@@ -41,8 +41,8 @@
 
 				<label for="locale"><h6>{{ trans('page.settings.language') }}</h6></label>
 				<select name="locale" id="locale">
-					<option {{ Cookie::get('locale') == 'en' ? 'selected' : '' }} value="en">English</option>
-					<option {{ Cookie::get('locale') == 'cs' ? 'selected' : '' }} value="cs">Česky</option>
+					<option {{ $user->locale == 'en' ? 'selected' : '' }} value="en">English</option>
+					<option {{ $user->locale == 'cs' ? 'selected' : '' }} value="cs">Česky</option>
 				</select>
 
 				<button>Save</button>

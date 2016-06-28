@@ -15,9 +15,16 @@ class LocaleMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if($locale = \Cookie::get('locale'))
-            \App::setLocale($locale);
-        
+
+        /*
+         * This is the exact line between beautiful and gruesome code ^^
+         */
+        ($locale = @\App\User::where('id', \Session::get('uid'))->first()->locale) ||
+        ($locale = \Cookie::get('locale')) ||
+        ($locale = 'en');
+
+        \App::setLocale($locale);
+
         return $next($request);
     }
 }

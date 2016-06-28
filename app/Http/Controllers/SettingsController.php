@@ -31,9 +31,12 @@ class SettingsController extends Controller
         \App\User::where('id', \Session::get('uid'))->update([
             'birthday'      => strtotime($request->birthday),
             'metric'        => $request->metric,
+            'locale'        => $request->locale,
         ]);
 
         \Cookie::forever('locale', $request->locale);
+
+        \App::setLocale($request->locale);
 
         return \Redirect::to('profile/settings')->with('message', trans('page.settings.updated'))
                                        ->withCookie(\Cookie::forever('locale', $request->locale));

@@ -32,6 +32,7 @@ class SetupController extends Controller
     		'username' 		=> $request->username,
     		'birthday' 		=> strtotime($request->birthday),
     		'metric'		=> $request->metric,
+            'locale'        => $request->locale,
     	]);
 
     	\Cookie::forever('locale', $request->locale);
