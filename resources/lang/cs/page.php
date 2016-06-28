@@ -62,11 +62,11 @@ return [
 	'community.friend'		=> '{1}Přítel|{2,3,4}Prátelé|[5,Inf]Přátel',
 	'community.newest'		=> 'Nejnovější',
 	'community.not_found'	=> 'Uživatel nebyl nalezen',
-	'community.detail.add_friend'		=> 'Přidat jako přítele',
-	'community.detail.friend_added'		=> 'Přítel přidán',
-	'community.detail.remove_friend'	=> 'Odebrat přítele',
-	'community.detail.friend_removed'	=> 'Přítel odebrán',
-	'community.detail.no_records'		=> '{0}:name zatím nepřidala žádné záznamy|{1}:name zatím nepřidal žádné záznamy',
+	'community.detail.follow'		=> 'Sledovat',
+	'community.detail.followed'		=> 'Sleduji',
+	'community.detail.unfollow'		=> 'Zrušit sledování',
+	'community.detail.unfollowed'	=> 'Sledování zrišeno',
+	'community.detail.no_records'	=> '{0}:name zatím nepřidala žádné záznamy|{1}:name zatím nepřidal žádné záznamy',
 
 	/*
 	 * Settings/setup

@@ -17,12 +17,12 @@ class User extends Model
         return $this->hasMany("App\Tag");
     }
 
-    public function friends()
+    public function follows()
     {
         return $this->hasMany("App\Relationship");
     }
 
-    public function hasFriend($id)
+    public function isFollowerOf($id)
     {
         $friends = \App\Relationship::where('user_id', \Session::get('uid'))->get();
         foreach($friends as $friend)

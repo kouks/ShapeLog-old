@@ -24,7 +24,7 @@
 	<div class="row white-bg">
 		<div class="col-6 area-2">
 			<h3 class="center area-2">{{ trans_choice('page.community.friend', 2) }}</h3>
-			@foreach($friends as $member)
+			@foreach($follows as $member)
 				<div class="col-6 area-2">
 					@include('partials.member')
 				</div>

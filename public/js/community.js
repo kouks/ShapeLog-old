@@ -57,11 +57,11 @@ $(document).ready(function() {
 		});
 	});
 
-	$(".add-friend").click(function() {
+	$(".follow").click(function() {
 		var id = $(this).data('id');
 
 		$.ajax({
-			url: '/profile/community/add-friend',
+			url: '/profile/community/follow',
 			method: 'post',
 			data: { 
 				id: id,
@@ -72,16 +72,16 @@ $(document).ready(function() {
 			if(data === '403')
 				return false;
 
-			$(".add-friend").hide().next().show();
+			$(".follow").hide().next().show();
 
 		});
 	});
 
-	$(".remove-friend").click(function() {
+	$(".unfollow").click(function() {
 		var id = $(this).data('id');
 
 		$.ajax({
-			url: '/profile/community/remove-friend',
+			url: '/profile/community/unfollow',
 			method: 'post',
 			data: { 
 				id: id,
@@ -92,7 +92,7 @@ $(document).ready(function() {
 			if(data === '403')
 				return false;
 
-			$(".remove-friend").hide().next().show();
+			$(".unfollow").hide().next().show();
 
 		});
 	});

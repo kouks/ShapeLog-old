@@ -10,21 +10,21 @@
 		    <h6 class="center grey-text">{{ '@' . $detail->username }}</h6>
 		    <br />
 			@if($user->id !== $detail->id)
-				@if($user->hasFriend($detail->id))
-					<a class="friend remove-friend" data-id="{{ $detail->id }}">
+				@if($user->isFollowerOf($detail->id))
+					<a class="follow-button unfollow" data-id="{{ $detail->id }}">
 						<i class="fa fa-times" aria-hidden="true"></i> 
-						{{ trans('page.community.detail.remove_friend') }}
+						{{ trans('page.community.detail.unfollow') }}
 					</a>	
-					<a class="friend" style="display: none">
-						{{ trans('page.community.detail.friend_removed') }}
+					<a class="follow-button" style="display: none">
+						{{ trans('page.community.detail.unfollowed') }}
 					</a>
 				@else
-					<a class="friend add-friend" data-id="{{ $detail->id }}">
+					<a class="follow-button follow" data-id="{{ $detail->id }}">
 						<i class="fa fa-plus" aria-hidden="true"></i> 
-						{{ trans('page.community.detail.add_friend') }}
+						{{ trans('page.community.detail.follow') }}
 					</a>
-					<a class="friend" style="display: none">
-						{{ trans('page.community.detail.friend_added') }}
+					<a class="follow-button" style="display: none">
+						{{ trans('page.community.detail.followed') }}
 					</a>	
 				@endif
 				{!! csrf_field() !!}

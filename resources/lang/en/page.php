@@ -61,11 +61,11 @@ return [
 	'community.friend'		=> '{1}Friend|[2,Inf]Friends',
 	'community.newest'		=> 'Newest',
 	'community.not_found'	=> 'This user was not found',
-	'community.detail.add_friend'		=> 'Add as a friend',
-	'community.detail.friend_added'		=> 'Successfully added!',
-	'community.detail.remove_friend'	=> 'Remove friend',
-	'community.detail.friend_removed'	=> 'Friendship removed.',
-	'community.detail.no_records'		=> '{0,1}:name has not added any records yet',
+	'community.detail.follow'		=> 'Follow',
+	'community.detail.followed'		=> 'Followed',
+	'community.detail.unfollow'		=> 'Unfollow',
+	'community.detail.unfollowed'	=> 'Unfollowed',
+	'community.detail.no_records'	=> '{0,1}:name has not added any records yet',
 
 	/*
 	 * Settings/setup

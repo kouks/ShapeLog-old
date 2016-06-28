@@ -17,19 +17,19 @@ class CommunityController extends Controller
     { 
         $user = \App\User::where('id', \Session::get('uid'))->first();
 
-        $friends = [];
-        foreach($user->friends as $friend)
+        $follows = [];
+        foreach($user->follows as $friend)
         {
-            $friends[] = $friend->friend_id;
+            $follows[] = $friend->friend_id;
         }
 
-        $friends = \App\User::whereIn('id', $friends)->orderBy('last_name', 'asc')->get();
+        $follows = \App\User::whereIn('id', $follows)->orderBy('last_name', 'asc')->get();
 
       	return \View::make('community', [
             'title'         => trans('page.community'),
             'user'          => $user,
             'newest'        => \App\User::orderBy('id', 'desc')->limit(8)->get(),
-            'friends'       => $friends,
+            'follows'       => $follows,
         ]);  
     }
 
@@ -82,7 +82,7 @@ class CommunityController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function addFriend(Request $request)
+    public function follow(Request $request)
     { 
         \App\Relationship::create([
             'user_id'   => \Session::get('uid'),
@@ -97,7 +97,7 @@ class CommunityController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function removeFriend(Request $request)
+    public function unfollow(Request $request)
     { 
         \App\Relationship::where([
             'user_id'   => \Session::get('uid'),
