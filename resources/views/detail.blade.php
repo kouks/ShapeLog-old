@@ -11,7 +11,11 @@
 		    <br />
 			@if($user->id !== $detail->id)
 				@if($user->isFollowerOf($detail->id))
-					<a class="follow-button unfollow" data-id="{{ $detail->id }}">
+					<a class="follow-button followed">
+						<i class="fa fa-check" aria-hidden="true"></i> 
+						{{ trans('page.community.detail.followed') }}
+					</a>
+					<a class="follow-button unfollow" style="display: none" data-id="{{ $detail->id }}">
 						<i class="fa fa-times" aria-hidden="true"></i> 
 						{{ trans('page.community.detail.unfollow') }}
 					</a>	
@@ -24,6 +28,7 @@
 						{{ trans('page.community.detail.follow') }}
 					</a>
 					<a class="follow-button" style="display: none">
+						<i class="fa fa-check" aria-hidden="true"></i> 
 						{{ trans('page.community.detail.followed') }}
 					</a>	
 				@endif

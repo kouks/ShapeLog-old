@@ -77,6 +77,9 @@ $(document).ready(function() {
 		});
 	});
 
+	$(".followed").click(function() {
+		$(this).hide().next().show();
+	})
 	$(".unfollow").click(function() {
 		var id = $(this).data('id');
 
