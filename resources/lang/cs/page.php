@@ -54,11 +54,12 @@ return [
 	/*
 	 * Community
 	 */
-	'community.heading'	=> 'Komunita Shape Log',
-	'community.desc'	=> 'Najděte své přátele a podívejte se také na jejich progres',
-	'community.search'	=> 'Hledat mezi lidmi',
-	'community.friend'	=> '{1}Přítel|{2,3,4}Prátelé|[5,Inf]Přátel',
-	'community.newest'	=> 'Nejnovější',
+	'community.heading'		=> 'Komunita Shape Logu',
+	'community.desc'		=> 'Najděte své přátele a podívejte se také na jejich progres.',
+	'community.search'		=> 'Hledat mezi lidmi',
+	'community.friend'		=> '{1}Přítel|{2,3,4}Prátelé|[5,Inf]Přátel',
+	'community.newest'		=> 'Nejnovější',
+	'community.not_found'	=> 'Uživatel nebyl nalezen',
 	'community.detail.add_friend'		=> 'Přidat jako přítele',
 	'community.detail.friend_added'		=> 'Přítel přidán',
 	'community.detail.remove_friend'	=> 'Odebrat přítele',

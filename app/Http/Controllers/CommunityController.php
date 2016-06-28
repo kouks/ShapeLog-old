@@ -42,6 +42,9 @@ class CommunityController extends Controller
     { 
         $user = \App\User::where('id', $request->id)->first();
 
+        if(!$user instanceof \App\User) 
+            return \Redirect::to('profile/community')->with('message', trans('page.community.not_found'));
+        
         $data = [];
         foreach($user->records as $record)
         {

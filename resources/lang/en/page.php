@@ -53,11 +53,12 @@ return [
 	/*
 	 * Community
 	 */
-	'community.heading'	=> 'Community page',
-	'community.desc'	=> 'Meet up with your friends and check their progress, too.',
-	'community.search'	=> 'Search Shape Log community',
-	'community.friend'	=> '{1}Friend|[2,Inf]Friends',
-	'community.newest'	=> 'Newest',
+	'community.heading'		=> 'Community page',
+	'community.desc'		=> 'Meet up with your friends and check their progress, too.',
+	'community.search'		=> 'Search Shape Log community',
+	'community.friend'		=> '{1}Friend|[2,Inf]Friends',
+	'community.newest'		=> 'Newest',
+	'community.not_found'	=> 'This user was not found',
 	'community.detail.add_friend'		=> 'Add as a friend',
 	'community.detail.friend_added'		=> 'Successfully added!',
 	'community.detail.remove_friend'	=> 'Remove friend',
