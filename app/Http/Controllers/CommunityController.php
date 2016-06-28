@@ -23,7 +23,7 @@ class CommunityController extends Controller
             $friends[] = $friend->friend_id;
         }
 
-        $friends = \App\User::whereIn('id', $friends)->get();
+        $friends = \App\User::whereIn('id', $friends)->orderBy('last_name', 'asc')->get();
 
       	return \View::make('community', [
             'title'         => trans('page.community'),

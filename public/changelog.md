@@ -66,3 +66,5 @@ Version 1.1
 ----------------
 * Czech locale
 * Secured deleting od tags and records
+* Exception handling
+* Various bugfixes
