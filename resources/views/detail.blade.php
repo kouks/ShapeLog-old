@@ -9,11 +9,23 @@
 		    <h4 class="center dark-grey-text">{{ $detail->first_name }} {{ $detail->last_name }}</h4>
 		    <h6 class="center grey-text">{{ '@' . $detail->username }}</h6>
 		    <br />
-			@if($user->id !== $detail->id)
+			@if($user->id === $detail->id)
 				@if($user->hasFriend($detail->id))
-					<a href="#" class="friend remove-friend" data-id="{{ $detail->id }}"><i class="fa fa-times" aria-hidden="true"></i> Remove friend</a>	
+					<a class="friend remove-friend" data-id="{{ $detail->id }}">
+						<i class="fa fa-times" aria-hidden="true"></i> 
+						{{ trans('page.community.detail.remove_friend') }}
+					</a>	
+					<a class="friend" style="display: none">
+						{{ trans('page.community.detail.friend_removed') }}
+					</a>
 				@else
-					<a href="#" class="friend add-friend" data-id="{{ $detail->id }}"><i class="fa fa-plus" aria-hidden="true"></i> Add friend</a>	
+					<a class="friend add-friend" data-id="{{ $detail->id }}">
+						<i class="fa fa-plus" aria-hidden="true"></i> 
+						{{ trans('page.community.detail.add_friend') }}
+					</a>
+					<a class="friend" style="display: none">
+						{{ trans('page.community.detail.friend_added') }}
+					</a>	
 				@endif
 				{!! csrf_field() !!}
 			@endif
@@ -24,7 +36,7 @@
 	</div>
 	@if(count($detail->records->toArray()))
 		<div class="row white-bg">
-			<h2 class="center area-4">Records</h2>
+			<h2 class="center area-4">{{ trans('page.records.heading') }}</h2>
 		</div>
 		<div class="row almost-white-bg">
 			@foreach($detail->records as $record)
@@ -40,16 +52,17 @@
 		</div>
 
 		<div class="row white-bg">
-			<h2 class="center area-4">Data graphs</h2>
+			<h2 class="center">{{ trans('page.graphs') }}</h2>	
 		</div>
 		<div class="row almost-white-bg">
 			<div class="col-12 area-2">
 				<ul class="tag-list">
-					@foreach($data as $record)
-						@foreach($record["data"] as $cat=>$value)
-							<li data-selected="0" data-cat="{{ strtoupper($cat) }}">{{ strtoupper($cat) }}</li>	
-						@endforeach
-						<? break; ?>
+				<li data-selected="0" data-cat="WEIGHT">{{ trans('page.weight') }}</li>
+				<li data-selected="0" data-cat="KCAL">{{ trans('page.intake') }}</li>
+					@foreach($user->tags as $tag)
+						<li data-selected="0" data-cat="{{ strtoupper($tag->name) }}">
+							{{ strtoupper($tag->name) }}
+						</li>	
 					@endforeach
 				</ul>
 			</div>
@@ -73,7 +86,7 @@
 		</div>
 	@else
 		<div class="row white-bg">
-			<h2 class="center area-4">This user has not added any records yet</h2>
+			<h2 class="center area-4">{{ $detail->first_name }} has not added any records yet</h2>
 		</div>
 	@endif
 	

@@ -17,7 +17,7 @@ class ProfileController extends Controller
     public function index()
     { 
         return \View::make('profile', [
-            'title'         => 'Profile',
+            'title'         => trans('page.records'),
             'user'          => \App\User::where('id', \Session::get('uid'))->first(),
         ]);  
     }
@@ -55,7 +55,7 @@ class ProfileController extends Controller
             'img'  => $fileName,
         ]);
         
-        return \Redirect::to('profile')->with('message', 'Record successfully added');
+        return \Redirect::to('profile')->with('message', trans('page.records.added'));
     }
 
     /**
@@ -65,9 +65,10 @@ class ProfileController extends Controller
      */
     public function delete(Request $request)
     {
-        \App\Record::where('id', $request->id)->delete();
+        if(!\App\Record::where(['id' => $request->id, 'user_id' => \Session::get('uid')])->delete())
+            return \Redirect::to('/profile/tags')->with('message', trans('page.records.doesnt_exist'));
         
-        return \Redirect::to('profile')->with('message', 'Successfully deleted');
+        return \Redirect::to('profile')->with('message', trans('page.records.deleted'));
     }
 
     /**
@@ -100,6 +101,6 @@ class ProfileController extends Controller
     {
         \Session::flush();
         
-        return \Redirect::to('')->with('message', 'Successfully logged out');
+        return \Redirect::to('')->with('message', trans('master.lo_successful'));
     }
 }

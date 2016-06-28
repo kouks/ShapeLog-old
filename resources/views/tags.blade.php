@@ -4,12 +4,12 @@
 
 	<div class="row almost-white-bg">
 		<div class="col-12 area-2">
-			<h1 class="center">Edit custom tags</h1>			
+			<h1 class="center">{{ trans('page.tags.heading') }}</h1>			
 		</div>
 	</div>
 	<div class="row white-bg">
 		<div class="col-12 area-2">
-			<p class="center big grey-text serif">On this page, you can edit your own custom tags. Simply enter the name and unit of whatever you want to keep track of. It is automatically added to both your record form and graphs page.</p>
+			<p class="center big grey-text serif">{{ trans('page.tags.desc') }}</p>
 		</div>
 	</div>
 
@@ -28,12 +28,12 @@
 				<tr>
 					<form method="post" id="new-tag">
 						<td>
-							<input name="name" placeholder="Enter a new tag" type="text">
+							<input name="name" placeholder="{{ trans('page.tags.enter_name') }}" type="text">
 							<input name="user" value="{{ $user->id }}" type="hidden">
 							{!! csrf_field() !!}
 						</td>
 						<td>
-							<input name="unit" placeholder="Enter unit" type="text">
+							<input name="unit" placeholder="{{ trans('page.tags.enter_unit') }}" type="text">
 						</td>
 						<td class="center">
 							<button><i class="fa fa-plus" aria-hidden="true"></i></button>

@@ -16,7 +16,7 @@ class SetupController extends Controller
     public function index()
     { 
         return \View::make('setup', [
-            'title'         => 'Setup',
+            'title'         => trans('page.settings'),
             'user'          => \App\User::where('id', \Session::get('uid'))->first(),
         ]);  
     }
@@ -36,7 +36,7 @@ class SetupController extends Controller
 
     	\Cookie::forever('locale', $request->locale);
 
-        return \Redirect::to('profile')->with('message', 'Your account has been set up')
+        return \Redirect::to('profile')->with('message', trans('master.set_up'))
         							   ->withCookie(\Cookie::forever('locale', $request->locale));
     }
 

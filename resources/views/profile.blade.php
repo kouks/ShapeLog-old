@@ -4,12 +4,12 @@
 
 	<div class="row almost-white-bg">
 		<div class="col-12 area-2">
-			<h1 class="center">Listing of records</h1>			
+			<h1 class="center">{{ trans('page.records.heading') }}</h1>			
 		</div>
 	</div>
 	<div class="row white-bg">
 		<div class="col-12 area-2">
-			<p class="center big grey-text serif">On this page, you can find all the records that you have ever added, as well as edit them by simply clicking on any value, rewrting it and pressing enter.</p>
+			<p class="center big grey-text serif">{{ trans('page.records.desc') }}</p>
 		</div>
 	</div>
 	<div class="row almost-white-bg">
@@ -18,7 +18,7 @@
 			<div class="new-record area-4">
 				<h2 class="center"><i class="fa fa-plus" aria-hidden="true"></i></h2>
 				<h4 class="area-4 center">
-					New record
+					{{ trans('page.records.new') }}
 				</h4>
 			</div>
 		</div>

@@ -16,7 +16,7 @@ class SettingsController extends Controller
     public function index()
     { 
       	return \View::make('settings', [
-            'title'         => 'Settings',
+            'title'         => trans('page.settings'),
             'user'          => \App\User::where('id', \Session::get('uid'))->first(),
         ]);  
     }
@@ -35,7 +35,7 @@ class SettingsController extends Controller
 
         \Cookie::forever('locale', $request->locale);
 
-        return \Redirect::to('profile/settings')->with('message', 'Successfully updated')
+        return \Redirect::to('profile/settings')->with('message', trans('page.settings.updated'))
                                        ->withCookie(\Cookie::forever('locale', $request->locale));
     }
 }

@@ -30,41 +30,43 @@
 			{{ date('j. n. Y', strtotime($record->created_at)) }}
 		</h4>
 
-		<p class="title">basic info</p>
+		<p class="title">{{ trans('page.records.basic') }}</p>
 		
 		<p class="row">
-			<span>height</span>
+			<span>{{ trans('page.height') }}</span>
 			<span data-id="{{ $record->id }}" data-cat="height">{{ round($record->height, 1) }} cm</span>
 			<input type="text" class="edit" />
 		</p>
 		<p class="row">
-			<span>weight</span>
+			<span>{{ trans('page.weight') }}</span>
 			<span data-id="{{ $record->id }}" data-cat="weight">{{ round($record->weight, 1) }} kg</span>
 			<input type="text" class="edit" />
 		</p>
 		<p class="row">
-			<span>age</span>
-			<span>{{ $age }} years</span>
+			<span>{{ trans('page.age') }}</span>
+			<span>{{ $age }} {{ trans_choice('page.year', $age) }}</span>
 		</p>
 
 
-		<p class="title">energy</p>
+		<p class="title">{{ trans('page.records.energy') }}</p>
 
 		<p class="row">
 			<span>bmr</span>
 			<span>{{ $bmr }} kcal</span>
 		</p>
 		<p class="row">
-			<span>expenditure</span>
+			<span>{{ trans('page.records.expenditure') }}</span>
 			<span>{{ $burn = round($bmr * $record->cal_level) }} kcal</span>
 		</p>
 		<p class="row">
-			<span>intake</span>
-			<span data-id="{{ $record->id }}" data-cat="kcal">{{ round($record->kcal) }} kcal ({{ abs($record->kcal - $burn) }} in {{ $record->kcal > $burn ? "surplus" : "deficit" }})</span>
+			<span>{{ trans('page.records.intake') }}</span>
+			<span data-id="{{ $record->id }}" data-cat="kcal">
+			{{ round($record->kcal) }} kcal ({{ abs($record->kcal - $burn) }} {{ trans('page.in') }} {{ $record->kcal > $burn ? trans_choice('page.records.surplus', 6) : trans_choice('page.records.deficit', 6) }})
+			</span>
 			<input type="text" class="edit" />
 		</p>
 
-		<p class="title">Custom Tags</p>
+		<p class="title">{{ trans('page.tags') }}</p>
 
 		@foreach($user->tags as $tag)
 			@if(@$data[$tag->name])
@@ -76,16 +78,18 @@
 			@else
 				<p class="row">
 					<span>{{ $tag->name }}</span>
-					<span data-id="{{ $record->id }}" data-cat="{{ $tag->name }}">Not assigned</span>
+					<span data-id="{{ $record->id }}" data-cat="{{ $tag->name }}">
+						{{ trans('page.not_assigned') }}
+					</span>
 					<input type="text" class="edit" />
 				</p>
 			@endif
 		@endforeach
 
 		@if(!empty($record->img))
-			<p data-id="{{ $record->id }}" class="toggle-photo title">photo</p>
+			<p data-id="{{ $record->id }}" class="toggle-photo title">{{ trans('page.photo') }}</p>
 
-			<img style="display: none" id="{{ $record->id }}" src="/uploads/{{ $record->img }}" alt="Fotka Formy {{ $record->created_at }}">
+			<img style="display: none" id="{{ $record->id }}" src="/uploads/{{ $record->img }}">
 		@endif
 		
 		<i class="fa fa-times close" aria-hidden="true"></i>

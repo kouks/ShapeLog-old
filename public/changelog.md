@@ -61,3 +61,8 @@ Version 1.0
 * Localisation
 * Adding friends
 * Community detail page
+
+Version 1.1
+----------------
+* Czech locale
+* Secured deleting od tags and records

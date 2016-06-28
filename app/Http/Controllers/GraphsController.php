@@ -28,7 +28,7 @@ class GraphsController extends Controller
         }
 
         return \View::make('graphs', [
-            'title'         => 'Graphs',
+            'title'         => trans('page.graphs'),
             'user'          => $user,
             'data'          => $data,
         ]);  

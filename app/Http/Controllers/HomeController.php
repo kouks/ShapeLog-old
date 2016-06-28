@@ -34,7 +34,7 @@ class HomeController extends Controller
             unset($_COOKIE["laravel_session"]);
 
         return \View::make('home', [
-            'title' => 'Home',
+            'title' => trans('page.home'),
             'loginUrl' => $loginUrl,
             'user' => \App\User::where('id', \Session::get('uid'))->first(),
         ]);  
@@ -74,11 +74,11 @@ class HomeController extends Controller
         } 
         catch(\Facebook\Exceptions\FacebookResponseException $e)
         {
-            return \Redirect::to('')->with('message', 'Login failed');
+            return \Redirect::to('')->with('message', trans('master.l_failed'));
         }
         catch(\Facebook\Exceptions\FacebookSDKException $e)
         {
-            return \Redirect::to('')->with('message', 'Login failed');
+            return \Redirect::to('')->with('message', trans('master.l_failed'));
         }
         
         /*
@@ -114,6 +114,6 @@ class HomeController extends Controller
          */ 
         \Session::put('uid', \App\User::where('fbid', $user->id)->first()->id);
 
-        return \Redirect::to('setup')->with('message', 'Setup your account');
+        return \Redirect::to('setup')->with('message', trans('master.need_data'));
     }
 }

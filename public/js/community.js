@@ -72,7 +72,7 @@ $(document).ready(function() {
 			if(data === '403')
 				return false;
 
-			$(".friend").text("Added as friend!");
+			$(".add-friend").hide().next().show();
 
 		});
 	});
@@ -92,7 +92,7 @@ $(document).ready(function() {
 			if(data === '403')
 				return false;
 
-			$(".friend").text("Friendship removed");
+			$(".remove-friend").hide().next().show();
 
 		});
 	});

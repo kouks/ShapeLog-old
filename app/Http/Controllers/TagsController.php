@@ -16,7 +16,7 @@ class TagsController extends Controller
     public function index()
     { 
         return \View::make('tags', [
-            'title'         => 'Custom Tags',
+            'title'         => trans('page.tags'),
             'user'          => \App\User::where('id', \Session::get('uid'))->first(),
         ]);  
     }
@@ -42,7 +42,9 @@ class TagsController extends Controller
      */
     public function delete(Request $request)
     { 
-        \App\Tag::where('id', $request->id)->delete();
-        return \Redirect::to('/profile/tags')->with('message', 'Tag successfully deleted');
+        if(!\App\Tag::where(['id' => $request->id, 'user_id' => \Session::get('uid')])->delete())
+            return \Redirect::to('/profile/tags')->with('message', trans('page.tags.doesnt_exist'));
+        
+        return \Redirect::to('/profile/tags')->with('message', trans('page.tags.deleted'));
     }
 }

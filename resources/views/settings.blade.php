@@ -4,12 +4,12 @@
 
 	<div class="row almost-white-bg">
 		<div class="col-12 area-2">
-			<h1 class="center">User settings</h1>			
+			<h1 class="center">{{ trans('page.settings.heading') }}</h1>			
 		</div>
 	</div>
 	<div class="row white-bg">
 		<div class="col-12 area-2">
-			<p class="center big grey-text serif">Manage your account.</p>
+			<p class="center big grey-text serif">{{ trans('page.settings.desc') }}</p>
 		</div>
 	</div>
 	
@@ -26,16 +26,20 @@
 
 				{!! csrf_field(); !!}
 
-				<label for="birthday"><h6>Birthday</h6></label>
+				<label for="birthday"><h6>{{ trans('page.settings.birthday') }}</h6></label>
 				<input id="birthday" value="{{ date('Y-m-d', $user->birthday) }}" type="date" name="birthday">
 
-				<label for="metric"><h6>System of measurement</h6></label>
+				<label for="metric"><h6>{{ trans('page.settings.measurement') }}</h6></label>
 				<select name="metric" id="metric">
-					<option value="1">Metric</option>
-					<option {{ !$user->metric ? 'selected' : '' }} value="O">Imperial</option>
+					<option value="1">
+						{{ trans('page.settings.measurement.metric') }}
+					</option>
+					<option {{ !$user->metric ? 'selected' : '' }} value="O">
+						{{ trans('page.settings.measurement.imperial') }}
+					</option>
 				</select>
 
-				<label for="locale"><h6>Language</h6></label>
+				<label for="locale"><h6>{{ trans('page.settings.language') }}</h6></label>
 				<select name="locale" id="locale">
 					<option {{ Cookie::get('locale') == 'en' ? 'selected' : '' }} value="en">English</option>
 					<option {{ Cookie::get('locale') == 'cs' ? 'selected' : '' }} value="cs">Česky</option>

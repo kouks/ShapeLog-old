@@ -26,9 +26,9 @@ class CommunityController extends Controller
         $friends = \App\User::whereIn('id', $friends)->get();
 
       	return \View::make('community', [
-            'title'         => 'Community',
+            'title'         => trans('page.community'),
             'user'          => $user,
-            'newest'        => \App\User::orderBy('created_at', 'desc')->limit(9)->get(),
+            'newest'        => \App\User::orderBy('id', 'desc')->limit(8)->get(),
             'friends'       => $friends,
         ]);  
     }
