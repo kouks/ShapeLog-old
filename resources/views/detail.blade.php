@@ -35,7 +35,7 @@
 		<div class="col-3">&nbsp;</div>	
 	</div>
 
-	@if(!count($detail->records->toArray()))
+	@if(count($detail->records->toArray()))
 		<div class="row white-bg">
 			<h2 class="center area-4">{{ trans('page.records.heading') }}</h2>
 		</div>
