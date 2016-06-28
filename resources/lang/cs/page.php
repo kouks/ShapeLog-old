@@ -41,7 +41,7 @@ return [
 	 * Graphs
 	 */
 	'graphs.heading'	=> 'Grafy Vašich dat',
-	'graphs.desc'		=> 'Je vždy motivující vidět na grafu, jak se pomalu, ale jistě snižuje Váš tělesný tuk. Jednoduše si vyberte, která data chcete vidět na grafu.',
+	'graphs.desc'		=> 'Je vždy motivující vidět na grafu, jak se pomalu ale jistě snižuje Váš tělesný tuk. Jednoduše si vyberte, která data chcete grafovat.',
 
 	/*
 	 * Tags
