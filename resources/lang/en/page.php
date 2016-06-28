@@ -65,6 +65,7 @@ return [
 	'community.detail.friend_added'		=> 'Successfully added!',
 	'community.detail.remove_friend'	=> 'Remove friend',
 	'community.detail.friend_removed'	=> 'Friendship removed.',
+	'community.detail.no_records'		=> '{0,1}:name has not added any records yet',
 
 	/*
 	 * Settings/setup

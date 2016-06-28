@@ -66,6 +66,7 @@ return [
 	'community.detail.friend_added'		=> 'Přítel přidán',
 	'community.detail.remove_friend'	=> 'Odebrat přítele',
 	'community.detail.friend_removed'	=> 'Přítel odebrán',
+	'community.detail.no_records'		=> '{0}:name zatím nepřidala žádné záznamy|{1}:name zatím nepřidal žádné záznamy',
 
 	/*
 	 * Settings/setup

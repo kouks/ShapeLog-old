@@ -34,7 +34,8 @@
 		
 		<div class="col-3">&nbsp;</div>	
 	</div>
-	@if(count($detail->records->toArray()))
+
+	@if(!count($detail->records->toArray()))
 		<div class="row white-bg">
 			<h2 class="center area-4">{{ trans('page.records.heading') }}</h2>
 		</div>
@@ -86,7 +87,9 @@
 		</div>
 	@else
 		<div class="row white-bg">
-			<h2 class="center area-4">{{ $detail->first_name }} has not added any records yet</h2>
+			<h2 class="center area-4">
+				{{ trans_choice('page.community.detail.no_records', $user->gender == 'male' ? 1 : 0, ['name' => $detail->first_name]) }}
+			</h2>
 		</div>
 	@endif
 	
