@@ -29,10 +29,10 @@ return [
 	 * Index
 	 */
 	'about'				=> 'O projektu',
-	'about_text'		=> "Vítejte na stránkách projektu Shape Log. Naším hlavním cílem je pomoct vám se záznamem důležitých dat týkajících se Vašeho progresuv posilovně. Vše, co musíte udělat, je propojit naši aplikace s Vaším Facebookem. Nebojte se, je to naprosto bezpečné.",
+	'about_text'		=> "Vítejte na stránkách projektu Shape Log. Naším hlavním cílem je pomoct vám se záznamem důležitých dat týkajících se Vašeho progresu v posilovně. Vše, co musíte udělat, je propojit naši aplikace s Vaším Facebookem. Nebojte se, je to naprosto bezpečné.",
 
 	'features'			=> 'Funkce',
-	'features_text'		=> "Shape Log Vám poskytuje možnost poromítnout věškerá data, která jste vložili do naší aplikace, do pěkných a přehledných grafů, což Vám pomůže se orientovat ve Vašem progresu. Co více, je jen na Vás, která data budete chcít zaznamenávat a grafovat, díky našemu systému vlastních štítků. Také si můžete vyhledat ostatní uživalte a podívat se jak jsou na tom oni nebo porovnat jejich progres s Vaším",
+	'features_text'		=> "Shape Log Vám poskytuje možnost poromítnout věškerá data, která jste vložili do naší aplikace, do pěkných a přehledných grafů, což Vám pomůže se orientovat ve Vašem progresu. Co více, je jen na Vás, která data budete chtít zaznamenávat a grafovat, díky našemu systému vlastních štítků. Také si můžete vyhledat ostatní uživalte a podívat se jak jsou na tom oni nebo porovnat jejich progres s Vaším.",
 
 	'motivation'		=> 'Motivace',
 	'motivation_text' 	=> "Ač se to nezdá, naše aplikace je i skvělý nástroj k motivaci! Nikdo přece nechce vidět, jak se jeho statistiky zhoršují, a určitě udělá, co je v jeho silách, aby jen rostly. Pokud Vás toto nepřesvědčilo, zvažte následující fakt - dokonce Vaši přátelé se můžou podívat na Vaše grafy, a kdo by přece chtěl, aby se mu přátelé vysmívali za jeho zhoršující se výkony?",

@@ -9,7 +9,7 @@
 		    <h4 class="center dark-grey-text">{{ $detail->first_name }} {{ $detail->last_name }}</h4>
 		    <h6 class="center grey-text">{{ '@' . $detail->username }}</h6>
 		    <br />
-			@if($user->id === $detail->id)
+			@if($user->id !== $detail->id)
 				@if($user->hasFriend($detail->id))
 					<a class="friend remove-friend" data-id="{{ $detail->id }}">
 						<i class="fa fa-times" aria-hidden="true"></i> 
