@@ -32,7 +32,7 @@ Route::group(['prefix' => 'profile'], function() {
 	Route::group(['prefix' => 'tags'], function() {
 		Route::get('', 'TagsController@index')->middleware('logout');
 		Route::post('add', 'TagsController@add')->middleware('logout');
-		Route::get('delete/{id}', 'TagsController@delete')->middleware('logout');
+		Route::post('delete', 'TagsController@delete')->middleware('logout');
 	});
 
 	Route::group(['prefix' => 'settings'], function() {

@@ -83,6 +83,7 @@ return [
 	'setup.desc'			=> 'We will ask you for some more information so we can personalize the interface even more. We require your birthday so we can accurately calculate your BMR.',
 	'setup.username'		=> 'Username',
 	'setup.pick_username'	=> 'Pick your username',
+	'setup.tags.desc'		=> 'Although this is completely optional, you can add your own custom tags. Do not worry, this can be modified at any time after.',
 
 	/*
 	 * Frequently used
@@ -99,5 +100,6 @@ return [
 	'in'			=> 'in',
 	'not_assigned'	=> 'Not assigned',
 	'intake'		=> 'Calorie intake',
+	'save'			=> 'Save',
 
 ];

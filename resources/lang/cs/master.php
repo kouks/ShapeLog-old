@@ -7,7 +7,7 @@ return [
 	 */
     'logged_as' 	=> 'Přihlášen jako :name',
     'goto'	 		=> 'Jít na profil',
-    'logout' 		=> 'Ohdlásit se',
+    'logout' 		=> 'Odhlásit se',
     
 	/*
 	 * Header

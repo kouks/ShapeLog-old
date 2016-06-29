@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
 
-	$('.verify').click(function() {
+	$(document).on('click', '.verify', function() {
 		if(!confirm("Do you really want to delete this?"))
 			return false;
 	});

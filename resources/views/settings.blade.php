@@ -45,7 +45,7 @@
 					<option {{ $user->locale == 'cs' ? 'selected' : '' }} value="cs">Česky</option>
 				</select>
 
-				<button>Save</button>
+				<button>{{ trans('page.save') }}</button>
 			</form>
 		</div>	
 		

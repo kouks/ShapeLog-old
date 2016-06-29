@@ -84,6 +84,7 @@ return [
 	'setup.desc'			=> 'Zeptáme se Vás na pár dalších informací, abychom mohli personalizovat vaše rozhraní. Vaše datum narození potřebujeme pouze pro výpočet bazálního metabolismu.',
 	'setup.username'		=> 'Uživatelské jméno',
 	'setup.pick_username'	=> 'Vyberte si své uživatelské jméno',
+	'setup.tags.desc'		=> 'Zde si můžete přidat své vlastní štítky, které budou definovat, jaká data budete zaznamenávat. Nebojte se, tyto štítky se dají kdykoli smazat, nebo vytvořit nové.',
 
 	/*
 	 * Frequently used
@@ -100,5 +101,6 @@ return [
 	'in'			=> 'v',
 	'not_assigned'	=> 'Nepřiřazeno',
 	'intake'		=> 'Kalorický příjem',
+	'save'			=> 'Uložit',
 
 ];

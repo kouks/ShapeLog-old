@@ -26,7 +26,7 @@ $(document).ready(function() {
 	    		'<tr>' + 
 	    			'<td class="bold">' + $('input[name="name"]').val().toUpperCase() + '</td>' +
 	    			'<td>' + $('input[name="unit"]').val() + '</td>' +
-	    			'<td></td>' +
+	    			'<td class="right"><i data-id="' + data + '" class="fa fa-times verify delete" aria-hidden="true"></i></td>' +
 	    		'</tr>'
 	    	);
 
@@ -35,6 +35,26 @@ $(document).ready(function() {
     	});
 
 		return false;
+	});
+
+	$(document).on('click', '.tags .delete', function() {
+		var el = this;
+
+		/* building ajax request */
+	    $.ajax({
+	    	url: '/profile/tags/delete',
+	    	method: 'post',
+	    	data: { 
+	    		id: $(el).data('id'), 
+	    		_token: $("input[name='_token']").val()
+	    	}
+	    }).done(function(data) {
+
+	    	if(data === '403')
+	    		return false;
+
+	    	$(el).parent().parent().remove();
+    	});
 	});
 
 

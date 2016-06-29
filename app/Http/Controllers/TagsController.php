@@ -28,11 +28,13 @@ class TagsController extends Controller
      */
     public function add(Request $request)
     { 
-        \App\Tag::create([
+        $tag = \App\Tag::create([
             'user_id' => $request->user,
             'name' => $request->name,
             'unit' => $request->unit,
         ]);
+
+        return $tag->id;
     }
 
     /**

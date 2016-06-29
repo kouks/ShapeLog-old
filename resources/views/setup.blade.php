@@ -22,7 +22,7 @@
 				{!! csrf_field(); !!}
 
 				<label for="username"><h6>{{ trans('page.setup.username') }}</h6></label>
-				<input id="username" type="text" name="username" placeholder="{{ trans('page.setup.pick_username') }}">
+				<input class="setup" id="username" type="text" name="username" placeholder="{{ trans('page.setup.pick_username') }}">
 
 				<div class="col-12 area-2 error length">
 					Your username has to be 4 - 20 characters long and has to contain only numbers and English letters.
@@ -35,10 +35,10 @@
 				</div>
 
 				<label for="birthday"><h6>{{ trans('page.settings.birthday') }}</h6></label>
-				<input id="birthday" value="{{ date('Y-m-d', $user->birthday) }}" type="date" name="birthday">
+				<input class="setup" id="birthday" value="{{ date('Y-m-d', $user->birthday) }}" type="date" name="birthday">
 
 				<label for="metric"><h6>{{ trans('page.settings.measurement') }}</h6></label>
-				<select name="metric" id="metric">
+				<select class="setup" name="metric" id="metric">
 					<option value="1">
 						{{ trans('page.settings.measurement.metric') }}
 					</option>
@@ -48,12 +48,43 @@
 				</select>
 
 				<label for="locale"><h6>{{ trans('page.settings.language') }}</h6></label>
-				<select name="locale" id="locale">
+				<select class="setup" name="locale" id="locale">
 					<option {{ Cookie::get('locale') == 'en' ? 'selected' : '' }} value="en">English</option>
 					<option {{ Cookie::get('locale') == 'cs' ? 'selected' : '' }} value="cs">Česky</option>
 				</select>
 
-				<button>Save</button>
+				<label for="locale"><h6>{{ trans('page.tags') }}</h6></label>
+				<div class="col-12 area-2 desc">
+					{{ trans('page.setup.tags.desc') }}
+				</div>
+				<table class="table-simple tags" style="border: 1px solid #e4e4e4;">
+					@foreach($user->tags as $tag)
+						<tr>
+							<td class="bold">{{ $tag->name }}</td>
+							<td>{{ $tag->unit }}</td>
+							<td class="right">
+								<i data-id="{{ $tag->id }}" class="fa fa-times verify delete" aria-hidden="true"></i>
+							</td>
+						</tr>
+					@endforeach	
+					<tr>
+						<form method="post" id="new-tag">
+							<td>
+								<input name="name" placeholder="{{ trans('page.tags.enter_name') }}" type="text">
+								<input name="user" value="{{ $user->id }}" type="hidden">
+								{!! csrf_field() !!}
+							</td>
+							<td>
+								<input name="unit" placeholder="{{ trans('page.tags.enter_unit') }}" type="text">
+							</td>
+							<td class="right">
+								<button><i class="fa fa-plus" aria-hidden="true"></i></button>
+							</td>
+						</form>
+					</tr>
+				</table>	
+
+				<button class="setup">{{ trans('page.save') }}</button>
 			</form>
 		</div>	
 
