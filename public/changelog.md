@@ -70,3 +70,8 @@ Version 1.1
 * Various bugfixes
 * Systems of measurement
 * Friends changes to followers
+
+Version 1.2
+----------------
+* Tagy v setupu
+* Friends changes to followers

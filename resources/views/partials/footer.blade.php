@@ -1,7 +1,7 @@
 <div class="row-90 footer">
     <div class="col-4 area-2">
     	<p class="grey-text">
-    		{{ trans('master.version') }} 1.1 | <a href="/changelog.md">Changelog</a>
+    		{{ trans('master.version') }} 1.2 | <a href="/changelog.md">Changelog</a>
     	</p>
     	<p class="grey-text">
     		{{ trans('master.created_by') }} <a href="http://sleanded.com">Sleanded Codes</a> &copy; | 2016
