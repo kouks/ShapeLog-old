@@ -16,13 +16,13 @@
 	<div class="row almost-white-bg">
 		<div class="col-3">&nbsp;</div>
 		
-		<div class="col-6 area-2 setup">
-			<form action="/setup/save" method="post" id="setup-form">
+		<div class="col-6 area-2">
+			<form action="/setup/save" method="post" id="setup-form" class="setup">
 
 				{!! csrf_field() !!}
 
 				<label for="username"><h6>{{ trans('page.setup.username') }}</h6></label>
-				<input class="setup" id="username" type="text" name="username" placeholder="{{ trans('page.setup.pick_username') }}">
+				<input id="username" type="text" name="username" placeholder="{{ trans('page.setup.pick_username') }}">
 
 				<div class="col-12 area-2 error length">
 					 {{ trans('page.setup.username.long') }}
@@ -38,10 +38,10 @@
 				<div class="col-12 area-2 desc">
 					{{ trans('page.setup.birthday.desc') }}
 				</div>
-				<input class="setup" id="birthday" value="{{ date('Y-m-d', $user->birthday) }}" type="date" name="birthday">
+				<input id="birthday" value="{{ date('Y-m-d', $user->birthday) }}" type="date" name="birthday">
 
 				<label for="metric"><h6>{{ trans('page.settings.measurement') }}</h6></label>
-				<select class="setup" name="metric" id="metric">
+				<select name="metric" id="metric">
 					<option value="1">
 						{{ trans('page.settings.measurement.metric') }}
 					</option>
@@ -51,12 +51,12 @@
 				</select>
 
 				<label for="locale"><h6>{{ trans('page.settings.language') }}</h6></label>
-				<select class="setup" name="locale" id="locale">
+				<select name="locale" id="locale">
 					<option {{ Cookie::get('locale') == 'en' ? 'selected' : '' }} value="en">English</option>
 					<option {{ Cookie::get('locale') == 'cs' ? 'selected' : '' }} value="cs">Česky</option>
 				</select>
 
-				<button class="setup">{{ trans('page.save') }}</button>
+				<button>{{ trans('page.save') }}</button>
 			</form>
 
 			<h6>{{ trans('page.tags') }}</h6>
