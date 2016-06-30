@@ -55,7 +55,7 @@ Version 0.9 beta
 * Community newest/filter
 
 Version 1.0
-----------------
+-----------
 * Prelogin
 * Settings
 * Localisation
@@ -63,7 +63,7 @@ Version 1.0
 * Community detail page
 
 Version 1.1
-----------------
+-----------
 * Czech locale
 * Secured deleting od tags and records
 * Exception handling
@@ -72,6 +72,6 @@ Version 1.1
 * Friends changes to followers
 
 Version 1.2
-----------------
-* Tagy v setupu
-* Friends changes to followers
+-----------
+* Adding tags in setup
+* Friends renamed to followers

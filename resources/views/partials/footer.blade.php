@@ -1,18 +1,22 @@
 <div class="row-90 footer">
     <div class="col-4 area-2">
+        <span class="light-grey-text big">{{ trans('master.license') }}</span>
+        <p class="grey-text">
+            <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU GPL v3</a>
+        </p>
     	<p class="grey-text">
-    		{{ trans('master.version') }} 1.2 | <a href="/changelog.md">Changelog</a>
+    		Copyright &copy; 2016 <a href="http://sleanded.com">Sleanded</a>
     	</p>
-    	<p class="grey-text">
-    		{{ trans('master.created_by') }} <a href="http://sleanded.com">Sleanded Codes</a> &copy; | 2016
-    	</p>
+        <p class="grey-text">
+            {{ trans('master.version') }} 1.2 | <a href="/changelog.md">Changelog</a>
+        </p>
     </div>
 
     <div class="col-4 area-2">
     	<span class="light-grey-text big">{{ trans('master.menu') }}</span>
     	<ul>
-    		<li class="grey-text">{{ trans('master.faq') }}</li>
-            <li class="grey-text">{{ trans('master.about') }}</li>
+    		<li class="almost-black-text">{{ trans('master.faq') }}</li>
+            <li class="almost-black-text">{{ trans('master.about') }}</li>
     	</ul>
     </div>
 
@@ -20,7 +24,7 @@
     	<span class="light-grey-text big">{{ trans('master.links') }}</span>
         <ul>
             <a href="https://github.com/KouKs/ShapeLog"><li class="grey-text">GitHub</li></a>
-            <li class="grey-text">Facebook</li>
+            <li class="almost-black-text">Facebook</li>
         </ul>
     </div>
 </div>

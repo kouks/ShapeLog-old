@@ -42,9 +42,9 @@ return [
 	 * Footer
 	 */
 	'version'		=> 'Verze',
-	'created_by'	=> 'Vytvořili',
 	'menu'			=> 'Menu',
 	'faq'			=> 'FAQ',
 	'links'			=> 'Odkazy',
+	'license'		=> 'Licence',
 
 ];

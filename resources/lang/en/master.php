@@ -42,8 +42,8 @@ return [
 	 * Footer
 	 */
 	'version'		=> 'Version',
-	'created_by'	=> 'Created by',
 	'menu'			=> 'Menu',
 	'faq'			=> 'FAQ',
 	'links'			=> 'Links',
+	'license'		=> 'License',
 ];
