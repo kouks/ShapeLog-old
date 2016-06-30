@@ -12,11 +12,13 @@ $(document).ready(function() {
 		}, 3000);
 	}
 
+	/*
 	$(window).load(function() {
         $('.grid').masonry({
             itemSelector: '.grid-item'
         }).masonry('reloadItems');
     });
+    */
 
     $('.add div').click(function() {
     	$(this).parent().hide();
