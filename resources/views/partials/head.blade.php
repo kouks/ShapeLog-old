@@ -9,9 +9,9 @@
 
     <script type="text/javascript" src="/js/Chart.bundle.min.js"></script>
     <script type="text/javascript" src="/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/jquery.ui.min.js"></script>
-    <script type="text/javascript" src="/js/jquery.cookie.js"></script>
-    <script type="text/javascript" src="/js/jquery.masonry.min.js"></script>
+    <!-- <script type="text/javascript" src="/js/jquery.ui.min.js"></script> -->
+    <!-- <script type="text/javascript" src="/js/jquery.cookie.js"></script> -->
+    <!-- <script type="text/javascript" src="/js/jquery.masonry.min.js"></script> -->
     <script type="text/javascript" src="/js/main.js"></script>
     <script type="text/javascript" src="/js/graphs.js"></script>
     <script type="text/javascript" src="/js/tags.js"></script>
