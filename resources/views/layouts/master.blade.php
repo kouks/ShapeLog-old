@@ -42,6 +42,17 @@
             </div>
         @endif
 
+        @if(false && !Cookie::get('cookies'))
+            <div class="col-12 cookies">
+                <div class="area-2 theme-bg">
+                    <p class="light-grey-text big bold">
+                        {{ trans('master.cookies') }}
+                    </p>
+                    <i class="fa fa-times close" aria-hidden="true"></i>
+                </div>
+            </div>
+        @endif
+
         <div class="content">
             @yield('main') 
         </div>

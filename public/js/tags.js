@@ -1,9 +1,9 @@
 
 $(document).ready(function() {
-	$("#new-tag").submit(function() {
 
+	$("#new-tag").submit(function() {
 		if($('input[name="name"]').val() === '' || $('input[name="name"]').val().length > 12) {
-			alert("Field 'name' has to be filled and has to be up to 12 letters long");
+			alert("Field 'name' has to be filled and the name has to be up to 12 letters long");
 			return false;
 		}
 

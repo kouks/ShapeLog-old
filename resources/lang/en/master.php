@@ -13,6 +13,7 @@ return [
 	 * Header
 	 */
     'motto' 		=> 'The perfect tool for monitoring your gym progress',
+    'cookies' 		=> '...',
 
 	/*
 	 * Login

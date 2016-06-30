@@ -71,8 +71,9 @@ class CommunityController extends Controller
     public function filter(Request $request)
     { 
         $users = \App\User::where('first_name', 'regexp', $request->pattern)
-                          ->orWhere('last_name', 'regexp', $request->pattern)
-                          ->orWhere('username', 'regexp', $request->pattern)->limit(8)->get()->toArray();
+            ->orWhere('last_name', 'regexp', $request->pattern)
+            ->orWhere('username', 'regexp', $request->pattern)
+            ->limit(8)->get()->toArray();
 
         return json_encode($users);
     }
@@ -88,8 +89,6 @@ class CommunityController extends Controller
             'user_id'   => \Session::get('uid'),
             'friend_id'   => $request->id,
         ]);
-
-        return 1;
     }
 
     /**
@@ -103,7 +102,5 @@ class CommunityController extends Controller
             'user_id'   => \Session::get('uid'),
             'friend_id'   => $request->id,
         ])->delete();
-
-        return 1;
     }
 }

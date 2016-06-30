@@ -80,10 +80,14 @@ return [
 	'settings.updated'		=> 'Successfully updated',
 
 	'setup.heading'			=> 'Just a few more details',
-	'setup.desc'			=> 'We will ask you for some more information so we can personalize the interface even more. We require your birthday so we can accurately calculate your BMR.',
+	'setup.desc'			=> 'We will ask you for some more information so we can personalize the interface even more.',
 	'setup.username'		=> 'Username',
 	'setup.pick_username'	=> 'Pick your username',
+	'setup.birthday.desc'	=> 'We require your birthday so we can accurately calculate your BMR. It will not be published.',
 	'setup.tags.desc'		=> 'Although this is completely optional, you can add your own custom tags. Do not worry, this can be modified at any time after.',
+	'setup.username.long'	=> 'Your username has to be 4 - 20 characters long and has to contain only numbers and English letters.',
+	'setup.username.taken'	=> 'This username is alread taken.',
+	'setup.username.err'	=> 'Please, check the viability of your username.',
 
 	/*
 	 * Frequently used

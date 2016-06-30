@@ -110,6 +110,7 @@ img {
 [class^='col'] {
 	float: left;
 	box-sizing: border-box;
+	position: relative;
 }
 
 .col {
@@ -359,19 +360,6 @@ p.serif {
 
 	.toggle-photo {
 		cursor: pointer;
-	}
-
-	.close {
-		position: absolute;
-		top: 15px;
-		right: 10px;
-		cursor: pointer;
-		color: #eee;
-		.animate();
-
-		&:hover {
-			color: #333;
-		}
 	}
 
 	input.edit {
@@ -781,5 +769,22 @@ p.serif {
 	.record {
    		page-break-after: always;
    		page-break-inside: avoid;
+	}
+}
+
+/*
+ * 8 - Icons
+ */ 
+/* 8.1s - Fixed close */
+.close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	color: #eee;
+	.animate();
+
+	&:hover {
+		color: #333;
 	}
 }

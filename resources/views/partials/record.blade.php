@@ -77,8 +77,9 @@
 			</span>
 			<input type="text" class="edit" />
 		</p>
-
-		<p class="title">{{ trans('page.tags') }}</p>
+		@if(count($record->user->tags) > 0)
+			<p class="title">{{ trans('page.tags') }}</p>
+		@endif
 
 		@foreach($record->user->tags as $tag)
 			@if(@$data[$tag->name])

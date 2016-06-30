@@ -13,6 +13,7 @@ return [
 	 * Header
 	 */
     'motto' 		=> 'Dokonalý nástroj pro záznam Tvého progresu ve fitku',
+    'cookies' 		=> '...',
 
 	/*
 	 * Login

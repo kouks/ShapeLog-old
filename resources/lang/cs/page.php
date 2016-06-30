@@ -17,7 +17,7 @@ return [
 	 * Records
 	 */
 	'records.heading'		=> 'Výpis záznamů',
-	'records.desc'			=> 'Na této stránce najdete veškeré záznamy, které jste kdy přidali. Stejně tak je můžete upravit tím, že kliknete na kteroukoli hodnotu, přepíšete ji a stisktene enter. Pro přidání dalších dat k logování, navštivte stránku \'Vlastní štítky\'.',
+	'records.desc'			=> 'Na této stránce najdete veškeré záznamy, které jste kdy přidali. Stejně tak je můžete upravit tím, že kliknete na kteroukoli hodnotu, přepíšete ji a stisktene enter. Pro přidání dalších štítků k logování navštivte stránku \'Vlastní štítky\'.',
 	'records.new'			=> 'Nový záznam',
 	'records.basic'			=> 'Základní informace',
 	'records.energy'		=> 'Energie',
@@ -48,7 +48,7 @@ return [
 	 */
 	'tags.heading'		=> 'Vaše štítky',
 	'tags.desc'			=> 'Na této stránce můžete upravovat své vlastní štítky. Jednoduše vložte jméno a jednotku pro Váš štítek, bude automaticky přidát jak do formuláře nového záznamu, tak na stránku s grafy.',
-	'tags.enter_name' 	=> 'Vložte název nového tagu',
+	'tags.enter_name' 	=> 'Vložte název nového štítku',
 	'tags.enter_unit' 	=> 'Vložte jednotku',
 	'tags.deleted'		=> 'Štítek úspěšně smazán',
 	'tags.doesnt_exist'	=> 'Tento štítek neexistuje',
@@ -72,7 +72,7 @@ return [
 	 * Settings/setup
 	 */
 	'settings.heading'		=> 'Nastavení účtu',
-	'settings.desc'			=> 'Změntě nastavení Vašeho účtu.',
+	'settings.desc'			=> 'Změntě nastavení svého účtu.',
 	'settings.birthday'		=> 'Datum narození',
 	'settings.measurement'	=> 'Jednotková soustava',
 	'settings.measurement.metric'	=> 'Metrická',
@@ -81,10 +81,14 @@ return [
 	'settings.updated'		=> 'Úspěšně uloženo',
 
 	'setup.heading'			=> 'Jen pár dalších detailů',
-	'setup.desc'			=> 'Zeptáme se Vás na pár dalších informací, abychom mohli personalizovat vaše rozhraní. Vaše datum narození potřebujeme pouze pro výpočet bazálního metabolismu.',
+	'setup.desc'			=> 'Zeptáme se Vás na pár dalších informací, abychom mohli personalizovat vaše rozhraní.',
 	'setup.username'		=> 'Uživatelské jméno',
 	'setup.pick_username'	=> 'Vyberte si své uživatelské jméno',
-	'setup.tags.desc'		=> 'Zde si můžete přidat své vlastní štítky, které budou definovat, jaká data budete zaznamenávat. Nebojte se, tyto štítky se dají kdykoli smazat, nebo vytvořit nové.',
+	'setup.birthday.desc'	=> 'Vaše datum narození potřebujeme pouze pro výpočet bazálního metabolismu. Samozřejmě jej nebudeme nikam zveřejňovat.',
+	'setup.tags.desc'		=> 'Zde si můžete přidat své vlastní štítky, které budou definovat, jaká data budete zaznamenávat. Nebojte se, tyto štítky se dají později upravit.',
+	'setup.username.long'	=> 'Vaše uživatelské jméno musí mít délku 4 - 20 písmen a musí obsahovat pouze písmena anglické abecedy nebo čísla.',
+	'setup.username.taken'	=> 'Toto uživatelské jméno je již zabráno.',
+	'setup.username.err'	=> 'Prosím, zkontrolujte platnost svého uživatelského jména.',
 
 	/*
 	 * Frequently used
