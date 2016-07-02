@@ -59,7 +59,7 @@ return [
 	'community.heading'		=> 'Komunita Shape Logu',
 	'community.desc'		=> 'Najděte své přátele a podívejte se také na jejich progres.',
 	'community.search'		=> 'Hledat mezi lidmi',
-	'community.i_follow'	=> 'Sleduji',
+	'community.following'	=> 'Sleduji',
 	'community.newest'		=> 'Nejnovější',
 	'community.not_found'	=> 'Uživatel nebyl nalezen',
 	'community.detail.follow'		=> 'Sledovat',
