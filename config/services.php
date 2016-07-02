@@ -39,4 +39,14 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    /*
+     * Facebbok credentials
+     */
+    'facebook' => [
+        'app_id' => '1643582335963261',
+        'app_secret' => 'cdfbfc4f92550998fc068c17c4c4cd68',
+        'default_graph_version' => 'v2.5',
+        'persistent_data_handler'=>'session',
+    ],
+
 ];

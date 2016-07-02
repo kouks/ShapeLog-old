@@ -15,10 +15,10 @@ class SetupMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if(!\Session::get('uid'))
+        if(!\Cookie::get('uid'))
             return \Redirect::to('')->with('message', trans('master.not_logged'));
         
-        if(!empty(\App\User::where('id', \Session::get('uid'))->first()->username))
+        if(!empty(\App\User::where('id', \Cookie::get('uid'))->first()->username))
             return \Redirect::to('profile')->with('message', trans('master.l_successful'));
 
         return $next($request);

@@ -17,7 +17,7 @@ class TagsController extends Controller
     { 
         return \View::make('tags', [
             'title'         => trans('page.tags'),
-            'user'          => \App\User::where('id', \Session::get('uid'))->first(),
+            'user'          => \App\User::where('id', \Cookie::get('uid'))->first(),
         ]);  
     }
 
@@ -44,7 +44,7 @@ class TagsController extends Controller
      */
     public function delete(Request $request)
     { 
-        if(!\App\Tag::where(['id' => $request->id, 'user_id' => \Session::get('uid')])->delete())
+        if(!\App\Tag::where(['id' => $request->id, 'user_id' => \Cookie::get('uid')])->delete())
             return \Redirect::to('/profile/tags')->with('message', trans('page.tags.doesnt_exist'));
         
         return \Redirect::to('/profile/tags')->with('message', trans('page.tags.deleted'));

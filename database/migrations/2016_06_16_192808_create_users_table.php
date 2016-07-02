@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('gender');
             $table->tinyInteger('metric')->default(1);
             $table->string('locale')->default('en');
+            $table->tinyInteger('admin')->default(0);
             $table->timestamps();
         });
     }

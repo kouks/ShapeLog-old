@@ -15,7 +15,7 @@ class CommunityController extends Controller
      */
     public function index()
     { 
-        $user = \App\User::where('id', \Session::get('uid'))->first();
+        $user = \App\User::where('id', \Cookie::get('uid'))->first();
 
         $follows = [];
         foreach($user->follows as $friend)
@@ -86,7 +86,7 @@ class CommunityController extends Controller
     public function follow(Request $request)
     { 
         \App\Relationship::create([
-            'user_id'   => \Session::get('uid'),
+            'user_id'   => \Cookie::get('uid'),
             'friend_id'   => $request->id,
         ]);
     }
@@ -99,7 +99,7 @@ class CommunityController extends Controller
     public function unfollow(Request $request)
     { 
         \App\Relationship::where([
-            'user_id'   => \Session::get('uid'),
+            'user_id'   => \Cookie::get('uid'),
             'friend_id'   => $request->id,
         ])->delete();
     }

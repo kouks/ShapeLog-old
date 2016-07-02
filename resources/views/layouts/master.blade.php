@@ -5,7 +5,7 @@
 
     <body id="master">
 
-        @if(null != Session::get('uid'))
+        @if(null != Cookie::get('uid'))
             <nav class="row top-bar">
                 <a href="/profile" class="profile-pic"><img src="//graph.facebook.com/{{ $user->fbid }}/picture?width=80&height=80"></a>
                 <a href="/profile" class="bold">{{ trans('master.logged_as', ['name' => $user->first_name]) }}</a>
@@ -24,7 +24,7 @@
                 <h2 class="light-grey-text">{{ trans('master.motto') }}</h2>
             </div>
 
-            @if(!Session::get('uid'))
+            @if(!Cookie::get('uid'))
                 <div class="col-12 center area-4">
                     <a class="fb-button center" href="{{ $loginUrl }}">
                         <i class="fa fa-2 fa-facebook"></i> &nbsp;&nbsp;

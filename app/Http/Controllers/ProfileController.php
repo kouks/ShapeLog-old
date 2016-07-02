@@ -18,7 +18,7 @@ class ProfileController extends Controller
     { 
         return \View::make('profile', [
             'title'         => trans('page.records'),
-            'user'          => \App\User::where('id', \Session::get('uid'))->first(),
+            'user'          => \App\User::where('id', \Cookie::get('uid'))->first(),
         ]);  
     }
 
@@ -65,7 +65,7 @@ class ProfileController extends Controller
      */
     public function delete(Request $request)
     {
-        if(!\App\Record::where(['id' => $request->id, 'user_id' => \Session::get('uid')])->delete())
+        if(!\App\Record::where(['id' => $request->id, 'user_id' => \Cookie::get('uid')])->delete())
             return \Redirect::to('/profile/tags')->with('message', trans('page.records.doesnt_exist'));
         
         return \Redirect::to('profile')->with('message', trans('page.records.deleted'));
@@ -101,6 +101,8 @@ class ProfileController extends Controller
     {
         \Session::flush();
         
-        return \Redirect::to('')->with('message', trans('master.lo_successful'));
+        return \Redirect::to('')
+            ->with('message', trans('master.lo_successful'))
+            ->withCookie(\Cookie::forget('uid'));;
     }
 }

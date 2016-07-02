@@ -15,7 +15,7 @@ class GraphsController extends Controller
      */
     public function index()
     { 
-        $user = \App\User::where('id', \Session::get('uid'))->first();
+        $user = \App\User::where('id', \Cookie::get('uid'))->first();
 
         $data = [];
         foreach($user->records as $record)

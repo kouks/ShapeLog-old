@@ -15,14 +15,14 @@ class LogoutMiddleware
      */
     public function handle($request, Closure $next)
     {        
-        if(!\Session::get('uid'))
+        if(!\Cookie::get('uid'))
             return \Redirect::to('')->with('message', trans('master.not_logged'));
 
         if(!$request->is('setup/check-name') &&
            !$request->is('setup/save') &&
            !$request->is('profile/tags/add') &&
            !$request->is('profile/tags/delete') &&
-           empty(\App\User::where('id', \Session::get('uid'))->first()->username))
+           empty(\App\User::where('id', \Cookie::get('uid'))->first()->username))
             return \Redirect::to('setup')->with('message', trans('master.still_need_data'));
 
         return $next($request);

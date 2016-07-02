@@ -15,28 +15,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $fb = new \Facebook\Facebook([
-            'app_id' => '1643582335963261',
-            'app_secret' => 'cdfbfc4f92550998fc068c17c4c4cd68',
-            'default_graph_version' => 'v2.5',
-            'persistent_data_handler'=>'session'
-        ]);
+        $fb = new \Facebook\Facebook(config('services.facebook'));
 
         /*
          * Generating login url
          */
         $loginUrl = $fb->getRedirectLoginHelper()->getLoginUrl('http://' . $_SERVER["SERVER_NAME"] . '/login');
 
-        /*
-         * Temporary bugfix
-         */
-        if(isset($_SESSION["fbid"]) && !\App\User::where('id', \Session::get('uid'))->count())
-            unset($_COOKIE["laravel_session"]);
-
         return \View::make('home', [
             'title' => trans('page.home'),
             'loginUrl' => $loginUrl,
-            'user' => \App\User::where('id', \Session::get('uid'))->first(),
+            'user' => \App\User::where('id', \Cookie::get('uid'))->first(),
         ]);  
     }
 
@@ -48,17 +37,12 @@ class HomeController extends Controller
      */
     public function login()
     {
-        $fb = new \Facebook\Facebook([
-            'app_id' => '1643582335963261',
-            'app_secret' => 'cdfbfc4f92550998fc068c17c4c4cd68',
-            'default_graph_version' => 'v2.5',
-            'persistent_data_handler'=>'session'
-        ]);
+        $fb = new \Facebook\Facebook(config('services.facebook'));
 
         $helper = $fb->getRedirectLoginHelper();
 
         /*
-         * Passing security token
+         * Passing access token
          */
         $_SESSION['FBRLH_state'] = $_GET['state'];
 
@@ -110,10 +94,10 @@ class HomeController extends Controller
         }
 
         /*
-         * Storing the user id
-         */ 
-        \Session::put('uid', \App\User::where('fbid', $user->id)->first()->id);
-
-        return \Redirect::to('setup')->with('message', trans('master.need_data'));
+         * Storing the user id and redirecting
+         */
+        return \Redirect::to('setup')
+            ->with('message', trans('master.need_data'))
+            ->withCookie('uid', \App\User::where('fbid', $user->id)->first()->id, 10080);
     }
 }

@@ -31,4 +31,3 @@
 	    <a href="/"><img src="/img/logo-white-300.png"></a>
 	</div>
 </div>
-

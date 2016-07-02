@@ -17,7 +17,7 @@ class SetupController extends Controller
     { 
         return \View::make('setup', [
             'title'         => trans('page.settings'),
-            'user'          => \App\User::where('id', \Session::get('uid'))->first(),
+            'user'          => \App\User::where('id', \Cookie::get('uid'))->first(),
         ]);  
     }
 
@@ -28,7 +28,7 @@ class SetupController extends Controller
      */
     public function save(Request $request)
     {
-    	\App\User::where('id', \Session::get('uid'))->update([
+    	\App\User::where('id', \Cookie::get('uid'))->update([
     		'username' 		=> $request->username,
     		'birthday' 		=> strtotime($request->birthday),
     		'metric'		=> $request->metric,
