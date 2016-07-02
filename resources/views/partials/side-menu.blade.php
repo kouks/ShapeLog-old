@@ -24,6 +24,9 @@
 	        <a title="{{ trans('page.logout') }}" href="/profile/logout">
 	        	<i class="fa fa-sign-out" aria-hidden="true"></i>
 	        </a>
+	        <a class="secondary" title="{{ trans('page.bug') }}">
+	        	<i class="fa fa-bug" aria-hidden="true"></i>
+	        </a>
 	    </nav>
 	</div>
 

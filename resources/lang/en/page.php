@@ -12,6 +12,7 @@ return [
 	'settings' 		=> 'Settings',
 	'logout' 		=> 'Logout',
 	'records' 		=> 'Records',
+	'bug' 			=> 'Report a bug',
 
 	/*
 	 * Records
@@ -89,6 +90,10 @@ return [
 	'setup.username.taken'	=> 'This username is alread taken.',
 	'setup.username.err'	=> 'Please, check the viability of your username.',
 
+	/*
+	 * Reporting a bug
+	 */
+	
 	/*
 	 * Frequently used
 	 */

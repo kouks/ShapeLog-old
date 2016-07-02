@@ -75,3 +75,8 @@ Version 1.2
 -----------
 * Adding tags in setup
 * Friends renamed to followers
+
+Version 1.3
+-----------
+* Bug reporting
+* Cookies login storage

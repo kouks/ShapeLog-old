@@ -57,7 +57,7 @@ class CommunityController extends Controller
 
         return \View::make('detail', [
             'title'         => $request->username,
-            'user'          => \App\User::where('id', \Session::get('uid'))->first(),
+            'user'          => \App\User::where('id', \Cookie::get('uid'))->first(),
             'detail'        => $user,
             'data'          => $data,
         ]);  

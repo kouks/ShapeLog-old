@@ -12,6 +12,7 @@ return [
 	'settings' 		=> 'Nastavení',
 	'logout' 		=> 'Odhlášení',
 	'records' 		=> 'Zázanamy',
+	'bug' 			=> 'Nahlásit chybu',
 
 	/*
 	 * Records
@@ -89,6 +90,10 @@ return [
 	'setup.username.long'	=> 'Vaše uživatelské jméno musí mít délku 4 - 20 písmen a musí obsahovat pouze písmena anglické abecedy nebo čísla.',
 	'setup.username.taken'	=> 'Toto uživatelské jméno je již zabráno.',
 	'setup.username.err'	=> 'Prosím, zkontrolujte platnost svého uživatelského jména.',
+
+	/*
+	 * Reporting a bug
+	 */
 
 	/*
 	 * Frequently used
