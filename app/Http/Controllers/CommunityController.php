@@ -17,19 +17,19 @@ class CommunityController extends Controller
     { 
         $user = \App\User::where('id', \Cookie::get('uid'))->first();
 
-        $follows = [];
-        foreach($user->follows as $friend)
+        $following = [];
+        foreach($user->following as $friend)
         {
-            $follows[] = $friend->friend_id;
+            $following[] = $friend->friend_id;
         }
 
-        $follows = \App\User::whereIn('id', $follows)->orderBy('last_name', 'asc')->get();
+        $following = \App\User::whereIn('id', $following)->orderBy('last_name', 'asc')->get();
 
       	return \View::make('community', [
             'title'         => trans('page.community'),
             'user'          => $user,
             'newest'        => \App\User::orderBy('id', 'desc')->limit(8)->get(),
-            'follows'       => $follows,
+            'following'       => $following,
         ]);  
     }
 

@@ -24,7 +24,7 @@
 	<div class="row white-bg">
 		<div class="col-6 area-2">
 			<h3 class="center area-2">{{ trans('page.community.following') }}</h3>
-			@foreach($follows as $member)
+			@foreach($following as $member)
 				<div class="col-6 area-2">
 					@include('partials.member')
 				</div>

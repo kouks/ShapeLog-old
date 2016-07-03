@@ -17,17 +17,16 @@ class User extends Model
         return $this->hasMany("App\Tag");
     }
 
-    public function follows()
+    public function following()
     {
         return $this->hasMany("App\Relationship");
     }
 
     public function isFollowerOf($id)
     {
-        $friends = \App\Relationship::where('user_id', \Session::get('uid'))->get();
-        foreach($friends as $friend)
+        foreach($this->following as $member)
         {
-            if($friend->friend_id == $id)
+            if($member->friend_id == $id)
                 return true;
         }
         return false;
