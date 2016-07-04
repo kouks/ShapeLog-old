@@ -8,7 +8,7 @@ var randomColor = function(opacity) {
 
 var cats = [];
 
-function draw(data) {
+function draw(data, cats) {
 
 	var datasets = [];
 	var dates = [];

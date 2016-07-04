@@ -15,6 +15,7 @@
     <div class="col-4 area-2">
     	<span class="light-grey-text big">{{ trans('master.menu') }}</span>
     	<ul>
+            <a href="/community"><li class="grey-text">{{ trans('page.community') }}</li></a>
     		<li class="almost-black-text">{{ trans('master.faq') }}</li>
             <li class="almost-black-text">{{ trans('master.about') }}</li>
     	</ul>
