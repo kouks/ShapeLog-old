@@ -12,6 +12,7 @@ return [
 	'settings' 		=> 'Nastavení',
 	'logout' 		=> 'Odhlášení',
 	'records' 		=> 'Zázanamy',
+	'profile' 		=> 'Profil',
 	'bug' 			=> 'Nahlásit chybu',
 
 	/*

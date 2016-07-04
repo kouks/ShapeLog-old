@@ -1,7 +1,7 @@
 
 <div class="page-shadow">
 	<div class="record-form record">
-		<form method="post" action="/profile/add" enctype="multipart/form-data">
+		<form method="post" action="/profile/records/add" enctype="multipart/form-data">
 			<input type="hidden" name="user" value="{{ $user->id }}" />
 			{!! csrf_field() !!}
 

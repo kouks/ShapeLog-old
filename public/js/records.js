@@ -23,7 +23,7 @@ $(document).ready(function() {
     	if(e.keyCode == 13 && $(e.target).is(".editable .edit")) {
     		console.log($(e.target).val());
 		    $.ajax({
-		    	url: '/profile/edit',
+		    	url: '/profile/records/edit',
 		    	method: 'post',
 		    	data: { 
 		    		id: $(e.target).prev().data("id"), 

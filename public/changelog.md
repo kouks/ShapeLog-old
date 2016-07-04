@@ -81,3 +81,5 @@ Version 1.3
 * Cookies login storage
 * BMR helper
 * Community can be viewed w/o login
+* Footer update
+* Profile controller refactor

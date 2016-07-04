@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class ProfileController extends Controller
+class RecordsController extends Controller
 {
     
     /**
@@ -16,7 +16,7 @@ class ProfileController extends Controller
      */
     public function index()
     { 
-        return \View::make('profile', [
+        return \View::make('records', [
             'title'         => trans('page.records'),
             'user'          => \App\User::where('id', \Cookie::get('uid'))->first(),
         ]);  
@@ -55,7 +55,7 @@ class ProfileController extends Controller
             'img'  => $fileName,
         ]);
         
-        return \Redirect::to('profile')->with('message', trans('page.records.added'));
+        return \Redirect::to('profile/records')->with('message', trans('page.records.added'));
     }
 
     /**
@@ -68,7 +68,7 @@ class ProfileController extends Controller
         if(!\App\Record::where(['id' => $request->id, 'user_id' => \Cookie::get('uid')])->delete())
             return \Redirect::to('/profile/tags')->with('message', trans('page.records.doesnt_exist'));
         
-        return \Redirect::to('profile')->with('message', trans('page.records.deleted'));
+        return \Redirect::to('profile/records')->with('message', trans('page.records.deleted'));
     }
 
     /**

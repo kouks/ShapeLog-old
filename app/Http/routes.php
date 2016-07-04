@@ -22,10 +22,12 @@ Route::group(['prefix' => 'setup'], function() {
 
 Route::group(['prefix' => 'profile'], function() {
 	
-	Route::get('', 'ProfileController@index')->middleware('logout');
-	Route::post('add', 'ProfileController@add')->middleware('logout');
-	Route::post('edit', 'ProfileController@edit')->middleware('logout');
-	Route::get('delete/{id}', 'ProfileController@delete')->middleware('logout');
+	Route::group(['prefix' => 'records'], function() {
+		Route::get('', 'RecordsController@index')->middleware('logout');
+		Route::post('add', 'RecordsController@add')->middleware('logout');
+		Route::post('edit', 'RecordsController@edit')->middleware('logout');
+		Route::get('delete/{id}', 'RecordsController@delete')->middleware('logout');
+	});
 
 	Route::get('graphs', 'GraphsController@index')->middleware('logout');
 

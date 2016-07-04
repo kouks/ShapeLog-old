@@ -1,5 +1,6 @@
 TODO List
 ==========
+* namespace Profile
 * Notification system !!
 * VERIFIKACE
 * Formuláře přes laravel + jejich verifikace :) (překlad err messages :((((.)

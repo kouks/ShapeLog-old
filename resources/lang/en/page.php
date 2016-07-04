@@ -12,6 +12,7 @@ return [
 	'settings' 		=> 'Settings',
 	'logout' 		=> 'Logout',
 	'records' 		=> 'Records',
+	'profile' 		=> 'Profile',
 	'bug' 			=> 'Report a bug',
 
 	/*

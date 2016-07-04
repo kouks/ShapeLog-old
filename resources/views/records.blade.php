@@ -30,7 +30,7 @@
 					<h4 class="area-4 center light-grey-text">
 						{{ date('j. n. Y', strtotime($record->created_at)) }}
 					</h4>
-					<a href="/profile/delete/{{ $record->id }}" class="verify delete big light-grey-text"><i class="fa fa-times" aria-hidden="true"></i></a>
+					<a href="/profile/records/delete/{{ $record->id }}" class="verify delete big light-grey-text"><i class="fa fa-times" aria-hidden="true"></i></a>
 				</div>
 			</div>
 		@endforeach
