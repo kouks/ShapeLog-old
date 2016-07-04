@@ -78,5 +78,6 @@ Version 1.2
 
 Version 1.3
 -----------
-* Bug reporting
 * Cookies login storage
+* BMR helper
+* Community can be viewed w/o login

@@ -8,7 +8,7 @@
     		Copyright &copy; 2016 <a href="http://sleanded.com">Sleanded</a>
     	</p>
         <p class="grey-text">
-            {{ trans('master.version') }} 1.2 | <a target="_blank" href="/changelog.md">Changelog</a>
+            {{ trans('master.version') }} 1.3 | <a target="_blank" href="/changelog.md">Changelog</a>
         </p>
     </div>
 

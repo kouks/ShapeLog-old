@@ -1,7 +1,6 @@
 TODO List
 ==========
+* Notification system !!
 * Bug reports
-* Community - nezávislé na profilu
-* Notification system?
-* Kalendár chození do fitka? 
 * Mrknout na to exception hadnling, popříadě nastylovat error pages
+* Kalendár chození do fitka? 
