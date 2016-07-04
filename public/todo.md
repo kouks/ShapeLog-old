@@ -1,5 +1,6 @@
 TODO List
 ==========
+* pořádek v routes (komenty)
 * namespace Profile
 * Notification system !!
 * VERIFIKACE

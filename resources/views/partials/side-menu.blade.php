@@ -21,7 +21,7 @@
 	        <a title="{{ trans('page.settings') }}" href="/profile/settings">
 	        	<i class="fa fa-cog" aria-hidden="true"></i>
 	        </a>
-	        <a title="{{ trans('page.logout') }}" href="/profile/logout">
+	        <a title="{{ trans('page.logout') }}" href="/logout">
 	        	<i class="fa fa-sign-out" aria-hidden="true"></i>
 	        </a>
 	        <a class="secondary" style="display: none" title="{{ trans('page.bug') }}">

@@ -100,4 +100,18 @@ class HomeController extends Controller
             ->with('message', trans('master.need_data'))
             ->withCookie('uid', \App\User::where('fbid', $user->id)->first()->id, 10080);
     }
+
+    /**
+     * Handles the logout action
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function logout()
+    {
+        \Session::flush();
+        
+        return \Redirect::to('')
+            ->with('message', trans('master.lo_successful'))
+            ->withCookie(\Cookie::forget('uid'));;
+    }
 }

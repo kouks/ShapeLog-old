@@ -13,6 +13,7 @@
 
 Route::get('', "HomeController@index");
 Route::get('login', "HomeController@login");
+Route::get('logout', 'HomeController@logout');
 
 Route::group(['prefix' => 'setup'], function() {
 	Route::get('', "SetupController@index")->middleware('setup');
@@ -41,9 +42,6 @@ Route::group(['prefix' => 'profile'], function() {
 		Route::get('', 'SettingsController@index')->middleware('logout');
 		Route::post('save', 'SettingsController@save')->middleware('logout');
 	});
-
-
-	Route::get('logout', 'ProfileController@logout');
 });
 
 Route::group(['prefix' => 'community'], function() {
