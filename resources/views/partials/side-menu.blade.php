@@ -6,8 +6,8 @@
 
 	<div class="row">
 	    <nav>
-	        <a title="{{ trans('page.home') }}" href="/profile/records">
-	        	<i class="fa fa-home" aria-hidden="true"></i>
+	        <a title="{{ trans('page.records') }}" href="/profile/records">
+	        	<i class="fa fa-th-large" aria-hidden="true"></i>
 	        </a>
 	        <a title="{{ trans('page.graphs') }}" href="/profile/graphs">
 	        	<i class="fa fa-area-chart" aria-hidden="true"></i>
