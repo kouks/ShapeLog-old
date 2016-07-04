@@ -1,4 +1,4 @@
-@extends('layouts.page')
+@extends($layout)
 
 @section('main')
 
@@ -23,7 +23,17 @@
 	</div>
 	<div class="row white-bg">
 		<div class="col-6 area-2">
-			<h3 class="center area-2">{{ trans('page.community.following') }}</h3>
+			@if($user instanceof App\User)
+				<h3 class="center area-2">{{ trans('page.community.following') }}</h3>
+			@else
+                <div class="col-12 center area-4">
+                    <a class="fb-button center" href="{{ $loginUrl }}">
+                        <i class="fa fa-2 fa-facebook"></i> &nbsp;&nbsp;
+                        {{ trans('master.fb_login') }}
+                    </a>
+                </div>
+			@endif
+
 			@foreach($following as $member)
 				<div class="col-6 area-2">
 					@include('partials.member')

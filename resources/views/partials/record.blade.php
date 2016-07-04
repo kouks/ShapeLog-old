@@ -14,14 +14,7 @@
     /*
      * Calculating BMR
      */
-    if($record->user->metric)
-    	$bmr = $record->user->gender == "male" ? 
-	        round(66.5 + 13.75*$record->weight + 5.003*$record->height - 6.755*$age) :
-	        round(655.1 + 9.563*$record->weight + 1.850*$record->height - 4.676*$age);
-	else
-    	$bmr = $record->user->gender == "male" ? 
-	        round(66 + 6.2*$record->weight + 12.7*$record->height - 6.76*$age) :
-	        round(655.1 + 4.35*$record->weight + 4.7*$record->height - 4.7*$age);
+    $bmr = BMR::get($age, $record->weight, $record->height, $record->user->gender, $record->user->metric);
 
 
 ?>

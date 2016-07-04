@@ -25,6 +25,7 @@ return [
     'need_data'			=> 'Potřebujeme o Vás ještě několik detailů...',
     'still_need_data' 	=> 'Stále chybí některá data',
     'set_up' 			=> 'Váš účet byl úspěšně nastaven',
+    'fb_login'			=> 'Přihlásit pomocí Facebooku',
 
 	/*
 	 * Index

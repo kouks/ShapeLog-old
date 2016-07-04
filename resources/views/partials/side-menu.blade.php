@@ -15,7 +15,7 @@
 	        <a title="{{ trans('page.tags') }}" href="/profile/tags">
 	        	<i class="fa fa-tags" aria-hidden="true"></i>
 	        </a>
-	        <a title="{{ trans('page.community') }}" href="/profile/community">
+	        <a title="{{ trans('page.community') }}" href="/community">
 	        	<i class="fa fa-users" aria-hidden="true"></i>
 	        </a>
 	        <a title="{{ trans('page.settings') }}" href="/profile/settings">
@@ -24,7 +24,7 @@
 	        <a title="{{ trans('page.logout') }}" href="/profile/logout">
 	        	<i class="fa fa-sign-out" aria-hidden="true"></i>
 	        </a>
-	        <a class="secondary" title="{{ trans('page.bug') }}">
+	        <a class="secondary" style="display: none" title="{{ trans('page.bug') }}">
 	        	<i class="fa fa-bug" aria-hidden="true"></i>
 	        </a>
 	    </nav>

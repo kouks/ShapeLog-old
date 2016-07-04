@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 class CommunityController extends Controller
-{  
+{ 
+
     /**
      * Display a listing of the resource.
      *
@@ -18,18 +19,34 @@ class CommunityController extends Controller
         $user = \App\User::where('id', \Cookie::get('uid'))->first();
 
         $following = [];
-        foreach($user->following as $friend)
+
+        if($user instanceof \App\User)
         {
-            $following[] = $friend->friend_id;
+            foreach($user->following as $friend)
+            {
+                $following[] = $friend->friend_id;
+            }
+
+            $following = \App\User::whereIn('id', $following)->orderBy('last_name', 'asc')->get();
         }
 
-        $following = \App\User::whereIn('id', $following)->orderBy('last_name', 'asc')->get();
+        /*
+         * Facebook instance
+         */        
+        $fb = new \Facebook\Facebook(config('services.facebook'));
 
-      	return \View::make('community', [
+        /*
+         * Generating login url
+         */
+        $loginUrl = $fb->getRedirectLoginHelper()->getLoginUrl('http://' . $_SERVER["SERVER_NAME"] . '/login');
+
+      	return \View::make('community.index', [
             'title'         => trans('page.community'),
+            'layout'        => $user instanceof \App\User ? 'layouts.page' : 'layouts.empty',
             'user'          => $user,
             'newest'        => \App\User::orderBy('id', 'desc')->limit(8)->get(),
-            'following'       => $following,
+            'following'     => $following,
+            'loginUrl'      => $loginUrl,    
         ]);  
     }
 
@@ -40,13 +57,14 @@ class CommunityController extends Controller
      */
     public function detail(Request $request)
     { 
-        $user = \App\User::where('id', $request->id)->first();
+        $detail = \App\User::where('id', $request->id)->first();
+        $user = \App\User::where('id', \Cookie::get('uid'))->first();
 
-        if(!$user instanceof \App\User) 
+        if(!$detail instanceof \App\User) 
             return \Redirect::to('profile/community')->with('message', trans('page.community.not_found'));
         
         $data = [];
-        foreach($user->records as $record)
+        foreach($detail->records as $record)
         {
             $time = date('j. n. Y', strtotime($record->created_at));
             $data[] = [ 
@@ -55,10 +73,11 @@ class CommunityController extends Controller
             ];
         }
 
-        return \View::make('detail', [
+        return \View::make('community.detail', [
             'title'         => $request->username,
-            'user'          => \App\User::where('id', \Cookie::get('uid'))->first(),
-            'detail'        => $user,
+            'layout'        => $user instanceof \App\User ? 'layouts.page' : 'layouts.empty',
+            'user'          => $user,
+            'detail'        => $detail,
             'data'          => $data,
         ]);  
     }

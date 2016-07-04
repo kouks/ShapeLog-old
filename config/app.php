@@ -205,6 +205,11 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        /**
+         *  Custom ones
+         */
+        'BMR' => App\Helpers\BMR::class,
+
     ],
 
 ];

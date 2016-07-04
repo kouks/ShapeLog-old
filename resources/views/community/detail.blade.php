@@ -1,4 +1,4 @@
-@extends('layouts.page')
+@extends($layout)
 
 @section('main')
 
@@ -9,7 +9,7 @@
 		    <h4 class="center dark-grey-text">{{ $detail->first_name }} {{ $detail->last_name }}</h4>
 		    <h6 class="center grey-text">{{ '@' . $detail->username }}</h6>
 		    <br />
-			@if($user->id !== $detail->id)
+			@if($user instanceof App\User && $user->id !== $detail->id)
 				@if($user->isFollowerOf($detail->id))
 					<a class="follow-button followed">
 						<i class="fa fa-check" aria-hidden="true"></i> 
@@ -65,7 +65,7 @@
 				<ul class="tag-list">
 				<li data-selected="0" data-cat="WEIGHT">{{ trans('page.weight') }}</li>
 				<li data-selected="0" data-cat="KCAL">{{ trans('page.intake') }}</li>
-					@foreach($user->tags as $tag)
+					@foreach($detail->tags as $tag)
 						<li data-selected="0" data-cat="{{ strtoupper($tag->name) }}">
 							{{ strtoupper($tag->name) }}
 						</li>	

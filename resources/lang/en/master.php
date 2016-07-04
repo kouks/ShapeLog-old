@@ -25,6 +25,7 @@ return [
     'need_data'			=> 'We need a few more details...',
     'still_need_data' 	=> 'Some data is still missing',
     'set_up' 			=> 'Your account has been set up',
+    'fb_login'			=> 'Login with Facebook',
 
 	/*
 	 * Index

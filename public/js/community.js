@@ -18,7 +18,7 @@ $(document).ready(function() {
 		);
 
 		$.ajax({
-			url: '/profile/community/filter',
+			url: '/community/filter',
 			method: 'post',
 			data: { 
 				pattern: pattern,
@@ -44,7 +44,7 @@ $(document).ready(function() {
 	    	for(key in data) {
 	    		$(".results").append(
 	    			'<div class="col-3 area-2">' + 
-	    				'<a href="/profile/community/detail/' + data[key].id + '/' + data[key].username + '">' +
+	    				'<a href="/community/detail/' + data[key].id + '/' + data[key].username + '">' +
 		    				'<div class="member">' +
 		    					'<img class="profile-pic" src="//graph.facebook.com/' + data[key].fbid + '/picture?width=300&height=300">' +
         						'<p>' + data[key].first_name + ' ' + data[key].last_name + '</p>' +
@@ -61,7 +61,7 @@ $(document).ready(function() {
 		var id = $(this).data('id');
 
 		$.ajax({
-			url: '/profile/community/follow',
+			url: '/community/follow',
 			method: 'post',
 			data: { 
 				id: id,
@@ -84,7 +84,7 @@ $(document).ready(function() {
 		var id = $(this).data('id');
 
 		$.ajax({
-			url: '/profile/community/unfollow',
+			url: '/community/unfollow',
 			method: 'post',
 			data: { 
 				id: id,

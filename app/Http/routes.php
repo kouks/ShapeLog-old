@@ -40,15 +40,16 @@ Route::group(['prefix' => 'profile'], function() {
 		Route::post('save', 'SettingsController@save')->middleware('logout');
 	});
 
-	Route::group(['prefix' => 'community'], function() {
-		Route::get('', 'CommunityController@index')->middleware('logout');
-		Route::get('detail/{id}/{username?}', 'CommunityController@detail')->middleware('logout');
-		Route::post('follow', 'CommunityController@follow')->middleware('logout');
-		Route::post('unfollow', 'CommunityController@unfollow')->middleware('logout');
-		Route::post('filter', 'CommunityController@filter')->middleware('logout');
-	});
 
 	Route::get('logout', 'ProfileController@logout');
+});
+
+Route::group(['prefix' => 'community'], function() {
+	Route::get('', 'CommunityController@index');
+	Route::get('detail/{id}/{username?}', 'CommunityController@detail');
+	Route::post('follow', 'CommunityController@follow')->middleware('logout');
+	Route::post('unfollow', 'CommunityController@unfollow')->middleware('logout');
+	Route::post('filter', 'CommunityController@filter');
 });
 
 Route::get('setlocale/{locale}', function($locale) {
