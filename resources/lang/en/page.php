@@ -13,6 +13,7 @@ return [
 	'logout' 		=> 'Logout',
 	'records' 		=> 'Records',
 	'profile' 		=> 'Profile',
+	'feed' 			=> 'Feed',
 	'bug' 			=> 'Report a bug',
 
 	/*

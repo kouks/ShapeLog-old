@@ -42,6 +42,10 @@ Route::group(['prefix' => 'profile'], function() {
 		Route::get('', 'SettingsController@index')->middleware('logout');
 		Route::post('save', 'SettingsController@save')->middleware('logout');
 	});
+
+	Route::group(['prefix' => 'feed'], function() {
+		Route::get('', 'FeedController@index')->middleware('logout');
+	});
 });
 
 Route::group(['prefix' => 'community'], function() {

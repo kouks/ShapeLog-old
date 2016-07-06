@@ -37,7 +37,7 @@ class SetupController extends Controller
 
     	\Cookie::forever('locale', $request->locale);
 
-        return \Redirect::to('profile/records')->with('message', trans('master.set_up'))
+        return \Redirect::to('profile/feed')->with('message', trans('master.set_up'))
         							   ->withCookie(\Cookie::forever('locale', $request->locale));
     }
 

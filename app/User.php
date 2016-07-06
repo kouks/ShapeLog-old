@@ -31,4 +31,14 @@ class User extends Model
         }
         return false;
     }
+
+    public function followingIds($id)
+    {
+        foreach($this->following as $member)
+        {
+            if($member->friend_id == $id)
+                return true;
+        }
+        return false;
+    }
 }

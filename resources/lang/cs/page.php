@@ -13,6 +13,7 @@ return [
 	'logout' 		=> 'Odhlášení',
 	'records' 		=> 'Zázanamy',
 	'profile' 		=> 'Profil',
+	'feed' 			=> 'Novinky',
 	'bug' 			=> 'Nahlásit chybu',
 
 	/*

@@ -3,7 +3,6 @@
     
     <title>Shape Log | {{ $title }}</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
     <link href="/css/glob.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="/img/favicon.ico">
 

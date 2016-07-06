@@ -6,6 +6,9 @@
 
 	<div class="row">
 	    <nav>
+	        <a title="{{ trans('page.feed') }}" href="/profile/feed">
+	        	<i class="fa fa-globe" aria-hidden="true"></i>
+	        </a>
 	        <a title="{{ trans('page.records') }}" href="/profile/records">
 	        	<i class="fa fa-th-large" aria-hidden="true"></i>
 	        </a>

@@ -19,7 +19,7 @@ class SetupMiddleware
             return \Redirect::to('')->with('message', trans('master.not_logged'));
         
         if(!empty(\App\User::where('id', \Cookie::get('uid'))->first()->username))
-            return \Redirect::to('profile/records')->with('message', trans('master.l_successful'));
+            return \Redirect::to('profile/feed')->with('message', trans('master.l_successful'));
 
         return $next($request);
     }

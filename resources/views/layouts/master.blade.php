@@ -7,9 +7,9 @@
 
         @if(null != Cookie::get('uid'))
             <nav class="row top-bar">
-                <a href="/profile/records" class="profile-pic"><img src="//graph.facebook.com/{{ $user->fbid }}/picture?width=80&height=80"></a>
-                <a href="/profile/records" class="bold">{{ trans('master.logged_as', ['name' => $user->first_name]) }}</a>
-                <a href="/profile/records">{{ trans('master.goto') }}</a>
+                <a href="/profile/feed" class="profile-pic"><img src="//graph.facebook.com/{{ $user->fbid }}/picture?width=80&height=80"></a>
+                <a href="/profile/feed" class="bold">{{ trans('master.logged_as', ['name' => $user->first_name]) }}</a>
+                <a href="/profile/feed">{{ trans('master.goto') }}</a>
                 <a href="/logout">{{ trans('master.logout') }}</a>
                 <a href="/" class="logo"><img src="/img/logo-red-80.png" alt=""></a>
             </nav>
